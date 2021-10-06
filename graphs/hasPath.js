@@ -1,4 +1,8 @@
-/** given the graph can we find if the destination node can be reached  */
+/** 
+ * given the graph can we find if the destination node can be reached  
+ * In this example we will walk through DFS iterative and recursion and Iterative bfs lookup. We cannot do BFS recursion has we will be using queue but recursion inheritly 
+ * uses stack for recursion calls
+ * */
 
 const graph = {
     a: ['b', 'c'],
@@ -62,3 +66,29 @@ console.log(hasPathRecursion(graph, 'a', 'e')); // true
 console.log(hasPathRecursion(graph, 'a', 'a')); // true
 console.log(hasPathRecursion(graph, 'c', 'g')); // true
 console.log(hasPathRecursion(graph, 'c', 'a')); // false
+
+
+const hasPathBfs = (graph, rootNode, destNode) => {
+    if(rootNode === destNode) return true;
+
+    const queue = [rootNode];
+
+    while(queue.length > 0){
+        const node = queue.shift();
+        const children = graph[node];
+
+        for(let child of children){
+            if(child === destNode) return true;
+            queue.push(child);
+        }
+    }
+
+    return false;
+}
+
+console.log('************* iterative bfs *****************')
+console.log(hasPathBfs(graph, 'a', 'f')); // true
+console.log(hasPathBfs(graph, 'a', 'e')); // true
+console.log(hasPathBfs(graph, 'a', 'a')); // true
+console.log(hasPathBfs(graph, 'c', 'g')); // true
+console.log(hasPathBfs(graph, 'c', 'a')); // false

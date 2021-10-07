@@ -25,7 +25,7 @@ Below graph illustrates how can we visualize graphs and what would be the node t
      d: ['f']
  }
 ```
-![graph](https://github.com/citta-lab/DSA/blob/6cd698be50f9129837a8cd76ea473de913a4e930/graphs/blob/graph.png )
+![graph](https://github.com/citta-lab/DSA/blob/019ad9d17db37fc207cb0c2f38a99f87dbc637f4/graphs/blob/graph.png)
 
 ### Shortest Distance 
 In this scenario we are trying to find the shortest distance from root node to targetted node (example: f). As you can see we can possiblly traverse to 'f' in three way however our goal is to find the shortest path. Hence 'BFS' gives an advantage of checking all the children at the closest level before going to next set of children in next level we can gurantee that once we find the distance to any targetted node will be the shortest ( important ). 
@@ -49,4 +49,4 @@ const graph = {
 }
 ```
 
-![graph](https://github.com/citta-lab/DSA/blob/6cd698be50f9129837a8cd76ea473de913a4e930/graphs/blob/distanceToTargetNode.png )
+![graph](https://github.com/citta-lab/DSA/blob/019ad9d17db37fc207cb0c2f38a99f87dbc637f4/graphs/blob/distanceToTargetNode.png)

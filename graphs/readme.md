@@ -42,6 +42,7 @@ Here is the queue node movement in BFS,
  }
 ```
 
+![graph](https://github.com/citta-lab/DSA/blob/b7ee19299b98e6ba4d1d7eeb8e303fba47a15b40/graphs/blob/queue.png)
 
 
 Below graph illustrates how can we visualize graphs and what would be the node traversing when we do DFS vs BFS.

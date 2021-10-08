@@ -8,6 +8,18 @@ Graphs problems can be tackled with two kinds of appraoch BFS and DFS. The core 
 - pop() and push() are your friends here
 
 Here is the stack node movement in DFS,
+```js
+/** given graph */
+ const graph = {
+     a: ['b', 'c'],
+     b: ['d', 'e'],
+     c: ['g'],
+     g: [],
+     f: [],
+     e: [],
+     d: ['f']
+ }
+```
 
 ![graph](https://github.com/citta-lab/DSA/blob/54845c5cc61f0a6d6cf241c7c8373de7e709701c/graphs/blob/stack.png)
 
@@ -15,6 +27,22 @@ Here is the stack node movement in DFS,
 - Use Queue 
 - First In, First Out
 - shift() and push() are your friends here
+
+Here is the queue node movement in BFS,
+```js
+/** given graph */
+ const graph = {
+     a: ['b', 'c'],
+     b: ['d', 'e'],
+     c: ['g'],
+     g: [],
+     f: [],
+     e: [],
+     d: ['f']
+ }
+```
+
+
 
 Below graph illustrates how can we visualize graphs and what would be the node traversing when we do DFS vs BFS.
 ```js

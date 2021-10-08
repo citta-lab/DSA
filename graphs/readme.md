@@ -8,6 +8,7 @@ Graphs problems can be tackled with two kinds of appraoch BFS and DFS. The core 
 - pop() and push() are your friends here
 
 Here is the stack node movement in DFS,
+
 ![graph](https://github.com/citta-lab/DSA/blob/54845c5cc61f0a6d6cf241c7c8373de7e709701c/graphs/blob/stack.png)
 
 ## BFS

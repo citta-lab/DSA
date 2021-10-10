@@ -27,6 +27,7 @@
  ];
 
  /** 
+  * APPROACH 1: 
   * BFS appraoch O(n+e) time and O(n) space 
   * ( but in reality we have two O(n) one for 
   * queue and one for buildGraph ) so O(2n) ==> O(n)
@@ -90,3 +91,42 @@
 
  console.log(buildGraph(edges));
  console.log(undirectedPath(edges, 'j', 'm')); // true
+
+
+
+
+ 
+
+ /** 
+  * APPROACH 2: 
+  * DFS recursion to cover the recusion senario and time and space complexity doesnt change 
+  * */
+ const undirectionalPathDfs = (edges, sourceNode, targetNode) => {
+    const graph = buildGraph(edges);  /** making use of previous buildGraph helper */
+    const visited = new Set();
+    return dfsRecursion(graph, sourceNode, targetNode, visited);
+ }
+
+ const dfsRecursion = (graph, sourceNode, targetNode, visited) => {
+    /** verify to avoid processing visited node, if not visted before mark it visted and process */
+    if(visited.has(sourceNode)) return false;
+    visited.add(sourceNode);
+
+    /** if we found target then just return */
+    if(sourceNode === targetNode) return true;
+    
+    const children = graph[sourceNode];
+    for(let child of children){
+        /**  
+         * we cannt just return dfsRecursion(.....) as it will stop for when one of the complete
+         * edge is finished processing. Also we only want to end it if we find the sourceNode === targetNode
+         * otherwise we ignore if it's not a match until all done.
+        */
+        const result = dfsRecursion(graph, child, targetNode, visited);
+        if(result){
+            return result;
+        }
+    }
+ }
+
+ console.log(undirectionalPathDfs(edges, 'j', 'm')); // true

@@ -37,4 +37,13 @@ const dfs = (rootNode, graph) => {
     }
 }
 
+const dfsRecurrsion = (rootNode, graph) => {
+    console.log(rootNode);
+    for(let child of graph[rootNode]){
+        dfsRecurrsion(child, graph)
+    }
+}
+
 console.log(dfs('a', graph));
+console.log('----- recursion ------')
+console.log(dfsRecurrsion('a', graph));

@@ -14,6 +14,7 @@ const largestComponent = (graph) => {
     const visted = new Set();
     /** hence we need max node with in a component */
     let maxCompoentCount = 0;
+    /** IMPORTANT: as this will help hopping between diffrent component/island which are not connected */
     for(let node in graph){
         let count = 0; 
         let currentComponentCount = dfs(node, graph, visted, count);

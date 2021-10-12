@@ -48,9 +48,10 @@
             queue.push([child, childEdgeLength]);
          }
      }
+
+     /** if target node is not found */
+     return -1;
  }
- 
- 
  
  
  const buildGraph = (edges, graph={}) => {
@@ -68,8 +69,10 @@
     return graph;
  }
 
+ console.log('******* example 1 ************');
  console.log(buildGraph(edges));
  console.log(shortestPathBfs(edges, 'w', 'z')); // 2
+ console.log(shortestPathBfs(edges, 'w', 'a')); // -1 ( when not found)
 
  const edgesTwo = [
     ['i', 'j'],
@@ -79,6 +82,7 @@
     ['j', 'l']
  ];
 
+ console.log('******* example 2 ************');
  console.log(shortestPathBfs(edgesTwo, 'j', 'l')); // 1
  console.log(shortestPathBfs(edgesTwo, 'i', 'l')); // 2
  console.log(shortestPathBfs(edgesTwo, 'i', 'm')); // 2

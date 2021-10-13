@@ -19,17 +19,25 @@
   */
  const positionQuery = (array, query_values, query_num) => {
      const positions = [];
+     /** hold count:position as key/value pair so we can look up quick */
      const countPoisitionMap = {};
 
+     /** build map with count:position  */
      let count = 0;
      for(let i=0; i<array.length; i++){
         const num = array[i];
         if(num === query_num){
             count++;
-            countPoisitionMap[count] = i + 1;
+            // +1 becasue we are dealing with array index 0
+            countPoisitionMap[count] = i + 1; 
         }
      }
 
+     /** 
+      * check query value for count'th value, find respective position from map & push 
+      * to array. If count'th key is not found in the map then it must be out of bound
+      * or we dont have array with those man query_number occurence so push -1
+      * */
      for(let count of query_values){
         if(!countPoisitionMap[count]) positions.push(-1);
         if(countPoisitionMap[count]) positions.push(countPoisitionMap[count])

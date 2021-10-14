@@ -8,6 +8,10 @@
  * Use:
  * We will use DFS as we can go as deep as we can with in a island and also problem is
  * not about SHORTEST path. 
+ * 
+ * LEET CODE QUESTIONS:
+ * https://leetcode.com/problems/number-of-islands/submissions/
+ * https://leetcode.com/problems/number-of-provinces/solution/ fails when input is [[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]] why ?
  */
 
  /** given m*n grid of water/land */

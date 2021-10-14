@@ -15,5 +15,16 @@ const graph = (edges, graph={}) => {
     return graph;
 }
 
+const buildEmptyGraph = (size, graph={}) => {
+    for(let i=0; i<size; i++){
+        graph[i] = [];
+    }
+    
+    return graph;
+}
 
-console.log(graph(edges));
+
+
+
+console.log(graph([[2,3],[1,2],[1,3]], buildEmptyGraph(4)))
+//console.log(graph(edges));

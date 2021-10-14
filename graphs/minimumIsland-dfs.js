@@ -1,4 +1,9 @@
-/** given two dimentional array return the minimum size of an island. Given grid of land and water with m*n matrix */
+/** 
+* given two dimentional array return the minimum size of an island. Given grid of land and water with m*n matrix 
+* 
+* LEET CODE QUESTION:
+* https://leetcode.com/problems/max-area-of-island/submissions/ ( instead of Math.min we looks for Math.max )
+*/
 
 
  /** given m*n grid of water/land */

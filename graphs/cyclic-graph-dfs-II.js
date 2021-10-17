@@ -17,9 +17,9 @@
  */
 
 const code = {
-	'NOT_VISITED': 0,
-	'PROCESSING': 1,
-	'VSITED_AND_PROCESSED':2
+	'NOT_VISITED': 0, /** not visited or processing in the stack */
+	'PROCESSING': 1, /** visited but still processing ( in stack ) */
+	'VSITED_AND_PROCESSED':2 /** visited, processed and not in stack  */
 }
 
 /** 

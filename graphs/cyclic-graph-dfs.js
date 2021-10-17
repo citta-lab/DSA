@@ -10,6 +10,11 @@
  * Example:
  * edges = [ [ 1, 3 ], [ 2, 3, 4 ], [ 0 ], [], [ 2, 5 ], [] ]
  * cylic as it forms 0->1->2->0 , 1->2->0->1 etc cycle 
+ * 
+ * NOTE: 
+ * Slightly improved solution 
+ * https://github.com/citta-lab/DSA/blob/b4ce1b08c3eb4bcdc189b3efa8f7badbdf224ccc/graphs/cyclic-graph-dfs-II.js
+ * 
  */
 
  /** O(n + e) time where n = nodes and e is edges. O(2n) => O(n) time for stack/visited/inStack */

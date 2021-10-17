@@ -10,6 +10,10 @@
  * Example:
  * edges = [ [ 1, 3 ], [ 2, 3, 4 ], [ 0 ], [], [ 2, 5 ], [] ]
  * cylic as it forms 0->1->2->0 , 1->2->0->1 etc cycle 
+ * 
+ * NOTE:
+ * Using two arrays to keep track of visited and inStack nodes while processing is done here
+ * https://github.com/citta-lab/DSA/blob/b4ce1b08c3eb4bcdc189b3efa8f7badbdf224ccc/graphs/cyclic-graph-dfs.js
  */
 
 const code = {

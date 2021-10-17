@@ -27,4 +27,4 @@ const buildEmptyGraph = (size, graph={}) => {
 
 
 console.log(graph([[2,3],[1,2],[1,3]], buildEmptyGraph(4)))
-//console.log(graph(edges));
+console.log(graph(edges));

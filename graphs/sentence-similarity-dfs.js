@@ -17,49 +17,64 @@
  * @return {boolean}
  */
 var areSentencesSimilar = function(sentence1, sentence2, similarPairs) {
+    
     if(sentence1.length != sentence2.length) return false;
     
-   let pairs = {}
-   for(let pair of similarPairs){
-       let [ first, second ] = pair;
-       if(!pairs[first]) pairs[first] = [];
-       if(!pairs[second]) pairs[second] = [];
+    const graph = buildGraph(similarPairs);
+    const visited = new Set();
+
+   for(let i=0; i < sentence1.length; i++){
        
-       pairs[first].push(second);
-       pairs[second].push(first);
+       let srcNode = sentence1[i];
+       let targetNode = sentence2[i];
+
+       if(srcNode === targetNode) continue;
+
+       if(!graph[srcNode]) return false;
+       if(!graph[targetNode]) return false;
+
+        const result = dfs(srcNode, targetNode, graph, visited);
+        if(!result) return false;
    }
-    
-    
-   for(let i=0 ; i < sentence1.length; i++){
-       const wordOne = sentence1[i];
-       const wordTwo = sentence2[i];
-       
-       /** if word in sentence one and two are equal then no need to look in Set */
-       if(wordOne === wordTwo){
-           continue;
-       }
-       
-       /** boundry condition to make sure we have word of sentence in the Set, otherwise no point in looking so return false*/
-       if(!pairs[wordOne]) return false;
-       if(!pairs[wordTwo]) return false;
-       
-       /** set key values can have more than one element i.e array of words */
-       let resultOne = findMatch(wordOne, pairs[wordTwo]);
-       let resultTwo = findMatch(wordTwo, pairs[wordOne]);
-       
-       /** if we don't find matching word then we must have failed */
-       if( resultOne === false || resultTwo === false ) return false
-       
-   }
-       
-   return true
+
+    return true;
+
 };
+
+
+const buildGraph = (edges, graph={}) => {
+    for(let edge of edges){
+        const [ node1, node2] = edge;
     
-    
-/** Set keys can have array of elements so we need to check all of them before making decision */    
-const findMatch = (matchWord, array) => {
-    return array.includes(matchWord); 
+        if(!graph[node1]) graph[node1] = [];
+        if(!graph[node2]) graph[node2] = [];
+
+        graph[node1].push(node2);
+        graph[node2].push(node1);
+    }
+
+    //console.log(graph)
+    return graph;
 }
+
+
+const dfs = (src, target, graph, visited) => {
+    
+    if(graph[src].includes(target)) return true
+    
+    if(visited.has(src)) return false;
+    visited.add(src);
+
+    for(let word of graph[src]){
+        /** not clear why we need to check this if we have already visited and return true :/ */
+         if(!visited.has(src) && dfs(word, target, graph, visited)) return true
+    }
+
+    return false;
+}
+    
+    
+
 
 let sentence1 = ["great","acting","skills"];
 let sentence2 = ["fine","drama","talent"];

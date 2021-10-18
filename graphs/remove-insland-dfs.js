@@ -12,6 +12,9 @@
  * 
  * Question Link:
  * https://www.algoexpert.io/questions/Remove%20Islands
+ * 
+ * In Modifed appraoch we will use SET for tracking visited instead of rerlaying on
+ * 2's value. Which adds the space complexity but it is much easy to go throuh
  */
 
  /**
@@ -142,3 +145,103 @@
 
   matrix = [ [ 0, 1, 0 ], [ 0, 1, 0 ], [ 1, 0, 0 ] ]
   console.log(removeIslands(matrix)) // it will be same as input
+
+
+
+
+
+
+
+
+
+
+  /** OR have visited SET to track the visited  */
+  console.log("----------- ( MODIFIED APPRAOCH ) WITH SET for tracking VISITED ---------")
+
+  function removeIslandsII(matrix) {
+    // Write your code here.
+      const visited = new Set();
+      for(let i=0; i< matrix.length; i++){
+          for(let j=0; j<matrix[0].length; j++){
+                  const rowBoundry = i === 0 || i === matrix.length-1;
+                  const colBoundry = j === 0 || j === matrix[0].length-1;
+                if(rowBoundry || colBoundry){
+                      dfsII(i, j, matrix, visited);
+                  }
+          }
+      }
+      
+          for(let i=0; i< matrix.length; i++){
+              for(let j=0; j<matrix[0].length; j++){
+                   const node = matrix[i][j];
+                   if( node === 2){
+                       matrix[i][j] = 1;
+                   }else if( node === 1){
+                       matrix[i][j] = 0;
+                   }
+              }
+          }
+      
+      console.log(matrix)
+      
+    return matrix;
+  }
+  
+  const dfsII = (row, col, matrix, visited) => {
+      const rowInBound = row >= 0 && row < matrix.length; 
+      const colInBound = col >= 0 && col < matrix[0].length;
+      if(!rowInBound || !colInBound) return 
+      
+      const hash = `${row}-${col}`;
+      if(visited.has(hash)) return 
+      visited.add(hash);
+      
+      const node = matrix[row][col];
+      if( node === 0) return 
+      
+      if(node === 1) matrix[row][col] = 2;
+      
+      dfsII(row+1, col, matrix, visited);
+      dfsII(row-1, col, matrix, visited);
+      dfsII(row, col+1, matrix, visited);
+      dfsII(row, col-1, matrix, visited);
+      
+      return 
+  }
+
+ matrix = [
+    [ 1, 0, 0, 0, 0, 0 ],
+    [ 0, 1, 0, 1, 1, 1 ],
+    [ 0, 0, 1, 0, 1, 0 ],
+    [ 1, 1, 0, 0, 1, 0 ],
+    [ 1, 0, 1, 1, 0, 0 ],
+    [ 1, 0, 0, 0, 0, 1 ]
+  ]
+  console.log(removeIslandsII(matrix)); // updated to example result from top
+
+
+  matrix = [
+    [ 1, 0, 1, 0, 1 ],
+    [ 0, 0, 1, 0, 0 ],
+    [ 1, 1, 0, 1, 1 ],
+    [ 0, 0, 1, 0, 0 ],
+    [ 1, 0, 1, 0, 1 ]
+  ];
+  console.log(removeIslandsII(matrix)); // remains the same
+
+
+  matrix = [
+    [ 0, 0, 0, 0, 0 ],
+    [ 0, 0, 1, 0, 0 ],
+    [ 0, 1, 1, 1, 0 ],
+    [ 0, 0, 1, 0, 0 ],
+    [ 0, 0, 0, 0, 0 ]
+  ]
+  console.log(removeIslandsII(matrix)); // will have all zero's
+
+  matrix = [ [ 0, 1, 0 ], [ 0, 1, 0 ], [ 1, 0, 0 ] ]
+  console.log(removeIslandsII(matrix)) // it will be same as input
+
+
+  
+  

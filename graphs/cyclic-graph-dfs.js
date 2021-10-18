@@ -15,6 +15,8 @@
  * Slightly improved solution 
  * https://github.com/citta-lab/DSA/blob/b4ce1b08c3eb4bcdc189b3efa8f7badbdf224ccc/graphs/cyclic-graph-dfs-II.js
  * 
+ * In Modifed appraoch we will use SET for tracking visited and inStack instead of Array. 
+ * we can reduce the time complexity but it wouldn't change overall space and time complexity here.
  */
 
  /** O(n + e) time where n = nodes and e is edges. O(2n) => O(n) time for stack/visited/inStack */
@@ -76,3 +78,55 @@ console.log(cycleInGraph(edges)); // true
 
 edges = [  [ 1 ], [ 2, 3, 4, 5, 6, 7 ], [], [ 2, 7 ], [ 5 ], [], [ 4 ], [ 0 ] ]
 console.log(cycleInGraph(edges)); // true
+
+
+
+
+
+
+
+
+
+
+/** OR use SET instead of ARRAY */
+console.log("---------- ( MODIFIED APPRAOCH ) USING SET--------");
+
+function cycleInGraphII(edges) {
+	const visited = new Set();
+	const currentStack = new Set();
+	
+	for(let i =0; i<edges.length; i++){
+		let result = dfsII(i, edges, visited, currentStack);
+		if(result) return true;
+	}
+	
+  return false;
+}
+
+
+const dfsII = (node, edges, visited, stack) => {
+	if(visited.has(node) && stack.has(node)) return true
+		visited.add(node)
+		stack.add(node);
+	
+	let children = edges[node];
+	for(let child of children){
+		let result = dfs(child, edges, visited, stack);
+		if(result) return true
+	}
+	
+	stack.delete(node)
+	return false;
+}
+edges = [ [ 1, 3 ], [ 2, 3, 4 ], [ 0 ], [], [ 2, 5 ], [] ]
+console.log(cycleInGraphII(edges)); // true
+
+
+edges = [ [ 1 ], [ 2, 3, 4, 5, 6, 7 ], [], [ 2, 7 ], [ 5 ], [], [ 4 ], [] ]
+console.log(cycleInGraphII(edges)); // false
+
+edges = [ [ [ 0 ], [ 1 ] ] ]
+console.log(cycleInGraphII(edges)); // true
+
+edges = [  [ 1 ], [ 2, 3, 4, 5, 6, 7 ], [], [ 2, 7 ], [ 5 ], [], [ 4 ], [ 0 ] ]
+console.log(cycleInGraphII(edges)); // true

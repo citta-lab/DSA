@@ -36,6 +36,7 @@ function cycleInGraph(edges) {
 	const stack = new Array(edges.length).fill(code['NOT_VISITED']);
 	
 	for(let i=0; i<edges.length; i++){
+		if(stack[i] !== code['NOT_VISITED']) continue /** optional: skipping if it's visited */
 		/** if we find its cyclic then return and exit */
 		const result = dfs(i, edges, stack);
 		if(result) return true;

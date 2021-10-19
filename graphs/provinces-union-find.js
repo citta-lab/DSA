@@ -64,3 +64,4 @@ console.log(findCircleNum(grid)); // 1 ( if we get 4 then wrong )
 console.log(findCircleNum([[1,1,0],[1,1,0],[0,0,1]])); // 2
 console.log(findCircleNum([[1,0,0],[0,1,0],[0,0,1]])); // 3
 console.log(findCircleNum([[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]])); // 1 
+console.log(findCircleNum([[1,1,1],[1,1,1],[1,1,1]])); // 1

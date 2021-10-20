@@ -1,3 +1,9 @@
+
+/** Given an array find the sub array which will form maxium sum. Example if the given array is like 
+ * [ 2,3,-9, 4,5,8,-3] then the subarray which can make the maxium sum would be [ 4, 5, 8] = 17.
+ * 
+ * Always start with brute force approach 
+ */
 //O(n^2) time 
 function maxSubArraySum(array) {	
 	let maxSum = -Infinity;

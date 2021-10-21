@@ -49,6 +49,7 @@ const bubbleSortII = (array) => {
 console.log(bubbleSortII([4,8,5,3,1])); // [ 1, 3, 4, 5, 8 ]
 console.log(bubbleSortII([1,2,3])); // [ 1, 2, 3 ]
 console.log(bubbleSortII([111, 110, 112, 9, -1, 345, -12])); // [-12,  -1,   9, 110, 111, 112, 345]
+console.log(bubbleSortII([4,-1,9,2,7,0])); // [ -1, 0, 2, 4, 7, 9 ]
 
 /** ( OPTIMIZED APPROACH II ) By reducing the array size after every loop  */
 
@@ -82,3 +83,4 @@ console.log(bubbleSortIII([4,8,5,3,1])); // [ 1, 3, 4, 5, 8 ]
 console.log(bubbleSortIII([1,2,3])); // [ 1, 2, 3 ]
 console.log(bubbleSortIII([111, 110, 112, 9, -1, 345, -12])); // [-12,  -1,   9, 110, 111, 112, 345]
 console.log(bubbleSortIII([-8, -9, 9, 8, 0, -1])); // [ -9, -8, -1, 0, 8, 9 ]
+console.log(bubbleSortIII([4,-1,9,2,7,0])); // [ -1, 0, 2, 4, 7, 9 ]

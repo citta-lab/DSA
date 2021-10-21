@@ -31,8 +31,8 @@ var findCircleNum = function(isConnected) {
     let components = isConnected.length;
     
     for(let i=0; i < isConnected.length; i++){
-        for(let j=0; j < isConnected.length; j++){
-            if(isConnected[i][j] === 1){
+        for(let j=0; j < isConnected[0].length; j++){
+            if(isConnected[i][j] === 1 && i !== j){
                 let p1 = findParent(i, parent);
                 let p2 = findParent(j, parent);
                 

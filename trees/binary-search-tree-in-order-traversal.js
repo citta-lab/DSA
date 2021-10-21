@@ -38,4 +38,34 @@ console.log(inorderTraversal([1,null,2,3]));// [1,2,3]
 console.log(inorderTraversal([]));// []
 console.log(inorderTraversal([1]));// [1]
 
+/** O(n) time and space in iteravtive way */
+var inorderTraversalII = function(root) {
+  // left, root, middle
+    let arr=[];
+    let val = preOrder(root, arr);
+    return arr
+};
 
+const preOrder = (root, arr) => {
+    let stack = [];
+    while(true){
+        
+     while(root) {
+        stack.push(root);
+        root = root.left;
+    }
+    
+    if(stack.length <= 0) return arr;
+    
+    if(stack.length >0){
+        root = stack.pop();
+        arr.push(root.val);
+        root = root.right;
+    }   
+        
+    }
+}
+
+console.log(inorderTraversalII([1,null,2,3]));// [1,2,3]
+console.log(inorderTraversalII([]));// []
+console.log(inorderTraversalII([1]));// [1]

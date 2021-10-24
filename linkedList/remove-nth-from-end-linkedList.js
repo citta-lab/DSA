@@ -12,11 +12,18 @@
  * }
  */
 
+// GIVEN 
 function ListNode(val, next) {
     this.val = (val===undefined ? 0 : val)
     this.next = (next===undefined ? null : next)
 }
- const { buildLinkedList } = require('./LinkedList');
+
+// GIVEN: used for building linked list
+const { buildLinkedList } = require('./LinkedList');
+
+
+
+
 
  /** O(n) time and O(1) space */
 var removeNthFromEnd = function(head, n) {

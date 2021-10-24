@@ -40,7 +40,6 @@ const manualLinkedListBuilder = () => {
 
 const buildLinkedList = (values=[]) => {
     if(values.length < 1) return null;
-    if(values.length < 2) return newNode(values[1]);
 
     let head = newNode(values[0]); /** need to start from 1st element */
     let newHead = head; /** need to catch hold of original head */

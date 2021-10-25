@@ -72,16 +72,71 @@ const mergeTwo = (l1, l2) => {
 };
 
 
-let nodeA = buildLinkedList([1]);
-let nodeB = buildLinkedList([4]);
-let nodeC = buildLinkedList([3,4]);
-let nodeD = buildLinkedList([2]);
+// let nodeA = buildLinkedList([1]);
+// let nodeB = buildLinkedList([4]);
+// let nodeC = buildLinkedList([3,4]);
+// let nodeD = buildLinkedList([2]);
 
-console.log(mergeKLists([nodeA, nodeB, nodeC, nodeD])); // [1,2,3,4,4]
-console.log(mergeKLists([])); // [ ]
-console.log(mergeKLists([[]])); // [ ]
+// console.log(mergeKLists([nodeA, nodeB, nodeC, nodeD])); // [1,2,3,4,4]
+// console.log(mergeKLists([])); // [ ]
+// console.log(mergeKLists([[]])); // [ ]
+
+// nodeA = buildLinkedList([111,222,333]);
+// nodeB = buildLinkedList([1,100]);
+// console.log(mergeKLists([nodeA, nodeB])); // [1,100,111,222,333]
+
+
+/** APPROACH II : DIVIDE and CONQUER
+ * Same technique as above instead of merging and using the head for all rest of the lists merge. we 
+ * split two lists at a time and merge them, repeat the process until end.
+ * 
+ * Refer : https://afteracademy.com/blog/merge-k-sorted-lists
+ */
+
+// O(N log k) where O(n) time for merging two lists of n nodes ( for both ) and log2K for merging splitting.
+// O(1) space
+var mergeKListsTwo = function(lists) {
+    
+    let size = lists.length;
+    
+    if(!size) return null
+    
+    /** interval is number of times we will do merge at each layer */
+    let interval = 1;
+    while(interval < size){
+        /** every interval we start with 0, so we can save the result in 0th index */
+        let index = 0;
+        /** need to make sure index and interval cal doesnt cross the boundry */
+        while(index + interval < size){
+            /** store the result in the i'th index, index 0 always gets the value every interval */
+            lists[index] = mergeTwo(lists[index], lists[index+interval]);
+            /** need to move the index to two position after every time index = 0 + 1 * 2 */
+            index = index + interval * 2;
+        }
+        
+        interval = interval * 2;
+    }
+    
+    return lists[0];
+    
+};
+
+ nodeA = buildLinkedList([1]);
+ nodeB = buildLinkedList([4]);
+ nodeC = buildLinkedList([3,4]);
+ nodeD = buildLinkedList([2]);
+
+console.log(mergeKListsTwo([nodeA, nodeB, nodeC, nodeD])); // [1,2,3,4,4]
+console.log(mergeKListsTwo([])); // [ ]
+console.log(mergeKListsTwo([[]])); // [ ]
 
 nodeA = buildLinkedList([111,222,333]);
 nodeB = buildLinkedList([1,100]);
-console.log(mergeKLists([nodeA, nodeB])); // [1,100,111,222,333]
+console.log(mergeKListsTwo([nodeA, nodeB])); // [1,100,111,222,333]
 
+nodeE = buildLinkedList([1]);
+nodeF = buildLinkedList([4]);
+nodeG = buildLinkedList([3,4]);
+nodeH = buildLinkedList([2]);
+
+console.log(mergeKListsTwo([nodeA, nodeB, nodeC, nodeD, nodeE, nodeF, nodeG, nodeH]));

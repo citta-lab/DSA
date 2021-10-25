@@ -20,7 +20,8 @@ var rotateRight = function(head, k) {
     let root = head;
     let oldTail = head;
   
-    /** find size while iterating for finding end. IMP: hence base condition is passed we are alreaedy at head so need to start counting from 1 rather than 0 */
+    /** find size while iterating for finding end. 
+     * IMP: hence base condition is passed we are alreaedy at head so need to start counting from 1 rather than 0 */
     let size = 1;
     while(oldTail && oldTail.next){
         size++

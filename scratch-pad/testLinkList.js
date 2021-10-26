@@ -1,29 +1,36 @@
-
+/** Similar to LinkedList class but instead of using data as property we will use val */
 
 class Node {
     constructor(){
-        this.data = 0;
+        this.val = 0;
         this.next = null;
     }
 }
 
-
-const newNode = (data) => {
+let newNode = (val) => {
     let node = new Node();
-    node.data = data;
+    node.val = val;
 
     return node;
 }
 
-const build = (num) => {
-    let node = newNode(1);
-    let head = node;
-    for(let i=2; i<= num; i++){
-        node.next = newNode(i);
-        node = node.next;
+const buildLinkedList = (values=[]) => {
+
+    if(values.length < 1) return null;
+
+    let head = newNode(values[0]);
+    let newHead = head;
+
+    for(let i=1; i<values.length; i++){
+        let val = values[i];
+        let node = newNode(val);
+        head.next = node;
+        head = head.next;
     }
 
-    return head;
+    return newHead;
 }
 
-console.log(build(4))
+module.exports = {
+    buildLinkedList
+}

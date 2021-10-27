@@ -4,6 +4,7 @@
 
 const { buildLinkedList } = require('./LinkedListII');
 /** Appraoch I: O(n) time and O(n) space where n stacks are used by recursions */
+// using iteration we can do O(1) space check here https://leetcode.com/problems/swap-nodes-in-pairs/solution/
 var swapPairs = function(head) {
     
     /** base condition: when head reaches the tail then it will be null which is the breaking point of swapPairs */

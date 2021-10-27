@@ -10,6 +10,8 @@
  * @param {number} k
  * @return {ListNode}
  */
+
+// read rotateRightII for easier understnading without oldTail/newTail headache
 var rotateRight = function(head, k) {
    
     /** base condition */
@@ -48,3 +50,43 @@ var rotateRight = function(head, k) {
       
     return newHead;
   };
+
+
+
+
+/** reworded the same for better understanding */
+var rotateRightII = function(head, k) {
+    
+    if(!head) return null;
+    if(!head.next) return head;
+    
+    let root = head;
+    let size = 1;
+    
+    /** fast forward until we reach the end ( tail ) of the current linked list and also find the size */
+    while(root && root.next) {
+     size ++;
+     root = root.next;   
+    }
+    
+    /** make it a circle so we can traverse withoutout headache */
+    root.next = head;
+    
+    /** lets have a pointer,  starts at tail ( root points to tail now ) */
+    let slow = root;
+
+    /** helps when roation is more than list size, otherwise size-k is enough */
+    let calSize = size - ( k % size )
+    
+    /** move pointers together untuil calSize becomes zero */
+    while( calSize > 0){
+        slow = slow.next;
+        calSize --
+    }
+    
+    let newHead = slow.next;
+    slow.next = null;
+    
+    return newHead
+    
+};

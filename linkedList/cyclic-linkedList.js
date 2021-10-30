@@ -40,3 +40,21 @@ var hasCycle = function(head) {
     
     return false
 };
+
+
+/** Same as above but instead of pointing `fast = head.next` at first we can start at head but then 
+ * we need to check `slow === fast` after we increment becasue slow,fast will be same at first.
+ */
+
+var hasCycle = function(head) {
+    let slow = head;
+    let fast = head;
+    
+    while(fast && fast.next){
+        fast = fast.next.next;
+        slow = slow.next;
+        if(fast === slow) return true;
+    }
+    
+    return false;
+};

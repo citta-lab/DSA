@@ -2,6 +2,10 @@
  * Given linkedList remove n'th position node from tail. 
  * head = 1->2->3->4->5->6->7->8 if n = 3 then we need to move node 6.
  * answer: 1->2->3->4->5->7->8
+ * 
+ * IMPORTANT:
+ * If the n position is equal to the size of linkedList then first element needs to be removed.
+ * Then our n+1 logic fails. Last example covers that scenario. 
  */
 
  /**
@@ -69,14 +73,64 @@ var removeNthFromEnd = function(head, n) {
 };
 
 
-let head = buildLinkedList([1,2,3,4,5,6,7]);
-console.log(removeNthFromEnd(head, 6)); // 2 should be removed
+// let head = buildLinkedList([1,2,3,4,5,6,7]);
+// console.log(removeNthFromEnd(head, 6)); // 2 should be removed
 
-head = buildLinkedList([1,2]);
-console.log(removeNthFromEnd(head, 1)); // 2 is removed
+// head = buildLinkedList([1,2]);
+// console.log(removeNthFromEnd(head, 1)); // 2 is removed
 
-head = buildLinkedList([1]);
-console.log(removeNthFromEnd(head, 1)); // null 
+// head = buildLinkedList([1]);
+// console.log(removeNthFromEnd(head, 1)); // null 
+
+// head = buildLinkedList([1,2,3,4]);
+// console.log(removeNthFromEnd(head, 1)); // 4 should be removed
+
+
+
+
+/** Example to handle using k instead of k+1 when size and k are equal */
+function removeKthNodeFromEnd(head, k) {
+    // Write your code here.
+      let result = head;
+      let fast = head;
+      let fwd = k; 
+      
+      while(fwd > 0 && fast ){
+          fast = fast.next;
+          fwd --
+      }
+      
+  if(!fast){
+      /** 
+       * this does print from 1 to 9 by removing 0 
+       * but algo experts seems to not compare the 
+       * return */
+      let dummy = new ListNode(null);
+      dummy.next = head.next;
+      return dummy.next;
+      
+      /** algo experts updates the head itself */
+      // head.value = head.next.value;
+      // head.next = head.next.next;
+      // return
+  }
+      
+      let slow = head;
+      /** 
+       * moving fast a step furhter so we can stop slow pointer 
+       * a step behind where we need to remove the node. similar to
+       * k+1 strategy  */
+      fast = fast.next;
+      while(fast){
+          slow = slow.next;
+          fast = fast.next;
+      }
+      
+      let nextPosition = slow.next.next;
+      slow.next = nextPosition;
+      
+      return result;
+  }
 
 head = buildLinkedList([1,2,3,4]);
-console.log(removeNthFromEnd(head, 1)); // 4 should be removed
+console.log(removeKthNodeFromEnd(head, 4)); // 2,3,4

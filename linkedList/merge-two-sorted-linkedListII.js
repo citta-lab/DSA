@@ -7,7 +7,7 @@
  * 
  * result : 1->1->2->3->4->5->6->7
  * 
- * Note: another solution with O(n) i.e using dummy linkedList is here 
+ * Note: another solution with O(1) i.e using dummy linkedList is here 
  * https://github.com/citta-lab/DSA/blob/c88146f392e56faa5cb0f6b90d41198da37dee9d/linkedList/merge-two-sorted-linkedList.js
  */
 

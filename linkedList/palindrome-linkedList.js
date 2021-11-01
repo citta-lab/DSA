@@ -38,6 +38,7 @@
         listTwo = listTwo.next;
     }
 
+    /** do this check only if needed */
     if(listOne || listTwo) return false;
 
     return true;
@@ -86,3 +87,6 @@
 
  node = buildLinkedList([1,2,1,4]);
  console.log(isPalindrome(node)); // false
+
+ node = buildLinkedList([1000, 1000, 1000, 1000, 1000]);
+ console.log(isPalindrome(node)); // true

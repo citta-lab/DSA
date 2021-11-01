@@ -1,3 +1,13 @@
+ /** 
+  * Shift  Linked List or Rotate Linked list Right by position ( from tail )
+  * 
+  * Given linked list such that rotate K positions right. Example: if k = 2 then the linked list 
+  * 1->2->3->4->5->6 should convert into 5->6->1->2->3->4 where 5,6 are two positions from the 
+  * tail moved to infront of the list
+  * 
+  * */
+ 
+ 
  /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -5,11 +15,9 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
-/**
- * @param {ListNode} head
- * @param {number} k
- * @return {ListNode}
- */
+
+// GIVEJN TO build data
+const { buildLinkedList } = require('./LinkedListII');
 
 // read rotateRightII for easier understnading without oldTail/newTail headache
 var rotateRight = function(head, k) {
@@ -90,3 +98,10 @@ var rotateRightII = function(head, k) {
     return newHead
     
 };
+
+
+let node = buildLinkedList([1,2,3,4,5]);
+console.log(rotateRight(node, 2)); // 4,5,1,2,3
+
+node = buildLinkedList([1,2]);
+console.log(rotateRight(node, 5)); // 2,1

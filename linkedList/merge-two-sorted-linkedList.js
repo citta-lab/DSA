@@ -72,3 +72,8 @@ console.log(mergeTwoLists(nodeOne, nodeTwo)); // 0,0
 nodeOne = buildLinkedList([3]);
 nodeTwo = buildLinkedList([0,1,2,4,5]);
 console.log(mergeTwoLists(nodeOne, nodeTwo)); // 0,1,2,3,4,5
+
+nodeOne = buildLinkedList([2,6,7,8]);
+nodeTwo = buildLinkedList([1,3,4,5,9,10]);
+let test = mergeTwoLists(nodeOne, nodeTwo)
+console.log(test.next.next.next); // 0,1,2,3,4,5

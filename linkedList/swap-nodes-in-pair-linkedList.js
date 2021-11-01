@@ -1,5 +1,8 @@
 /** swap pairs of node in linked list and return a swapped linkedList 
  * example: 1->2->3->4->null should be 2->1->4->3
+ * 
+ * HINT:
+ * Try to solve with O(1) space in second attempt. Second solution is using O(1) space
 */
 
 const { buildLinkedList } = require('./LinkedListII');
@@ -30,3 +33,46 @@ node = buildLinkedList([1]);
 console.log(swapPairs(node)); // [1]
 
 
+/** GIVEN: class */
+class Node {
+    constructor(){
+        this.val = 0;
+        this.next = null;
+    }
+}
+
+/** O(n) and O(1) */
+/** 1->2->3->4->5->6 */
+const swapPairsIterative = (head) => {
+
+    
+
+    let dummy = new Node(null);
+    dummy.next = head;
+
+    // prev->1
+    let prev = dummy;
+
+    while(prev.next && prev.next.next){
+        let first = prev.next; // 1 
+        let second = prev.next.next; // 2
+
+        console.log(first);
+        console.log(second)
+
+        first.next = second.next; // 1.next -> 3
+        second.next = first; // 2.next -> 1
+        prev.next = second; // prev->2 ( prev changed from 1 to 2)
+
+        prev = first;
+    }
+
+    return dummy.next
+}
+
+
+node = buildLinkedList([1,2,3,4,5]);
+console.log(swapPairsIterative(node)); // [2,1,4,3]
+
+// node = buildLinkedList([1]);
+// console.log(swapPairsIterative(node)); // [1]

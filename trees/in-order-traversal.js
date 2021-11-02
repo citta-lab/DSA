@@ -1,35 +1,37 @@
-const { Node, ExampleOne, ExampleTwo } = require('./tree-node-class');
+const { buildTree } = require('./BinaryTree');
 
-/** LEFT --> ROOT --> RIGHT */
-const inOrderRecursive = (rootNode) => {
-    if(rootNode.left) inOrderRecursive(rootNode.left);
-    console.log(rootNode.data);
-    if(rootNode.right) inOrderRecursive(rootNode.right);
+
+let result = [];
+const inOrder = (root) => {
+    if(root.left) inOrder(root.left);
+    result.push(root.val)
+    if(root.right) inOrder(root.right);
 }
 
-console.log(" ----- example one -----")
-console.log(inOrderRecursive(ExampleOne)); // 4,2,5,1,6,3,7
 
-console.log(" ----- example two -----")
-console.log(inOrderRecursive(ExampleTwo));
+const inOrderIterative = (root) => {
+    
+    let result = [];
+    let stack = [];
 
-
-const inOrderIterative = (rootNode) => {
-    const stack = [];
     while(true){
-
-        while(rootNode){
-            stack.push(rootNode);
-            rootNode = rootNode.left;
+        while(root){
+            stack.push(root);
+            root = root.left;
         }
 
-        if(stack.length <= 0) return;
-
-        rootNode = stack.pop();  
-        console.log(rootNode.data);  
-        rootNode = rootNode.right;
+        if(stack.length <= 0) return result;
+    
+        root = stack.pop();
+        result.push(root.val);
+    
+        root = root.right;
     }
 }
 
-console.log(" ----- example one -----")
-console.log(inOrderIterative(ExampleOne)); // 4,2,5,1,6,3,7
+
+let root = buildTree([1,2,3,4,5,6,7]);
+inOrder(root);
+console.log(result); // 4,2,5,1,6,3, 7
+
+console.log(inOrderIterative(root)); // 4,2,5,1,6,3, 7

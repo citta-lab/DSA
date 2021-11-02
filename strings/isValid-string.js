@@ -17,6 +17,13 @@ Output: false
 Example: 
 Input: s = "()[]{}"
 Output: true
+
+Hint:
+How about we use hashMap to keep track of closing braces like `]`,`}`,`)`. 
+Use stack to push all open braces like `(`,`[`,`{`. 
+
+Check if you have elements in hash, if not then add to stack this way we only have open
+braces in stack. If we find match in hash then pop from stack to compare 
 */
 
 /** O(n) time and O(n) space */

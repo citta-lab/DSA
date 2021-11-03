@@ -4,6 +4,8 @@
  * 
  * Example: 1->2->3->2->5 then 
  * result 1->3->5 as 2 is duplicate and botj occurance of 2 needs to be deleted
+ * 
+ * LeetCode: https://leetcode.com/problems/remove-duplicates-from-an-unsorted-linked-list/
  */
 
 /** GIVEN for data */

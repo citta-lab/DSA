@@ -29,13 +29,14 @@ var deleteDuplicates = function(head) {
             
             /** at this we by passed all nodes with same value, so we can point the prev pointer to next node */
             prev.next = root.next;
+            /** irrespective of match/no-match we need to move the pointers */
+            root = root.next;
         }else{
             /** if no match we need to move the prev pointer so we can use it when duplicates are found */
             prev = prev.next;
+            /** irrespective of match/no-match we need to move the pointers */
+            root = root.next;
         }
-        
-        /** irrespective of match/no-match we need to move the pointers */
-        root = root.next;
     }
    
     return dummy.next;

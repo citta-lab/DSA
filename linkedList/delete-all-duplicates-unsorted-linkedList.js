@@ -103,3 +103,7 @@ console.log(deleteDuplicatesUnsortedModified(head)); // []
 head = buildLinkedList([1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3]);
 console.log(deleteDuplicatesUnsorted(head)); // [1,3]
 console.log(deleteDuplicatesUnsortedModified(head)); // [1,3]
+
+head = buildLinkedList([1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3]);
+console.log(deleteDuplicatesUnsorted(head)); // [1,3]
+console.log(deleteDuplicatesUnsortedModified(head)); // [1,3]

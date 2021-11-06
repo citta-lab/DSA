@@ -30,8 +30,8 @@ const buildTreeHelper = (array, root, position) => {
 }
 
 
-console.log(buildTree([1, 2, 3, 4, 5, 6]));
-console.log(buildTree([ 1, 2, 3, 4, 5, 6, 6, 6, 6 ]));
+// console.log(buildTree([1, 2, 3, 4, 5, 6]));
+// console.log(buildTree([ 1, 2, 3, 4, 5, 6, 6, 6, 6 ]));
 
 module.exports = {
     Node, 

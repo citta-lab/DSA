@@ -11,7 +11,7 @@ function Node(val, children) {
     this.children = children;
 };
 
-var preorder = function(root) {
+var inorder = function(root) {
     let result = [];
     recursive(root, result)
     return result;

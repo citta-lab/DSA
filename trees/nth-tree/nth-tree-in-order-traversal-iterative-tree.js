@@ -12,7 +12,7 @@ function Node(val, children) {
 };
 
 /** O(n) time and space */
-const preorder = (root) => {
+const inorder = (root) => {
     let stack = [];
     let result = [];
 

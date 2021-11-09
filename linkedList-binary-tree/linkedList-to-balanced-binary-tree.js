@@ -3,7 +3,7 @@
 
 /** 
  * O(Nlog N) time as N for linkedList and n/2 operations to find middle while making BST
- * O(log N) space from left/right BST parts
+ * O(log N) space from left/right BST parts 
  * */
 const sortedListToBST = (head) => {
     /** split the linkedList at middle so middle will be root of tree */

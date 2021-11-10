@@ -4,16 +4,14 @@
 
 
 
-// given 
+// Given Tree Node
 function TreeNode(val, left, right) {
     this.val = (val===undefined ? 0 : val)
     this.left = (left===undefined ? null : left)
     this.right = (right===undefined ? null : right)
 }
 
-/** ITERATIVE  */
 /** O(n) time and space */
-
 var flatten = function(root) {
     let current = root;
     while(current){

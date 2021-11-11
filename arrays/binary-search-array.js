@@ -38,6 +38,7 @@
     while(left <= right){
         
         //let mid = Math.floor(left+ (right - left / 2)); <-- if larger number
+        // https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
         let mid = Math.floor((left+right) / 2);
         
         if(nums[mid] === target) return mid;

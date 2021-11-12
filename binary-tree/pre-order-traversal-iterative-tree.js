@@ -1,5 +1,5 @@
 
-const { buildTree } = require('./BinaryTree');
+const { buildTree } = require('../trees/BinaryTree');
 
 /** 
  * O(N) time as we need to visit eachj node exactly once

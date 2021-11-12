@@ -8,7 +8,7 @@
  * https://leetcode.com/problems/binary-tree-level-order-traversal/
  * */
 
-const { buildTree } = require('./BinaryTree');
+const { buildTree } = require('../trees/BinaryTree');
 var levelOrder = function(root) {
 
     let queue = [];

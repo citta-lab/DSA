@@ -1,4 +1,4 @@
-const { Node, ExampleOne, ExampleTwo } = require('./tree-node-class');
+const { Node, ExampleOne, ExampleTwo } = require('./binary-tree-node-class');
 
 /** ROOT -> LEFT -> RIGHT */
 const preOrderRecursive = (root) => {

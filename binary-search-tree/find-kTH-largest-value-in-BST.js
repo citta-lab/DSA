@@ -6,7 +6,7 @@
  * Hint: Remember it is BST. So values are sorted and all we need to do is apply the correct traversal.
  */
 
-const { buildTree } = require('./BinaryTree');
+const { buildTree } = require('./helper/BinaryTree');
 
 const findKthLargestValue = (tree, k ) => {
 

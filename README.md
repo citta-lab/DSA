@@ -4,4 +4,4 @@ These curated problems are from my leet code, algo expert, freecodecamp practice
 making a note as i forget the nitty gritty details as days goes on. 
 
 ## Binary Tree 
-Here is the (binay tree problems)[https://leetcode.com/tag/binary-tree/] from leetcode. The repo here is seperated into binary-tree, binary-search-tree, nth-tree, graphs and linkedList-to-binary-tree to seperate the topics and focus on the common patterns. 
+Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from leetcode. The repo here is seperated into binary-tree, binary-search-tree, nth-tree, graphs and linkedList-to-binary-tree to seperate the topics and focus on the common patterns. 

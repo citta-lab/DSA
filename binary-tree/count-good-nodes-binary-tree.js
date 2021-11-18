@@ -63,6 +63,45 @@ var goodNodesIterative = function(root) {
     return count;
 };
 
+/** using dfs to build Map(root, parentMax) & then bfs to count */
+var goodNodesIterativeII = function(root) {
+    let parentMap = new Map();
+ 
+    let maxSoFar = root.val; 
+    dfs(root, root.val, parentMap, maxSoFar);
+    
+    let queue = [root];
+    let count = 0;
+    while(queue.length){
+     let node = queue.shift();
+     
+     if(node){
+         let nodeVal = node.val;
+         let nodeParentVal = parentMap.get(node);
+
+         if(nodeVal >= nodeParentVal) count++;
+
+         queue.push(node.left);
+         queue.push(node.right);
+     }
+    }
+    
+    return count;
+};
+
+const dfs = (root, parent, map, maxSoFar) => {
+    if(!root) return null;
+     /** 
+       needed if the tree is like 9->3->6 wiht just parent mapping 6
+       is valid but according to condition it is not, so keeping maxSoFar
+       will map 9 as 6 parent 
+       */
+    let maxParentValueSoFar = Math.max(parent, maxSoFar);
+    map.set(root, maxParentValueSoFar);
+    
+    if(root && root.left) dfs(root.left, root.val, map, maxParentValueSoFar);
+    if(root && root.right) dfs(root.right, root.val, map, maxParentValueSoFar);
+}
 
 /** (FAILS but good to know why): Iterative  */
 var goodNodesFails = function(root) {

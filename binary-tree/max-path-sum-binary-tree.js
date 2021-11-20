@@ -19,6 +19,10 @@
  * leetcode: https://leetcode.com/problems/binary-tree-maximum-path-sum/
  * algoexpert: https://www.algoexpert.io/questions/Max%20Path%20Sum%20In%20Binary%20Tree 
  * 
+ * great explanation : https://leetcode.com/problems/binary-tree-maximum-path-sum/discuss/603423/Python-Recursion-stack-thinking-process-diagram
+ * video explanation I: https://www.youtube.com/watch?v=Hr5cWUld4vU 
+ * video explanation II: https://www.youtube.com/watch?v=6cA_NDtpyz8  
+ * 
  * */
 
  const { buildTree } = require('./helper/BinaryTree');

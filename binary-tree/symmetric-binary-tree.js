@@ -4,6 +4,8 @@
  * 
  * Input: root = [1,2,2,3,4,4,3]
    Output: true
+
+   leetcode: 
  * 
  * */
 
@@ -47,9 +49,31 @@ var isSymmetric = function(root) {
     return true;
 };
 
+const isSymmetricRecursion = root => {
+  return isSymmetricHelper(root, root);
+}
+
+const isSymmetricHelper = (leftNode, rightNode) => {
+  
+  if(leftNode === null && rightNode === null) return true; 
+
+  if( (leftNode === null && rightNode !== null) 
+   || (leftNode !== null && rightNode === null)) return false;
+
+  let leftNodeResult = isSymmetricHelper(leftNode.left, rightNode.right);
+  let rightNodeResult = isSymmetricHelper(leftNode.right, rightNode.left);
+
+  return leftNode.val === rightNode.val && leftNodeResult && rightNodeResult;
+  
+}
+
+
+
 
 let tree  = buildTree([1,2,2,3,4,4,3]);
 console.log(isSymmetric(tree)); // true
+console.log(isSymmetricRecursion(tree))
 
 tree  = buildTree([2,3,3,4,5,5]);
 console.log(isSymmetric(tree)); // false
+console.log(isSymmetricRecursion(tree))

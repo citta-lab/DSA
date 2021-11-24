@@ -77,19 +77,6 @@ class DoublyNode {
     }
 }
 
-/**
- * @param {number} capacity
- */
-
- class DoublyNode {
-    constructor(key, val){
-        this.key = key;
-        this.val = val;
-        this.prev = null;
-        this.next = null;
-    }
-}
-
 class LRUCache {
     constructor(size){
         this.size = size;
@@ -178,6 +165,18 @@ class LRUCache {
 
 
 
-let lrc = new LRU(2);
+let lrc = new LRUCache(2);
 lrc.put(1,1);
-console.log(lrc.get(2))
+console.log(lrc.get(1)) // 1
+console.log(lrc.get(2)); // -1
+console.log("-------- end --------");
+
+lrc = new LRUCache(2);
+console.log(lrc.get(2)); // -1
+console.log(lrc.put(2,6)); // null
+console.log(lrc.get(1)); // -1
+console.log(lrc.put(1,5)); // null
+console.log(lrc.put(1,2)); // null
+console.log(lrc.get(1)); // 2
+console.log(lrc.get(2)); // 6  <-- if we use remove in put for updating duplicate then we would have deleted [2,6] while adding [1,5] as new entry
+

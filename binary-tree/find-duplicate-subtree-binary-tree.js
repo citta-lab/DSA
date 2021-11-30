@@ -17,6 +17,7 @@
     return result;
 };
 
+/** POSTORDER */
 const dfs = (root, seen, result) => {
     
     if(!root) return null;

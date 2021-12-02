@@ -134,3 +134,6 @@ function removeKthNodeFromEnd(head, k) {
 
 head = buildLinkedList([1,2,3,4]);
 console.log(removeKthNodeFromEnd(head, 4)); // 2,3,4
+
+head = buildLinkedList([1]);
+console.log(removeKthNodeFromEnd(head, 1));

@@ -30,7 +30,7 @@ Input: head = [3,2,0,-4], pos = 1
 Output: true
 Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
 leetcode: https://leetcode.com/problems/linked-list-cycle/
-solution: (cylic-linkedList)[https://github.com/citta-lab/DSA/blob/9c91fda5e0886ba00e41fbfbdda9786846e11e73/linkedList/cyclic-linkedList.js];
+solution: [cylic-linkedList](https://github.com/citta-lab/DSA/blob/9c91fda5e0886ba00e41fbfbdda9786846e11e73/linkedList/cyclic-linkedList.js);
 
 ### Answer:
 ```js
@@ -52,4 +52,4 @@ var hasCycle = function(head) {
 };
 ```
 
-Another (example)[https://github.com/citta-lab/DSA/blob/main/linkedList/cyclic-LinkedListII.js]
+Another [example](https://github.com/citta-lab/DSA/blob/main/linkedList/cyclic-LinkedListII.js)

@@ -26,6 +26,28 @@ Reference: https://duncan-mcardle.medium.com/leetcode-problem-2-longest-substrin
 video : https://www.youtube.com/watch?v=wiGpQwVHdE0
 */
 
+/** O(N) time and O(N) space [ SLIDING WINDOW ] */
+var lengthOfLongestSubstring = function(s) {
+  let longest = 0;
+  let seen = new Set();
+  
+  let left = 0;
+  let right = 0;
+  for(let i=0; i<s.length; i++){
+      right = i;
+      while(seen.has(s[right])){
+          seen.delete(s[left]);
+          left += 1;
+      }
+      
+      seen.add(s[right]);
+      longest = Math.max(longest, seen.size);
+      //OR
+      // longest = Math.max(longest, right-left+1)
+  }
+  
+  return longest
+};
 
 /** BRUTE FORCE */
 var lengthOfLongestSubstringI = function(s) {

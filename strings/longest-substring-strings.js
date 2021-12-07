@@ -35,6 +35,7 @@ var lengthOfLongestSubstring = function(s) {
   let right = 0;
   for(let i=0; i<s.length; i++){
       right = i;
+      /** IMPORTANT: dont extract values like rightVal = s[right] and check rightVal in while loop. will cause infinite loop */
       while(seen.has(s[right])){
           seen.delete(s[left]);
           left += 1;

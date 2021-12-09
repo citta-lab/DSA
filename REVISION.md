@@ -7,9 +7,7 @@ i have made the progress.
 # PART I ( the Must ):
 | PROBLEM | What Went Wrong |
 | --- | --- |
-| [word ladder](https://github.com/citta-lab/DSA/blob/e9b31226b257075f3c56d6d8f58aebf831986ace/graphs/word-ladder-bfs.js) | do pattern matching on wordList, then do pattern matching on beginWord with in BFS level order, use SET() for prevent checking the same node. 
-
-Time: O(M^2 * N) where M is length of each word in the inputList and N is number of words in inputList. Space: O(M^2 * N) where we will have to store all N word combinations by doing M^2 combination. Keep in mind BFS and Visited set will cost O(M*N) |
+| [word ladder](https://github.com/citta-lab/DSA/blob/e9b31226b257075f3c56d6d8f58aebf831986ace/graphs/word-ladder-bfs.js) | do pattern matching on wordList, then do pattern matching on beginWord with in BFS level order, use SET() for prevent checking the same node.                                                            Time: O(M^2 * N) where M is length of each word in the inputList and N is number of words in inputList. Space: O(M^2 * N) where we will have to store all N word combinations by doing M^2 combination. Keep in mind BFS and Visited set will cost O(M*N) |
 | [next problem]() | comment |
 | [next problem]() | comment |
 | [next problem]() | comment |

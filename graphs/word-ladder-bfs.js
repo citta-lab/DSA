@@ -50,6 +50,7 @@ var ladderLength = function(beginWord, endWord, wordList) {
     
     let collections = {};
     
+    /** time: O(M^2*N) and space: O(M^2*N) */
     wordList.forEach((word) => {
         let len = word.length;
         for(let i=0; i<len; i++){
@@ -68,11 +69,11 @@ var ladderLength = function(beginWord, endWord, wordList) {
     let queue = [beginWord];
     let level = 1;
     
-    // helps to not vistit the node 
+    // helps to not vistit the node and will hold space: O(M*N) combinations 
     let visited = new Set();
     
     while(queue.length){
-        // level order BFS
+        // level order BFS costs O(M*N) stacks
         let size = queue.length;
         for(let i=0; i<size; i++){
             

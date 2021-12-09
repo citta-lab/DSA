@@ -18,7 +18,11 @@
  * Company: google 
  */
 
-
+/** 
+ Time: O(M^2 * N) where M is length of each word in the inputList and N is number of words in inputList. 
+ Space: O(M^2 * N) where we will have to store all N word combinations by doing M^2 combination. 
+ Keep in mind BFS and Visited set will cost O(M*N) 
+ */
 var ladderLength = function(beginWord, endWord, wordList) {
     
     /** Step 1: if we dont have endWord in wordList then no point searching */

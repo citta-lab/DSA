@@ -166,5 +166,22 @@ const graph = {
 ![graph](https://github.com/citta-lab/DSA/blob/019ad9d17db37fc207cb0c2f38a99f87dbc637f4/graphs/blob/distanceToTargetNode.png)
 
 
+# Topological Sort 
+Algorithm / technique to order nodes in DIRECTED graph such that nodes are ordered to resolve the dependencies. Time complexity for this is O(N+E) where N is the nodes and E is the edges.
+
+## Rules for Topological Sort 
+- Pick any / random unvisted node in the graph 
+- Apply DFS on unvisted nodes ( use recursion & Set() for keeping tracking for visted nodes)
+- At Leaf node ( when node.left and node.right is null ), during recursive callback of DFS, add the current node to topological ordering in REVERSE order. ( i.e [ _, _, _, 2, 1] ).
+
+## Topological Sort in Real Life:
+- School Class prerequisites 
+- Program dependecy ( node package dependency or maven dependency)
+- Event scheduling 
+- Assembly instructions 
+
+
+
 Reference:
 1. (Alvin Videos)[https://www.youtube.com/watch?v=2_Uuixtc5i0]
+2. (Topological Sort)[https://www.youtube.com/watch?v=eL-KzMXSXXI&t=692s]

@@ -14,6 +14,10 @@
  * leetcode: https://leetcode.com/problems/course-schedule/
  * video: https://www.youtube.com/watch?v=EgI5nU9etnU
  * 
+ * Hints:
+ * - we need to loop though all the courses based on numCourses so we apply dfs on each. 
+ * - need to delete course from Set and empty the course value in map after processing so we dont process again
+ * - directed graph, so we need to build map with empty array for all courses first. 
 */
 
 var canFinish = function(numCourses, prerequisites) {

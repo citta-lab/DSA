@@ -18,7 +18,9 @@ i have made the progress.
 
 # PART II ( yay's ):
 In this section i would also like to highlight the CONFIDENCE by rating the problem from 3 to 1 where 3 being the WORST and 1 is the BEST.
-Rating: 3-Worst, 1-Best
+
+**Rating:** 3-Worst, 1-Best
+
 | PROBLEM | Confidence Rating | Complexity |
 | --- | --- |--- |
 | [longest substring](https://github.com/citta-lab/DSA/blob/ac1549da4c694cbbf65b04dc410b59fc175e8492/strings/longest-substring-strings.js) | 2  | **time:** O(N) from whileloop. **space:** O(min(m,k)) as we delete left char when match found

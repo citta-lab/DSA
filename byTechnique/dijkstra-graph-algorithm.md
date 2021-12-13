@@ -13,23 +13,16 @@
 - Can be used on weight / length and/or unweighted graph
 
 ## Usage:
-- Finding shortest distance between source to destination 
+- Finding shortest distance between source to destination (Geographic Information System (GIS), such as Google Maps, for finding shortest path from point A to point B)
 - Finding cost between source and destination 
-- Traffic from A to B
+- Traffic from A to B (Traffic information systems use Dijkstra’s Algorithm for tracking destinations from a given source location)
 - Money conversion 
+- Router ( Open Source Path First (OSPF), an Internet-based routing protocol, uses Dijkstra’s Algorithm for finding best route from source router to other routers in the network )
+- Telephone and Cellular networks for routing management
 
 ## Implementation Pointers 
-### 1: Initialize Array
-- Calculate the size of adjacency list (i.e `const size = adjacencyMatrix.length;`);
-- Create new array and fill array with inifity value (i.e `const costArray = new Array(size).fill(Infinity);`); This is to indicate maxium value might be Infinity. 
-- Update first element value to `0`. As this will be our starting point. (i.e `costArray[0] = 0`);
-- Result 
-```js
-[ 0, 1,        2,       3] // <--  index:  vertex/node 
-[ 0, Infinity, Infinity, Infinity ] // <-- vertrex/node weight/length
-```
 
-## Input 
+### 1. Understand Inputs ( types )
 - Adjacency List 
 Example:
 ```js
@@ -39,21 +32,134 @@ const list = { 0 : [ [1, 7], [2, 5] ...] };
 const list = { 1: [[]]}; // node 1 doesnt have any outgoing
 ```
 This indicates Node/Vertex 0 points to 1 with weight 7 and points to 2 with weight 5.
-- Adjacency matrix 
 
-### 2. Initialize Visited Array
-- Initialize another array for keeping track of visited nodes. Size same as adjacency list.
-- Fill with false value.
-- Result
+- Adjacency matrix
+Example:
 ```js
-cosnt visited = new Array(size).fill(false);
+[ 
+  0, 0, 7, 0
+  4, 0, 2, 0
+  0, 0, 0, 9
+  0, 0, 0, 0
+]
+```
+This indicates Vertex O (index 0) points to Vertex 2 (index 2) with weight 7. Vertex 1 (index 1) points to Vertex 2 (index 2) with weight 2. Vertex 2 (index 2) points to vertex 3 (index 3) with weight 9 and lastly vertex 3 doesnt point to any other vertex.
+
+
+### 2: Initialize Array
+- Calculate the size of adjacency list (i.e `const size = adjacencyMatrix.length;`);
+- Create new array and fill array with inifity value (i.e `const costArray = new Array(size).fill(Infinity);`); This is to indicate maxium value might be Infinity. 
+- Update first element value to `0`. As this will be our starting point. (i.e `costArray[0] = 0`);
+- Result 
+```js
+const size = adjacencyMatrix.length; // edges.length ( if it is list )
+const distanceArray = new Array(size).fill(Infinity); 
+distanceArray[start] = 0; 
+
+console.log(distanceArray); // [ 0, Infinity, Infinity, Infinity ] // <-- vertrex/node weight/length
 ```
 
-### 3: Loop through the array & pick min Vertex value index. 
+### 3. Initialize Visited Set / Array
+- Initialize another Set to keeping track of visited nodes.
+- Result
+```js
+/** if Array */
+const size = edges.length or matrix.length;
+cosnt visited = new Array(size).fill(false); /** O(N) space */
 
+/** if Set */
+const visited = new Set(); /** O(N) space */
+```
+
+### 3: Loop until we visit all nodes or through the array & pick min Vertex value index. 
+```js
+while(visited.size !== edges.length){
+
+}
+```
 
 ### 4: Find minimum vertext value & index from array
+```js
+while(visited.size !== edges.length){
+    /** this will fetch vertex and it's respective value from distance array. It will start with index 0 */
+    const [ minVertex, minVertexDistance ] = getMinVertex(distanceArray, visited); // will implement at last
+}
 
+```
 
+### 5. Calculations
+- If fetched vertex distance is Infinity ( which is default value ) then it must be isolated vertex.
+- If we found the vertex occurence in Set, then we skip and go to next item in while loop
+- If we didnt do above then add the vertex we found to Set (i.e `visited.add(minVertex)`);
+- loop through edges to find [vertex, distance] pair then calculate what would be thew new minimum distance we can use in destination vertex ( index ). 
+- If the found value is less then update the destination vertex value with min found value
+```js
+/** O(N) time */
+while(visited.size !== edges.length){
+    const [ minVertex, minVertexDistance ] = getMinVertex(distanceArray, visited); // will implement at last
 
-### 4: Result 
+    if(minVertexDistance === Infinity){
+        break;
+    }
+
+    if(visited.has(minVertex)){
+        continue;
+    }
+
+    visited.add(minVertex);
+
+    let children = edges[minVertex];
+    for(let [destination, destinationToDistance] of children){
+        let newDistance = minVertexDistance + destinationToDistance;
+        let curDestinationDistance = distanceArray[destination];
+        let min = Math.min(newDistance, curDestinationDistance);
+        distanceArray[destination] = min;
+    }
+}
+
+```
+
+### 6: Result 
+Return the newly built array but replace Infinity ( if any) with -1.
+```js
+while(visited.size !== edges.length){
+ // ....
+ // ...
+}
+
+return distanceArray.map(x => x === Infinity ? -1 : x);
+```
+
+### 7: Helper ( Min Vertex and Value finder )
+This is main helper which will find the minimum vertex value from the distanceArray and returns both vertex and it's respective value from the array.
+- default vertex and distace to some out of bound value so we can return if we cant find min value.
+- we loop on newly initiated array
+- if we find this vertex ( which is index ) visited then we go to next in loop
+- if the value associated with vertex ( idex ) is less than our default. then update default values 
+- send it as min vertex, distance which we need to go next
+```js
+const getMinVertex = (distanceArray, visited) => {
+    let curVertex = -1; // default it to -1
+    let curDistance = Infinity; // default distance 
+
+    for(let i=0; i<distanceArray.length; i++){
+        let vertex = i;
+        let distance = distanceArray[vertex];
+
+        if(visited.has(vertex)){
+            continue;
+        }
+
+        if(distance <= curDistance){
+            curDistance = distance;
+            curVertex = vertex;
+        }
+    }
+
+    return [curVertex, curDistance]
+}
+
+```
+
+Code Example:
+https://github.com/citta-lab/DSA/blob/901ac898e7176dd82039c713b09c544a35ad015f/graphs/dijkstra-graph-algorithm.js 

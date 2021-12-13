@@ -3,7 +3,10 @@
 Graphs problems can be tackled with two kinds of appraoch BFS and DFS. The core business logic between them are very identical and only differs the way we extract and process the data. Example: Depth First Search (DFS) focus on traversing rhe node until it reaches the end before it picks up the next node to be processed whereas Breadth First Search (BFS) focus on traversing all the children nodes before it goes to children from next level. 
 
 ## Data
-we need graph data to tranverse the graph but often the given data might not be in the format or the structure known to us. The key is to indentify the data set to figureout if it is a graph problem. Here is one example,
+we need graph data to tranverse the graph but often the given data might not be in the format or the structure known to us. The key is to indentify the data set to figureout if it is a graph problem. Most often it will be of the format `Adjacency List` and
+`Adjacency Matrix` ( of size m*n). 
+
+Below are example,
 
 ### 1. Adjacency List:
 Here data is given in the form of adjacency list i.e node and it's respective childens. It would look somethign like ,
@@ -19,7 +22,7 @@ const graph = {
 }
 ```
 
-### 2.  Edges ( Undirected ):
+#### 1.2.  Edges ( Undirected ):
 In this case the edges are given for UNDIRECTED graph and we would need to build a adjacency list before we can apply BFS or DFS on the graph. 
 ```js
 const edges = {
@@ -61,7 +64,7 @@ the above buildGraph will return graph of below strcture,
 }
 ```
 
-### 3. Edges ( Directed ):
+#### 1.3. Edges ( Directed ):
 In this case given edges has dependecy / direction dictated using some constraints. Example: course completion can be represented as directed graph edges. Below is the example, 
 ```js
 const prereq = {
@@ -72,6 +75,8 @@ const prereq = {
 }
 ```
 In this case `[first, second] = prereq;` first has dependecy on the second course. So second course needs to be completed before we can finish first.
+
+### Adjacency Matrix (M*N)
 
 
 

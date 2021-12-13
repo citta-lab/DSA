@@ -50,11 +50,11 @@ var ladderLength = function(beginWord, endWord, wordList) {
     
     let collections = {};
     
-    /** time: O(M^2*N) and space: O(M^2*N) */
+    /** time: O(M^2*N) where O(M*N) is from forming the combination plus O(M) from forming substring and space: O(M^2*N) */
     wordList.forEach((word) => {
         let len = word.length;
         for(let i=0; i<len; i++){
-            let wordPattern = word.substring(0, i)+'*'+word.substring(i+1);
+            let wordPattern = word.substring(0, i)+'*'+word.substring(i+1); /** forming substring takes O(M) time where M is length of word */
             
             /** hence we need { name : [] } we default to empty array if its first time */
             if(!collections[wordPattern]){
@@ -88,7 +88,7 @@ var ladderLength = function(beginWord, endWord, wordList) {
             let len = word.length;
             for(let i=0; i<len; i++){
                 
-                let wordPattern = word.substring(0, i)+'*'+word.substring(i+1);
+                let wordPattern = word.substring(0, i)+'*'+word.substring(i+1); /** O(M) time */
                 
                 /** Step 3.2 find if we have this in collections or default to empty array so 3.3 doesnt break */
                 let neibhours = collections[wordPattern] || [];

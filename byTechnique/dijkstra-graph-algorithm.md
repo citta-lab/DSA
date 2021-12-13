@@ -82,7 +82,7 @@ while(visited.size !== edges.length){
 ```js
 while(visited.size !== edges.length){
     /** this will fetch vertex and it's respective value from distance array. It will start with index 0 */
-    const [ minVertex, minVertexDistance ] = getMinVertex(distanceArray, visited); // will implement at last
+    const [ minVertex, minVertexDistance ] = getMinVertex(distanceArray, visited); 
 }
 
 ```
@@ -96,23 +96,37 @@ while(visited.size !== edges.length){
 ```js
 /** O(N) time */
 while(visited.size !== edges.length){
-    const [ minVertex, minVertexDistance ] = getMinVertex(distanceArray, visited); // will implement at last
+    /** will implement helper at last */
+    const [ minVertex, minVertexDistance ] = getMinVertex(distanceArray, visited); 
 
+    /** if we find independent vertex/node then we get Infinity, so we cant do anything */
     if(minVertexDistance === Infinity){
         break;
     }
 
+    /** if we already visited the vertex/node then we skip and go to next item in while loop */
     if(visited.has(minVertex)){
         continue;
     }
 
+    /** now we can add vertex/node to set as we will process now */
     visited.add(minVertex);
 
+    /** get array of [vertex, distance] pair from edges for vertex we are processing */
     let children = edges[minVertex];
     for(let [destination, destinationToDistance] of children){
+        /** 
+         * Calculate what would be new distance by adding current vertex distance 
+         * + destination distance we got from the edges */
         let newDistance = minVertexDistance + destinationToDistance;
+
+        /** get current destination distance from the array we initialized/updating */
         let curDestinationDistance = distanceArray[destination];
+
+        /** our goal is to use the minimum distance */
         let min = Math.min(newDistance, curDestinationDistance);
+
+        /** update our initialized/updating array so destination will reflect the min distance */
         distanceArray[destination] = min;
     }
 }
@@ -127,6 +141,7 @@ while(visited.size !== edges.length){
  // ...
 }
 
+/** finally we compare if we have infinity to modify the result */
 return distanceArray.map(x => x === Infinity ? -1 : x);
 ```
 
@@ -142,20 +157,24 @@ const getMinVertex = (distanceArray, visited) => {
     let curVertex = -1; // default it to -1
     let curDistance = Infinity; // default distance 
 
+    /** our goal is to find minimum valued vertex in the array we have built so we can process it next */
     for(let i=0; i<distanceArray.length; i++){
         let vertex = i;
         let distance = distanceArray[vertex];
 
+        /** if its already visited ( vertex / index ) then skip */
         if(visited.has(vertex)){
             continue;
         }
-
+        
+        /** if array holds value ( vertex value) less than our default, then update */
         if(distance <= curDistance){
             curDistance = distance;
             curVertex = vertex;
         }
     }
 
+    /** return the pair */
     return [curVertex, curDistance]
 }
 

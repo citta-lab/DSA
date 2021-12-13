@@ -16,7 +16,7 @@ SOLVE with O(1) space and O(log n) time
 
 /**
  * Time: O(log N * log N) where N is node. In this we go left and right to calculate the height of balance
- * tree which costs us log 2 and in worst case we will do both left and right. Hence log n * log n
+ * tree which costs us `log n` and in worst case we will do both left and right. Hence log n * log n
  * Space: O(1) */
 var countNodes = function(root) {
    

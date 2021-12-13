@@ -16,7 +16,11 @@ The goal of this doccumentation is to capture `Time` and `Space` complexity for 
 ## Binary Tree: 
 
 ## Graphs:
-
+### Dijkstra Algorithm for Shortest Path:
+| Time | Space | DS |
+| --- | --- |--- |
+| O(N^2) | O(N) | When used with Array |
+| O(N logN) | O(N) | When used with min Heap |
 ## Sliding Window:
 
 ## Toposort:

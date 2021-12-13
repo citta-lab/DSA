@@ -81,8 +81,11 @@ while(visited.size !== edges.length){
 ### 4: Find minimum vertext value & index from array
 ```js
 while(visited.size !== edges.length){
-    /** this will fetch vertex and it's respective value from distance array. It will start with index 0 */
+    /** this will fetch vertex and it's respective value from distance array.*/
+    /** It will start with index 0 and built is as helper */
     const [ minVertex, minVertexDistance ] = getMinVertex(distanceArray, visited); 
+    ...
+    ...
 }
 
 ```
@@ -129,6 +132,8 @@ while(visited.size !== edges.length){
         /** update our initialized/updating array so destination will reflect the min distance */
         distanceArray[destination] = min;
     }
+    ....
+    ....
 }
 
 ```
@@ -137,8 +142,8 @@ while(visited.size !== edges.length){
 Return the newly built array but replace Infinity ( if any) with -1.
 ```js
 while(visited.size !== edges.length){
- // ....
- // ...
+  ....
+  ....
 }
 
 /** finally we compare if we have infinity to modify the result */

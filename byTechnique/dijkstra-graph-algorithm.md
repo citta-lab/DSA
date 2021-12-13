@@ -74,7 +74,8 @@ const visited = new Set(); /** O(N) space */
 ### 3: Loop until we visit all nodes or through the array & pick min Vertex value index. 
 ```js
 while(visited.size !== edges.length){
-
+    ....
+    ....
 }
 ```
 

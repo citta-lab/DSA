@@ -12,6 +12,8 @@ i have made the progress.
 | [course schedule](https://github.com/citta-lab/DSA/blob/85a990182ab7fd3dec52f69859ce9f95385f5254/graphs/course-canFinish-dfs.js) | - first build map with empty array for all course and then add pre-reqs which is O(N+E) time & space. Make sure check for empty array `[]` for no prereqs and do postorder way to add course to result, then delete from visit set, empty the course in map (i.e `map[course] = []`) |
 | [next]() | comment |
 | [count complete tree node](https://github.com/citta-lab/DSA/blob/ee4351ca340af8498c0b2d8a433eeec7a5f949a7/binary-tree/count-all-nodes-binary-tree.js) | can be done in O(log N*log N) time with binary search. Keep in mind if the tree is complete we can calculate size by `Math.pow(2, leftHeight)-1`. Also here main function should return `1+ mainFunction(root.left) + mainFunction(root.right)` not left(root) and right(root) |
+| [copy random linkedList](https://leetcode.com/problems/copy-list-with-random-pointer/) | Need Map which will hold old node to new node, then use map data to connect. |
+| [next problem]() | comment |
 | [next problem]() | comment |
 
 

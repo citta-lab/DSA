@@ -12,7 +12,7 @@ const dijkstra = (adjacencyList, start) => {
 
     /** value array which will map array index to node, and values to index value */
     const distanceArray = new Array(size).fill(Infinity);
-    distanceArray[0] = 0;
+    distanceArray[start] = 0; // OR distanceArray[0] = 0;
     
     // console.log(distanceArray);
 

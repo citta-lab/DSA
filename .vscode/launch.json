@@ -1,0 +1,14 @@
+
+{
+    "name": "Launch via npm",
+    "type": "node",
+    "request": "launch",
+    "cwd": "${workspaceFolder}",
+    "skipFiles": [
+        "<node_internals>/**"
+    ],
+    "program": "${workspaceFolder}/graphs/dijkstra-graph-algorithm-adjacencyMatrix.js",
+    "runtimeExecutable": "npm",
+    "runtimeArgs": ["run-script", "debug"]
+  }
+  

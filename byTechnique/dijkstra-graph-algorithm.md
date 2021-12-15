@@ -20,6 +20,10 @@
 - Router ( Open Source Path First (OSPF), an Internet-based routing protocol, uses Dijkstra’s Algorithm for finding best route from source router to other routers in the network )
 - Telephone and Cellular networks for routing management
 
+## Implementation Examples:
+- http://www.csl.mtu.edu/cs2321/www/newLectures/30_More_Dijkstra.htm
+
+
 ## Implementation Pointers 
 
 ### 1. Understand Inputs ( types )

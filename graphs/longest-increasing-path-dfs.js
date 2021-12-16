@@ -5,6 +5,9 @@
   
   leetcode-question:329
   leetcode: https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+
+  BRUTFORCE : DFS 
+  OPTIMIZED: DFS + MEMOIZATION 
   
   Hint: Can be done by DFS but we need to do memoization to prevent Time limit as we are not keeping track of visited cell to avoid 
   checking already visited node ( because we need to find the best increasing path )

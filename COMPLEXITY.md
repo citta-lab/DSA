@@ -50,11 +50,18 @@ return root ? 1 + count(root.left) + count(root.right) : 0;
 ## Binary Tree: 
 
 ## Graphs:
-### Dijkstra Algorithm for Shortest Path:
+### Dijkstra Algorithm for Shortest Path ( BFS ):
 | Time | Space | DS |
 | --- | --- |--- |
-| O(N^2) | O(N) | When used with Array |
-| O(N logN) | O(N) | When used with min Heap |
+| O(N^2) | O(N) | When used BFS with Array |
+| O(N logN) | O(N) | When used BFS with min Heap |
+
+### Longest Increasing Path (DFS):
+| Time | Space | DS |
+| --- | --- |--- |
+| O(2^m+n) | O(m*n) | with just DFS |
+| O(m*n) | O(m*n) | with DFS and Memoization |
+
 ## Sliding Window:
 
 ## Toposort:

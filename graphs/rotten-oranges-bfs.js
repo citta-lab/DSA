@@ -8,6 +8,7 @@
  * Return the minimum number of minutes that must elapse until no cell has a fresh orange. 
  * If this is impossible, return -1.
  * 
+ * leetcode-question:994
  * leetcode: https://leetcode.com/problems/rotting-oranges/ 
  * company: Amazon
  * */
@@ -85,7 +86,8 @@ var orangesRotting = function(grid) {
         }
         
         /** end of each level we increment time, as we finished all the immediate children */
-        timeInMin++
+        if (queue.length > 0) timeInMin++;
+        // timeInMin++
     }
     
     /** finally if we still have fresh count, then we failed otherwise return time */

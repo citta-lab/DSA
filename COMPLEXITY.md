@@ -11,7 +11,16 @@ The goal of this doccumentation is to capture `Time` and `Space` complexity for 
 
 ## LinkedList: 
 
-## Binary Search Tree:
+## Dynamic Programming
+### Fib Calculation
+On every recusion we are calling `fib(n-1)` on left and `fib(n-2)` on right which will further branch out like two more times on left, right respectively until we reach base condition. So Time complexity would be `O(2^N)`. 
+    At any given time recusion call will only have `N` stack, we will not have all the nodes until base in the callstack. Once the left leaf recursion ( example: `fib(1)` or `fib(0)`) returns it goes to right leaf node.  
+| Time | Space | DS |
+| --- | --- |--- |
+| O(2^n) | O(N) | due to recursion call on (n-1)+(n-2) |
+| O(N) | O(N) | when MEMORIZATION is used |
+
+## Binary Search Tree:  
 ```js
 Time: O(log N)
 Space: O(log N)

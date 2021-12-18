@@ -3,7 +3,7 @@
  * components are formed by connecting one or more vertices / node 
  * 
  * 
- * recursion solution: 
+ * recursion solution: https://github.com/citta-lab/DSA/blob/3dd7a17bb808f52c20f9df9bc40a9bdd0ac5dd68/graphs/largest-connected-component-recursion-dfs.js
  * 
  * */
  let adjacencyList = {

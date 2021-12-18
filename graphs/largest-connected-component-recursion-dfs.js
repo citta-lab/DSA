@@ -2,7 +2,7 @@
  * Given adjacencyList of undirected graph, return largest connected component size. Connected
  * components are formed by connecting one or more vertices / node 
  * 
- * iterative solution: 
+ * iterative solution: https://github.com/citta-lab/DSA/blob/3dd7a17bb808f52c20f9df9bc40a9bdd0ac5dd68/graphs/largest-connected-component-iterative-dfs.js
  * */
 let adjacencyList = {
     3: [],

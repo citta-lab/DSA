@@ -13,7 +13,7 @@ i have made the progress.
 | [course schedule order]() | - same as above for building map but we will use 'TOPOSORT'. We will use visited and hasCycle set, delete course from hasCycle after processing all course children  |
 | [count complete tree node](https://github.com/citta-lab/DSA/blob/ee4351ca340af8498c0b2d8a433eeec7a5f949a7/binary-tree/count-all-nodes-binary-tree.js) | can be done in O(log N*log N) time with binary search. Keep in mind if the tree is complete we can calculate size by `Math.pow(2, leftHeight)-1`. Also here main function should return `1+ mainFunction(root.left) + mainFunction(root.right)` not left(root) and right(root) |
 | [copy random linkedList](https://leetcode.com/problems/copy-list-with-random-pointer/) | Need Map which will hold old node to new node, then use map data to connect. |
-| [next problem]() | comment |
+| [longest increasing path](https://github.com/citta-lab/DSA/blob/e7b18987e0e6251e628950b3651388ac485a1294/graphs/longest-increasing-path-dfs.js) | DFS needs be called with some minimal parent value and in recursion we check if the current cell value is greater than parent value. Also DFS in all 4 directions needs to calculate maxPath like `mathPath = Math.max(maxPath, dfs(row-1, col, matrix, parentValue, memo))`. Adding memo we can reduce the complexity to m*n.  |
 | [next problem]() | comment |
 
 

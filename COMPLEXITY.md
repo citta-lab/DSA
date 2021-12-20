@@ -66,6 +66,7 @@ return root ? 1 + count(root.left) + count(root.right) : 0;
 | O(N logN) | O(N) | When used BFS with min Heap |
 
 ### Longest Increasing Path (DFS):
+In bruteforce ( just DFS ), we will keep traversing the same cell one or more times to find the increasing path. 
 | Time | Space | DS |
 | --- | --- |--- |
 | O(2^m+n) | O(m*n) | with just DFS |

@@ -14,6 +14,12 @@ i have made the progress.
 | [count complete tree node](https://github.com/citta-lab/DSA/blob/ee4351ca340af8498c0b2d8a433eeec7a5f949a7/binary-tree/count-all-nodes-binary-tree.js) | can be done in O(log N*log N) time with binary search. Keep in mind if the tree is complete we can calculate size by `Math.pow(2, leftHeight)-1`. Also here main function should return `1+ mainFunction(root.left) + mainFunction(root.right)` not left(root) and right(root) |
 | [copy random linkedList](https://leetcode.com/problems/copy-list-with-random-pointer/) | Need Map which will hold old node to new node, then use map data to connect. |
 | [longest increasing path](https://github.com/citta-lab/DSA/blob/e7b18987e0e6251e628950b3651388ac485a1294/graphs/longest-increasing-path-dfs.js) | DFS needs be called with some minimal parent value and in recursion we check if the current cell value is greater than parent value. Also DFS in all 4 directions needs to calculate maxPath like `mathPath = Math.max(maxPath, dfs(row-1, col, matrix, parentValue, memo))`. Adding memo we can reduce the complexity to m*n.  |
+| [walls and gate](https://github.com/citta-lab/DSA/blob/0b9ed5aa24ccd15fc59d6f09b574e74a0ce91fcd/graphs/wall-gates-bfs.js) | BFS as we need to find distance form the GATE to it's immediate empty rooms. Check for gate then push it to Queue. Check boundry condition then push new row,col to queue & also update the cell with distance |
+| [next problem]() | comment |
+| [next problem]() | comment |
+| [next problem]() | comment |
+| [next problem]() | comment |
+| [next problem]() | comment |
 | [next problem]() | comment |
 
 

@@ -3,9 +3,29 @@
  * [ 2,3,-9, 4,5,8,-3] then the subarray which can make the maxium sum would be [ 4, 5, 8] = 17.
  * 
  * Always start with brute force approach 
+ * 
+ * leetcode-question:53
+ * leetcode:https://leetcode.com/problems/maximum-subarray/
  */
+
+// Time: O(N)
+ var maxSubArray = function(nums) {
+    
+    let maxArray = nums[0];
+    let currentArray = nums[0];
+    
+    for(let i=1; i<= nums.length-1; i++){
+        let num = nums[i];
+        currentArray = Math.max(num, currentArray+num);
+        maxArray = Math.max(maxArray, currentArray)
+    }
+    
+    return maxArray
+    
+};        
+
 //O(n^2) time 
-function maxSubArraySum(array) {	
+function maxSubArraySumI(array) {	
 	let maxSum = -Infinity;
 	for(let i=0; i< array.length; i++){
 		let sum = 0

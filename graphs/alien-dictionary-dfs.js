@@ -105,3 +105,7 @@
     return output.join('')
 };         
 
+console.log(alienOrder(["wrt","wrf","er","ett","rftt"])); //wertf
+console.log(alienOrder(["z","x"])); //zx
+console.log(alienOrder(["z","x","z"])); //null
+console.log(alienOrder(["ab","adc"])); //cbda

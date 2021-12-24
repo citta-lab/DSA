@@ -3,6 +3,8 @@
  * (i.e) Number of Connected Components in an Undirected Graph. 
  * 
  * Important: Dont overlook why they have given "n" nodes with edges. 
+ * leetcode: https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
+ * leetcode-question:323
  */
 
 /**

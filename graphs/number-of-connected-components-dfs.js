@@ -3,6 +3,10 @@
  * (i.e) Number of Connected Components in an Undirected Graph. 
  * 
  * Important: Dont overlook why they have given "n" nodes with edges. 
+ * 
+ * leetcode: https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
+ * leetcode-question:323
+ * 
  */
 var countComponents = function(n, edges) {
     
@@ -13,6 +17,10 @@ var countComponents = function(n, edges) {
      * hence we have n as node size, we can initialize the graph 
      * to n keys with [] value. So it would look like 
      * graph = { 0:[], 1: [], 2:[]} if n = 3
+     * 
+     * Why:
+     * we need this as given n might have more size than given edges.
+     * Example: n=4, edges=[[2,3],[1,2],[1,3]]
      * */
     const emptyGraph = buildEmptyGraph(n);
 

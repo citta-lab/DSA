@@ -19,6 +19,9 @@
 - Money conversion 
 - Router ( Open Source Path First (OSPF), an Internet-based routing protocol, uses Dijkstra’s Algorithm for finding best route from source router to other routers in the network )
 - Telephone and Cellular networks for routing management
+- websites for booking flights 
+- Friend suggestions on social media
+- finding a way through a maze
 
 ## Implementation Examples:
 - http://www.csl.mtu.edu/cs2321/www/newLectures/30_More_Dijkstra.htm
@@ -192,3 +195,6 @@ const getMinVertex = (distanceArray, visited) => {
 
 Code Example:
 https://github.com/citta-lab/DSA/blob/901ac898e7176dd82039c713b09c544a35ad015f/graphs/dijkstra-graph-algorithm.js 
+
+Referece:
+https://www.udacity.com/blog/2021/10/implementing-dijkstras-algorithm-in-python.html

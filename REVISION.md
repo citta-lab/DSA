@@ -15,7 +15,7 @@ i have made the progress.
 | [copy random linkedList](https://leetcode.com/problems/copy-list-with-random-pointer/) | Need Map which will hold old node to new node, then use map data to connect. |
 | [longest increasing path](https://github.com/citta-lab/DSA/blob/e7b18987e0e6251e628950b3651388ac485a1294/graphs/longest-increasing-path-dfs.js) | DFS needs be called with some minimal parent value and in recursion we check if the current cell value is greater than parent value. Also DFS in all 4 directions needs to calculate maxPath like `mathPath = Math.max(maxPath, dfs(row-1, col, matrix, parentValue, memo))`. Adding memo we can reduce the complexity to m*n.  |
 | [walls and gate](https://github.com/citta-lab/DSA/blob/0b9ed5aa24ccd15fc59d6f09b574e74a0ce91fcd/graphs/wall-gates-bfs.js) | BFS as we need to find distance form the GATE to it's immediate empty rooms. Check for gate then push it to Queue. Check boundry condition then push new row,col to queue & also update the cell with distance |
-| [next problem]() | comment |
+| [decode string](https://github.com/citta-lab/DSA/blob/ac411df5b56c94dbe74913778ecd1ef009b2f46d/graphs/decode-string-stacks.js) | Keep `stack` and `for loop` to traverse the each char, need to push to stack as long as char is not closing bracket (i.e `]` ). Once we have closing bracket `while` loop to `pop` stack element as long as its not open bracket (i.e `]` example: `stack[stack.length-1] !== ']'`) and add it to new string. Then seperately pop ']' and do the same for number. parseInt the newly build number to add those many times to result array. At the end join the result array. |
 | [next problem]() | comment |
 | [next problem]() | comment |
 | [next problem]() | comment |

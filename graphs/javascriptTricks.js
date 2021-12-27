@@ -91,4 +91,27 @@ const buildNumberCountHash = (obj, hash={}) => {
 }
 
 // { '1': 3,'2': 2,'3': 1,'4': 1,'5': 1,'6': 1,'7': 1,'8': 1,'9': 0 }
-console.log(buildNumberCountHash(legoBuildSequence))
+console.log(buildNumberCountHash(legoBuildSequence));
+
+
+/** Build m*n empty array with initial value 0 */
+let size = 5;
+let arr = new Array(size).fill(0)
+.map(row => new Array(size).fill(0)); 
+
+console.log(arr) // [[0, 0, 0, 0, 0],[0, 0, 0, 0, 0],[0, 0, 0, 0, 0],[0, 0, 0, 0, 0],[0, 0, 0, 0, 0]]
+
+/** Deep copy an array or object */
+let arrList = { 'bob' : ['willy', 'bobby', 'william'], 'matt' : ['matthew', 'mat', 'mattew']}
+const copy = JSON.parse(JSON.stringify(arrList)); /** removes the reference to arrList so mutating copy will not change anything in arrList */
+
+/** Remove and Insert element to particular index in an Array */
+let names = ['bob', 'matt', 'adam', 'rob', 'james'];
+
+let robsIndex = 3;
+let removeRob = names.splice(robsIndex, 1); /** .splice(indexValueToRemove, numberOfItemToRemove) */
+console.log(removeRob); // ['rob']
+console.log(names); // ['bob', 'matt', 'adam', 'james']
+
+let addRobBack = names.splice(robsIndex, 0, removeRob[0]); /** .splice(indexValueToAdd, numberOfItemToRemove, valueToAdd) */
+console.log(names); // ['bob', 'matt', 'adam', 'rob', 'james']

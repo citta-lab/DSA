@@ -8,7 +8,12 @@
  * leetcode:https://leetcode.com/problems/cheapest-flights-within-k-stops/
  * leetcode-question:787
  * 
+ * code-workflow (DFS): https://github.com/citta-lab/DSA/blob/c23bdbbe16687507b4762c7696efa0e2f92f446f/graphs/blob/cheapFlightsDFS.png
+ * 
  * Hint: DFS with memoization 
+ * - Apply DFS on adjacency matrix, we can calculate children of node by looping through cities and then
+ * mapping with the src. like [src][0], [src][1], [src][2] where 0,1,2 are from n.
+ * - add memo to memoize as we will keep visiting same cell multiple time sin DFS
  * - Can also be done using Dijkstra's algorithm as this is meant for shortest path but having K stops
  * adds more complexity
  * - Bellam-Ford is better

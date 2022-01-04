@@ -39,13 +39,13 @@ on given data is,
 10. continue until queue is empty then return RESULT array if numCourses === countedCourses. 
 
 ## Implementation
-## Given 
+## 1. Given 
 ```
 Input: 
 numCourses = 4, 
 prerequisites = [[1,0],[2,0],[3,1],[3,2]]
 ```
-## Build AdjList
+## 2. Build AdjList
 ```js
     let adjList = {};
     for(let pre of prerequisites) {
@@ -64,7 +64,7 @@ Resulting adjList will be like
 { '0': [ 1, 2 ], '1': [ 3 ], '2': [ 3 ], '3': [] }
 ```
 
-## Build InDegree List
+## 3. Build InDegree List
 ```js
     let inDegree = {}
     for(let pre of prerequisites) {
@@ -81,11 +81,12 @@ resulting inDegree list will be
 { '0': 0, '1': 1, '2': 1, '3': 2 }
 ```
 
-## Build Queue based on Courses 
+## 3. Build Queue based on Courses 
 ```js
     let queue = [];
     for(let course=0; course<numCourses; course++){
-        /** !inDegree[course]: helps in handling when courses doesn't have pre-reqs then adjList will not have any but we need to handle it */
+        /** !inDegree[course]: helps in handling when courses doesn't have pre-reqs
+        then adjList will not have any but we need to handle it */
         if(inDegree[course] === 0 || !inDegree[course]){ 
             queue.push(course);
         }
@@ -94,7 +95,7 @@ resulting inDegree list will be
     console.log(queue); // [0]
 ```
 
-## Initialize & Prep for Queue 
+## 4. Initialize & Prep for Queue 
 ```js
     let topoOrder = []; /** final result */
     let courseCount = 0; /** to make sure we processed all the courses */
@@ -112,7 +113,7 @@ resulting inDegree list will be
     return [];
 ```
 
-## Process QUEUE & update inDegree
+## 5. Process QUEUE & update inDegree
 ```js
     let topoOrder = [];
     let courseCount = 0;
@@ -134,7 +135,7 @@ resulting inDegree list will be
     }
 ```
 
-## Return Result
+## 6. Return Result
 ```js
    /** making sure we processed all the GIVEN courses */
     if(courseCount === numCourses){
@@ -144,3 +145,8 @@ resulting inDegree list will be
     /** failure if we couldn't process all GIVEN course */
     return [];
 ```
+
+Complete Example:
+https://github.com/citta-lab/DSA/blob/3683659e93ac2d0391d354a81d363bf639bee93d/graphs/course-findOrder-inDegree.js 
+DFS way of solving:
+https://github.com/citta-lab/DSA/blob/4278a8a6d1e7523fb9e14aea86f968718644888f/graphs/course-findOrder-dfs.js

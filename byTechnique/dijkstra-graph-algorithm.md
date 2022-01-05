@@ -8,7 +8,6 @@
 - Time (Brute force): O(N^2) = O(N) * O(N) where O(N) for checking on each node/vertex, next O(N) for finding minium vertex / node. 
 - Space (Brute force): O(N) used in array and/or in visited array/set.
 - Time (with Heap): O(N log N) = O(N) * O(log N) where O(N) for checking on each node/vertex. O(log N) for finding minium vertex/node using Heap.
-
 - Can also be applied on DIRECTED and/or UNDIRECTED graph
 - Can be used on weight / length and/or unweighted graph
 
@@ -19,9 +18,10 @@
 - Money conversion 
 - Router ( Open Source Path First (OSPF), an Internet-based routing protocol, uses Dijkstra’s Algorithm for finding best route from source router to other routers in the network )
 - Telephone and Cellular networks for routing management
-- websites for booking flights 
+- Websites for booking flights 
 - Friend suggestions on social media
-- finding a way through a maze
+- Finding a way through a maze
+- Network Delay Time 
 
 ## Implementation Examples:
 - http://www.csl.mtu.edu/cs2321/www/newLectures/30_More_Dijkstra.htm

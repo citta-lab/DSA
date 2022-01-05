@@ -26,6 +26,13 @@ on given data is,
      3 [no incoming <- is 2]
 ```
 
+## Key Pointers
+- Adjacency List focus on `pre-req:[course]`
+- inDegree List & initialize it to 0 instead of `[]`
+- Loop on total courses & add 0 degree courses to QUEUE.
+- Add course to result, keep counter for course processing
+- Process children & look for 0 degree courses to QUEUE.
+
 ## Steps
 1. Understand the given data and draw the DIRECTED graph based on `[course, pre-req]` pair. 
 2. Build our adjacency list for pre-req's. So `adjList[pre-req].push(course)` will build the right adjacency list for inDegree. ( ex: `adjList = {}` )

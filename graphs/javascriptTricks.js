@@ -120,3 +120,14 @@ console.log(names); // ['bob', 'matt', 'adam', 'rob', 'james']
 /** If Infinity return -1 or find the last element value */
 const given = [1, Infinity, 12, 9, 7]
 const result = given.find((value,index) => value === Infinity || index === given.length-1 ); // Infinity 
+
+/** Find Max value or if we have Infinity return -1*/
+const given = [1, Infinity, 12, 9, 7]
+const max = Math.max(...given);
+const result = max === Infinity ? -1 : max;
+
+/** Find Max value or if we have Infinity return -1 but if we have NaN in the array */
+const given = [NaN, Infinity, 12, NaN, 7]
+// filter will remove NaN and ... will spread the numbers with Infinity.
+const max = Math.max(...(given.filter(x => x))); // Infinity
+const result = max === Infinity ? -1 : max; // -1

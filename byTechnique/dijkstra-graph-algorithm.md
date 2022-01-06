@@ -11,6 +11,10 @@
 - Can also be applied on DIRECTED and/or UNDIRECTED graph
 - Can be used on weight / length and/or unweighted graph
 
+## Intuition 
+![Graph](https://github.com/citta-lab/DSA/blob/dfa066caff0f5eba89e2e6c560149449fc671995/byTechnique/assests/dijkstra.png)
+![Queue](https://github.com/citta-lab/DSA/blob/dfa066caff0f5eba89e2e6c560149449fc671995/byTechnique/assests/dijkstra-priority-queue.png)
+
 ## Usage:
 - Finding shortest distance between source to destination (Geographic Information System (GIS), such as Google Maps, for finding shortest path from point A to point B)
 - Finding cost between source and destination 
@@ -181,10 +185,10 @@ const getMinVertex = (distanceArray, visited) => {
         }
         
         /** if array holds value ( vertex value) less than our default, then update */
-        if(distance <= curDistance){
-            curDistance = distance;
-            curVertex = vertex;
-        }
+            if(distance <= curDistance){
+                curDistance = distance;
+                curVertex = vertex;
+            }
     }
 
     /** return the pair */

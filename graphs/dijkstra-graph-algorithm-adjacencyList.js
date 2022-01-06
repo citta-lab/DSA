@@ -1,7 +1,13 @@
 
 /** 
+ * 
+ * Number of edges equals to total number of nodes and each pair corresponds to [destination, distance].
+ * find the shortest path.
+ * 
  * Implement Dijkstra algorithm and impove the time complexity further. 
  * video : https://www.youtube.com/watch?v=VaFFWxcKBO4 
+ * 
+ * question: https://www.algoexpert.io/questions/Dijkstra's%20Algorithm
  * 
  * */
 
@@ -74,16 +80,16 @@ const getMinDistanceVertex = (distanceArray, visited) => {
     return [curVertex, curMinDistance];
 }
 
-let edges = [
-    [ [ 1, 7 ] ],
-    [ [ 2, 6 ], [ 3, 20 ], [ 4, 3 ] ],
-    [ [ 3, 14 ] ],
-    [ [ 4, 2 ] ],
-    [],
-    []
-  ]
+    let edges = [
+        [ [ 1, 7 ] ],
+        [ [ 2, 6 ], [ 3, 20 ], [ 4, 3 ] ],
+        [ [ 3, 14 ] ],
+        [ [ 4, 2 ] ],
+        [],
+        []
+    ]
 
-console.log(dijkstra(edges, 0));
+console.log(dijkstra(edges, 0)); // [ 0, 7, 13, 27, 10, Infinity ]
 
 edges = [ [ [ 1, 2 ] ], [ [ 0, 1 ] ], [ [ 3, 1 ] ], [ [ 2, 2 ] ] ]
 console.log(dijkstra(edges, 0));

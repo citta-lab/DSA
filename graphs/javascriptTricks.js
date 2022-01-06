@@ -115,3 +115,8 @@ console.log(names); // ['bob', 'matt', 'adam', 'james']
 
 let addRobBack = names.splice(robsIndex, 0, removeRob[0]); /** .splice(indexValueToAdd, numberOfItemToRemove, valueToAdd) */
 console.log(names); // ['bob', 'matt', 'adam', 'rob', 'james']
+
+
+/** If Infinity return -1 or find the last element value */
+const given = [1, Infinity, 12, 9, 7]
+const result = given.find((value,index) => value === Infinity || index === given.length-1 ); // Infinity 

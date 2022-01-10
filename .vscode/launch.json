@@ -7,7 +7,7 @@
     "skipFiles": [
         "<node_internals>/**"
     ],
-    "program": "${workspaceFolder}/graphs/hasCycle-dfs.js",
+    "program": "${workspaceFolder}/graphs/",
     "runtimeExecutable": "npm",
     "runtimeArgs": ["run-script", "debug"]
   }

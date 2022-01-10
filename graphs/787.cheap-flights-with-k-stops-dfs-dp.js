@@ -1,6 +1,6 @@
 /** There are n cities connected by some number of flights. You are given an array flights where
- *  flights[i] = [fromi, toi, pricei] indicates that there is a flight from city fromi to city to 
- * i with cost pricei. 
+ *  flights[i] = [fromi, toi, pricei] indicates that there is a flight from city fromi to city toi
+ *  with cost pricei. 
  * 
  * You are also given three integers src, dst, and k, return the cheapest 
  * price from src to dst with at most k stops. If there is no such route, return -1. 
@@ -13,7 +13,7 @@
  * Hint: DFS with memoization 
  * - Apply DFS on adjacency matrix, we can calculate children of node by looping through cities and then
  * mapping with the src. like [src][0], [src][1], [src][2] where 0,1,2 are from n.
- * - add memo to memoize as we will keep visiting same cell multiple time sin DFS
+ * - add memo to memoize as we will keep visiting same cell multiple times in DFS
  * - Can also be done using Dijkstra's algorithm as this is meant for shortest path but having K stops
  * adds more complexity
  * - Bellam-Ford is better

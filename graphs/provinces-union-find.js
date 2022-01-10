@@ -33,6 +33,7 @@ var findCircleNum = function(isConnected) {
     
     for(let i=0; i < isConnected.length; i++){
         for(let j=0; j < isConnected[0].length; j++){
+            /** Union function operation */
             if(isConnected[i][j] === 1 && i !== j){
                 let p1 = findParent(i, parent);
                 let p2 = findParent(j, parent);
@@ -42,7 +43,7 @@ var findCircleNum = function(isConnected) {
                     components -= 1
                 }
             }
-        }
+        }   
     }
     
     return components;
@@ -56,7 +57,7 @@ const buildParent = (n, array=[]) => {
     return array;
 }
 
-const findParent = (node, parent) =>{
+const findParent = (node, parent) => {
     if(node === parent[node]) return node;
     return findParent(parent[node], parent);
 }

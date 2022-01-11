@@ -23,7 +23,13 @@
  * - 'JFK' is by default airport and will be starting airport
  * - edges (tickets) length + 1 should be equal to our resut itenary to say we completed the travel.
  * - need backtracking if we endup with airport doesnt have connections but we yet to explore more destinations
- * 
+ * from the adjList. Example:
+ *  a <--->c
+ *  |
+ *  v 
+ *  b
+ * If we go from a to b first then we can't come back as b doesnt have edge pointing to a. So we will 
+ * undo the process by putting b back and go to c. Once c is done we will come back to b.
  * */
 
 
@@ -84,6 +90,7 @@
             /** if true then we found complete path so we are done i.e first true condition */
             if(result) return true; 
             
+            /** back tracking */
             // https://stackabuse.com/javascript-how-to-insert-elements-into-a-specific-index-of-an-array/
             adjList[start].splice(index, 0, child);
             resultArr.pop();

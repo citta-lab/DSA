@@ -40,7 +40,7 @@
     /** Apply DFS with product as accumulator which can be used to multiple ex: a/b*b/c = 2*3 => a/c */
     let dfs = (src, dst, adjList, visited, product) => {
         
-        /** if we dont have src or dst in the adjList */
+        /** if we dont have src or dst in the adjList ( THIS NEEDS TO BE THE FIRST CHECK )*/
         if(!adjList[src] || !adjList[dst]){
             return -1;
         }
@@ -76,7 +76,7 @@
     let result = [];
     for(let query of queries){
         const [ src, dst] = query;
-        let visited = new Set();
+        let visited = new Set(); /** needs to have here so new set is used for every query */
         let value = dfs(src, dst, adjList, visited, 1);
         
         /** this will handle when src === dst or src/dst !== -1 */

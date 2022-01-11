@@ -89,9 +89,14 @@ In this case `[first, second] = prereq;` first has dependecy on the second cours
 
 
 ## DFS:
+Traverse all the way until we cant go any further. Hence Depth.
 - Use Stack 
 - Last In, First Out
 - pop() and push() are your friends here
+
+In Graph theory, the depth-first search algorithm (abbreviated as DFS) is mainly used to:
+- Traverse all vertices in a “graph”;
+- Traverse all paths between any two vertices in a “graph”.
 
 Here is the stack node movement in DFS,
 ```js

@@ -8,7 +8,7 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 
 
 ## Other JS Repos
-[Easy-Medium](https://github.com/anubhavsrivastava/leetcodeJS) 
+[Easy-Medium](https://github.com/anubhavsrivastava/leetcodeJS)
 [700-Leetcode-Questions](https://github.com/BakeItTillYouMakeIt/LeetCodeJS/tree/master/Javascript)
 [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
 [javascript-interview-questions](https://github.com/sudheerj/javascript-interview-questions)

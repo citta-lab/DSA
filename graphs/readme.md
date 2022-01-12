@@ -115,6 +115,13 @@ Here is the stack node movement in DFS,
 ![graph](https://github.com/citta-lab/DSA/blob/54845c5cc61f0a6d6cf241c7c8373de7e709701c/graphs/blob/stack.png)
 
 ## BFS
+"“breadth-first search” is to efficiently find the shortest path between two vertices in a “graph” where all edges have equal and positive weights."
+
+In Graph theory, the primary use cases of the “breadth-first search” (“BFS”) algorithm are:
+
+- Traversing all vertices in the “graph”;
+- Finding the shortest path between two vertices in a graph where all edges have equal and positive weights.
+
 - Use Queue 
 - First In, First Out
 - shift() and push() are your friends here

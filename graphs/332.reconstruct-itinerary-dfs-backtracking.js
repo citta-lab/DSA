@@ -105,3 +105,16 @@
     return resultArr;
 };
 
+let tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]];
+console.log(findItinerary(tickets)); // [ 'JFK', 'ATL', 'JFK', 'SFO', 'ATL', 'SFO' ]
+
+tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
+console.log(findItinerary(tickets)); // [ 'JFK', 'MUC', 'LHR', 'SFO', 'SJC' ]
+
+/** this will break if we dont do backtracking */
+/** adjList = { JFK: [ 'KUL', 'NRT' ], KUL: [], NRT: [ 'JFK' ] } by looking at it when we go from JFK to 
+ * KUL first we cant come back and cant go to NRT. So we need to undo going to KUL and go to NRT then revist
+ * KUL */
+tickets = [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]]
+console.log(findItinerary(tickets)); // ["JFK","NRT","JFK","KUL"]   
+

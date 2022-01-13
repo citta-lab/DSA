@@ -12,6 +12,9 @@ one simple path between any two points.
 Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
 Output: 20
 
+leetcode-question:1584
+leetcode:https://leetcode.com/problems/min-cost-to-connect-all-points/
+
 Hint: Kruskals method to find min spanning tree with union find for finding already connected nodes 
 */
 

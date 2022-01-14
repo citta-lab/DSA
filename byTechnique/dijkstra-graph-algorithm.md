@@ -162,7 +162,8 @@ while(visited.size !== edges.length){
 }
 
 /** finally we compare if we have infinity to modify the result */
-return distanceArray.map(x => x === Infinity ? -1 : x);
+let result = Math.max(...(distance.filter(x => x)));
+return result === Infinity ? -1 : result
 ```
 
 ### 7: Helper ( Min Vertex and Value finder )

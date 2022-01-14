@@ -79,7 +79,8 @@ var networkDelayTime = function(times, n, k) {
     we have in the shortest path. So abusing spead and Math.max to find the max value after
     using filter to remove NaN */
     
-    let result = distance.find((x, index) => x === Infinity || index === distance.length-1)
+    // let result = distance.find((x, index) => x === Infinity || index === distance.length-1) <-- fails
+    let result = Math.max(...(distance.filter(x => x)));
     
     return result === Infinity ? -1 : result;
 };

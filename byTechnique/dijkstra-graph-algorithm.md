@@ -1,4 +1,7 @@
 # Dijkstra Algorithm 
+the “breadth-first search” algorithm can only solve the “shortest path” problem in “unweighted graphs”. But in real life, we often need to find the “shortest path” in a “weighted graph”. “Dijkstra's algorithm” can only be used to solve the “single source shortest path” problem in a weighted directed graph with non-negative weights.
+
+Note: “Bellman-Ford algorithm”, on the other hand, can solve the “single-source shortest path” in a weighted directed graph with any weights, including, of course, negative weights.
 
 ## Pointers:
 - Apply on `Graph` problem to find the `shortest distance`.

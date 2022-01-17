@@ -1,8 +1,17 @@
-/** swap pairs of node in linked list and return a swapped linkedList 
+/** 
+ * 24. Swap Nodes in Pairs
+ * 
+ * swap pairs of node in linked list and return a swapped linkedList 
  * example: 1->2->3->4->null should be 2->1->4->3
+ * 
+ * leetcode-question:24
+ * leetcode:https://leetcode.com/problems/swap-nodes-in-pairs/
  * 
  * HINT:
  * Try to solve with O(1) space in second attempt. Second solution is using O(1) space
+ * 
+ * Topic:
+ * LinkedList-Recursion
 */
 
 const { buildLinkedList } = require('./LinkedListII');
@@ -19,6 +28,8 @@ var swapPairs = function(head) {
     
     /** in  this recursion it goes all the way from 1 to 4 and gets resolved then backtracks */
     firstNode.next = swapPairs(secondNode.next);
+
+    /** backtracking */
     secondNode.next = firstNode;
     
     return secondNode;

@@ -18,3 +18,6 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [Graphs Video by Alvin](https://www.youtube.com/watch?v=2_Uuixtc5i0)
 - [Dynamic Programming by Alvin](https://www.youtube.com/watch?v=oBt53YbR9Kk&t=9296s)
 - [LinkedList Basics Standford](http://cslibrary.stanford.edu/103/LinkedListBasics.pdf)
+- [Interview Prep Leetcode Recommendation](https://leetcode.com/discuss/study-guide/1098600/topics-which-you-cant-skip-interview-preparation-study-plan-using-leetcode)
+- [Bit Operators](https://leetcode.com/discuss/study-guide/1151183/tips-hacks-which-you-cant-ignore-as-a-coder)
+- [Git repo on DSA](https://github.com/sachuverma/DataStructures-Algorithms#data-structures--algorithms)

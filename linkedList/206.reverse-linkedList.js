@@ -1,6 +1,17 @@
-/** Reverse a singly linked list.
-	Input: 1->2->3->4->5->NULL
-    Output: 5->4->3->2->1->NULL */
+/** 
+
+ 206. Reverse Linked List
+
+ Given the head of a singly linked list, reverse the list, and return the reversed list.
+ 
+ leetcode-question:206
+ leetcode:https://leetcode.com/problems/reverse-linked-list/
+ 
+ Example:
+ Input: 1->2->3->4->5->NULL
+ Output: 5->4->3->2->1->NULL 
+ 
+ */
     
 
     const { buildLinkedList } = require('./LinkedListII');

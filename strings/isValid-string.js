@@ -1,4 +1,7 @@
 /**
+
+20. Valid Parentheses
+
 Given a string s containing just the 
 characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 An input string is valid if:
@@ -17,6 +20,9 @@ Output: false
 Example: 
 Input: s = "()[]{}"
 Output: true
+
+leetcode-question:20
+leetcode:https://leetcode.com/problems/valid-parentheses/
 
 Hint:
 How about we use hashMap to keep track of closing braces like `]`,`}`,`)`. 

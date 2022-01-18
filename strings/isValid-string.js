@@ -34,31 +34,35 @@ braces in stack. If we find match in hash then pop from stack to compare
 
 /** O(n) time and O(n) space */
 var isValid = function(s) {
-    let hash = {
+   
+   let stack = []; /** will store all opening brace */
+   let str = s.split('');
+   
+   /** matcher to remove open brace from stack from top */
+   let hash = {
         ')': '(',
         '}': '{',
         ']': '['
     };
     
-    let stack =[];
+   for(let i=0; i<str.length; i++){
+       let char = str[i];
+       /** 
+         if it is closing brace, then we need to remove
+         open brance from top of the queue and make sure
+         it is of same type 
+         */
+       if(hash[char]){
+           let pop = stack.pop();
+           /** we fail when char from loop is ) and poped from stack is [ */
+           if(pop !== hash[char]) return false 
+       }else{
+           /** we store only open brace & remove it when we find closing match */
+           stack.push(char);
+       }
+   }
     
-    let chars = s.split('');
-    for(let i=0; i< chars.length; i++){
-        
-        let char = chars[i];
-        
-        if(hash[char]){
-            let popped = stack.length > 0 ? stack.pop() : 'DUMMY';
-            if(popped !== hash[char]){
-                return false;
-            }
-        }else{
-            stack.push(char);
-        }
-        
-    }
-    
-    return stack.length === 0;
+   return stack.length === 0
 };
 
 console.log(isValid('[[[]]]'));

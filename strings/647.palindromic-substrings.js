@@ -17,7 +17,7 @@ leetcode-question:647
 leetcode:https://leetcode.com/problems/palindromic-substrings/
 video: https://www.youtube.com/watch?v=4RACzI5-du8
 
-Similar Question: 
+Similar Question: https://github.com/citta-lab/DSA/blob/89faf71b0f98f993e08d0af2e64a92c51bd3289e/strings/5.longest-palindromic-substring.js
 
 Hint: 
 Use two pointers left and right have them move outwards. we need to handle both

@@ -69,3 +69,43 @@ console.log(isValid('[[[]]]'));
 console.log(isValid('(]'));     // false 
 console.log(isValid('([)]'));   // false
 console.log(isValid('()'));     // true
+
+
+/** More Verbose  */
+var isValid = function(s) {
+    let str = s.split('');
+    let stack = [];
+    
+    for(let i=0; i<str.length; i++){
+        let char = str[i];
+        if(char === '('){
+            stack.push(')');
+        }else if(char === ')'){
+            if(stack[stack.length-1] === char){
+                stack.pop();   
+            }else{
+                return false;
+            }
+        }
+        
+        else if(char === '['){
+            stack.push(']');
+        }else if(char === ']'){
+            if(stack[stack.length-1] === char) stack.pop();
+            else {
+                return false;
+            }
+        }
+        
+        else if(char === '{'){
+            stack.push('}');
+        }else if(char === '}'){
+            if(stack[stack.length-1] === char) stack.pop();
+            else {
+                return false;
+            }
+        }
+    }
+    
+    return stack.length === 0  
+};

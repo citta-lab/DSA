@@ -1,4 +1,9 @@
-/** Given a string s, find the length of the longest substring without repeating characters.
+/** 
+ * 
+ * 3. Longest Substring Without Repeating Characters
+ * 
+ * Given a string s, find the length of the longest substring without 
+ * repeating characters.
 
 Examples: 
 Input: s = "abcabcbb"
@@ -19,6 +24,7 @@ Output = 2
 Input: s = "asjrgapa"
 Output = 6
 
+leetcode-question:3
 leetcode: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 Company: Google, Facebook
 
@@ -28,27 +34,41 @@ video : https://www.youtube.com/watch?v=wiGpQwVHdE0
 
 /** O(N) time and O(N) space [ SLIDING WINDOW ] */
 var lengthOfLongestSubstring = function(s) {
-  let longest = 0;
-  let seen = new Set();
+  let str = s.split('');
+  let max = 0;
   
-  let left = 0;
+  /** 
+    left pointer : to delete char from left side 
+    when we find char in visited set 
+    right pointer : will keep moving until end
+    */
+  let left = 0; 
   let right = 0;
-  for(let i=0; i<s.length; i++){
-      right = i;
-      /** IMPORTANT: dont extract values like rightVal = s[right] and check rightVal in while loop. will cause infinite loop */
-      while(seen.has(s[right])){
-          seen.delete(s[left]);
-          left += 1;
+  
+  let visited = new Set();
+  for(let i=0; i<str.length; i++){
+      let right = i;
+      
+      let rightChar = str[right];
+      /** while loop instead of `if` to handle when we tackle
+       *  string like 'pww' where we will have to remove p & w 
+       * before we add w on 2nd index */
+      while(visited.has(rightChar)){
+          let leftChar = str[left];
+          visited.delete(leftChar);
+          left++  // <-- move left pointer now
       }
       
-      seen.add(s[right]);
-      longest = Math.max(longest, seen.size);
-      //OR
-      // longest = Math.max(longest, right-left+1)
+      visited.add(rightChar);
+      
+      max = Math.max(max, right-left+1);
+      // max = Math.max(max, visited.size); <-- OR this
   }
   
-  return longest
+  return max;
 };
+
+
 
 /** BRUTE FORCE */
 var lengthOfLongestSubstringI = function(s) {

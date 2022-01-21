@@ -2,8 +2,9 @@
 
 ## 1. Count Repeated Char 
 If the given string has multiple repeated character then we would like to count number of times it is repeated from given index. 
-Example "heeeelloo" we need to have h:1, e:4, l:2, o:2. if someone asks to find repeated character at index 1 i.e (e) then we 
-should return 4.
+Example : 
+`"heeeelloo"` we need to have `h:1, e:4, l:2, o:2`. if someone asks to find repeated character at `index 1` i.e (e) then we 
+should return `4`.
 
 :shipit: sliding window / two pointers.
 

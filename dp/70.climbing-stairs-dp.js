@@ -26,7 +26,7 @@ var climbStairs = function(n) {
      1: 1 i.e ways
      2: 1+1, 2 i.e 2 ways 
      3: 1+1+1, 2+1, 3 i.e 3 ways 
-     4: 1+1+1+1, 1+1+2, 2+2, 1+3, 4 i.e 4 ways
+     4: 1+1+1+1, 1+1+2, 2+2, 1+1+2, 1+2+1 i.e 5 ways
      
      pattern:
      to find 3rd stairs combinations we can do first + second 

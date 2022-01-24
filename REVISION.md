@@ -22,7 +22,16 @@ i have made the progress.
 | [next problem]() | comment |
 | [next problem]() | comment |
 
+## Strings 
 
+| PROBLEM | What Went Wrong |
+| --- | --- |
+| [1249. Minimum Remove to Make Valid Parentheses](https://github.com/citta-lab/DSA/blob/65b3eec2fd23f21249ed1fa4d6a13eedc390de8b/strings/1249.minimum-remove-to-make-valid-parentheses.js) | Use stack to add index of '(' position, pop stack when we see ')'. if stack is not empty pop the index and remove the char corresponding to popped index from string (i.e str[index] = '') |
+| [20. Valid Parentheses]() | Use stack whenever we see 'open brace' we push it to stack, when we see matching brace we pop. Before popping check if opping element is actually matching closing brace otherwise return false. Repeat this to all kind of braces |
+| [3.Longest Substring Without Repeating Characters](https://github.com/citta-lab/DSA/blob/65b3eec2fd23f21249ed1fa4d6a13eedc390de8b/strings/3.longest-substring-strings.js) | Use left and right pointers with visited set. loop though the string and if we found char in visited we remove char from visited set and increment left. Do Math.max on visited set and return max at end |
+| [5.Longest Palindromic Substring](https://github.com/citta-lab/DSA/blob/65b3eec2fd23f21249ed1fa4d6a13eedc390de8b/strings/5.longest-palindromic-substring.js) | two pointers left and right starts from i=0. Two while loops one for even size and one for odd size |
+| [next problem]() | comment |
+| [next problem]() | comment |
 
 # PART II ( yay's ):
 In this section i would also like to highlight the CONFIDENCE by rating the problem from 3 to 1 where 3 being the WORST and 1 is the BEST.

@@ -30,7 +30,7 @@ i have made the progress.
 | [20. Valid Parentheses]() | Use stack whenever we see 'open brace' we push it to stack, when we see matching brace we pop. Before popping check if opping element is actually matching closing brace otherwise return false. Repeat this to all kind of braces |
 | [3.Longest Substring Without Repeating Characters](https://github.com/citta-lab/DSA/blob/65b3eec2fd23f21249ed1fa4d6a13eedc390de8b/strings/3.longest-substring-strings.js) | Use left and right pointers with visited set. loop though the string and if we found char in visited we remove char from visited set and increment left. Do Math.max on visited set and return max at end |
 | [5.Longest Palindromic Substring](https://github.com/citta-lab/DSA/blob/65b3eec2fd23f21249ed1fa4d6a13eedc390de8b/strings/5.longest-palindromic-substring.js) | two pointers left and right starts from i=0. Two while loops one for even size and one for odd size |
-| [next problem]() | comment |
+| [394. Decode String](https://github.com/citta-lab/DSA/blob/57b9210796919130609630ab3158738b4546efe5/strings/394.decode-strings-stack.js) | Use stack, add char to stack until ']', process char from stack until we find ']', then pop the ']' and process num by using parseInt(char) >= 0. Then repeat num times and push it to stack  |
 | [next problem]() | comment |
 
 # PART II ( yay's ):

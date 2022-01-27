@@ -1,4 +1,26 @@
-# javascript 
+# ARRAYS
+
+## Mutate Array
+### Remove Item from an Array
+```js
+/** Remove and Insert element to particular index in an Array */
+let names = ['bob', 'matt', 'adam', 'rob', 'james'];
+
+let robsIndex = 3;
+/** .splice(indexValueToRemove, numberOfItemToRemove) */
+let removeRob = names.splice(robsIndex, 1); 
+console.log(removeRob); // ['rob']
+console.log(names); // ['bob', 'matt', 'adam', 'james']
+```
+
+### Insert Item to an Array
+```js
+let names = ['bob', 'matt', 'adam', 'james'];
+
+/** .splice(indexValueToAdd, numberOfItemToRemove, valueToAdd) */
+let addRob = names.splice(robsIndex, 0, removeRob[0]); 
+console.log(names); // ['bob', 'matt', 'adam', 'rob', 'james']
+```
 
 ## Array Sort 
 ### With Tuples like `[x,y,value]`:
@@ -15,6 +37,26 @@ If we would like to sort the array by last element, then by next previous elemen
 let arr = [[2,3,1], [2,3,0], [4,2,6], [5,8,2], [2,2,2]];
 let sortedArr = arr.sort((a,b) => a[1]-b[1]).sort((x,y) => x[2]-y[2]);
 console.log(sortedArr); // [[2,3,0],[2,3,1],[2,2,2],[5,8,2],[4,2,6]];
+```
+
+## Initialize M*N array
+### Initialize Array with Zero's 
+```js
+/** Build m*n empty array with initial value 0 */
+let size = 5;
+let arr = new Array(size).fill(0)
+.map(row => new Array(size).fill(0)); 
+```
+
+### Initialize Array to HOLD diagonal values
+This particular scenario is needed if we want to traverse the m * n array via zigzag. Then 
+we initialize the result array with row+col-1 size to store all diagonal values. Example: 
+3 * 3 array we will have result with size 5.
+```js
+let rows = matrix.length;
+let cols = matrix[0].length;
+let arr = new Array(rows+cols-1).fill(null)
+.map(() => []); // [ [], [], [], [], [] ]
 ```
 
 ## Matrix (M*N) Co-ordinates 

@@ -69,3 +69,14 @@ console.log(areTheySame('heeellooo', 'hello')); // true
 console.log(areTheySame('heeellooo', 'helo'));  // true
 console.log(areTheySame('heeellooo', 'hillo')); // false
 ```
+
+## BIT Conversion 
+
+The most easy way to convert any number to corresponding bit value is by doing 
+```js
+/** syntax : (num).toString(2); */
+(10).toString(2); // 1010
+```
+
+
+

@@ -131,3 +131,5 @@ const given = [NaN, Infinity, 12, NaN, 7]
 // filter will remove NaN and ... will spread the numbers with Infinity.
 const max = Math.max(...(given.filter(x => x))); // Infinity
 const result = max === Infinity ? -1 : max; // -1
+
+

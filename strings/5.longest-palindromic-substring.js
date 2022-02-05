@@ -38,7 +38,8 @@ index = 1, left = right = 0; result = 'bab' ( while loop will exit after going t
 
 Hint: 
 Use two pointers left and right have them move outwards. we need to handle both
-odd case ( i.e 'bbb' ) and for even case (i.e 'bb' ). 
+ODD case ( i.e 'bbb' ) and 
+EVEN case (i.e 'bb' ). 
 
 IMPORTANT: 
 - `left, right = i` ( to start with )
@@ -49,33 +50,7 @@ IMPORTANT:
 - extracting the string from s is `s.substring(left, right+1)`
 - for EVEN case `left = i` but `right = i + 1`
 so pseudo code looks like this
-```js 
-/** result and size to find longest string */
-result = '';
-size = 0
-for index of s 
-   /** odd case */
-   left = index
-   right = index
-   while left>= 0 && right < s.length && s[left] === s[right]
-       curSize = right-left+1
-       if curSize > size 
-          curString = s.substring(left,right+1)
-          result = curString
-          size = curSize
-        
-       left -= 1
-       right += 1
-       
-   /** even case like 'bb' */
-   left = index
-   right = index+1 // <--- is the only diff
-   while left>= 0 && right < s.length && s[left] === s[right]
-       ....
-       ...
-       ...
- ```
-*/
+
 
 /** time: O(n^2) and space: O(1) */
 var longestPalindrome = function(s) {
@@ -120,3 +95,12 @@ var longestPalindrome = function(s) {
     
     return result;
 };
+
+let s = "aacabdkacaa"
+console.log(longestPalindrome(s)); //"aca" 
+
+s = "babad" // <-- ODD case
+console.log(longestPalindrome(s)); //"bab" 
+
+s = "cbbd"// <-- EVEN case
+console.log(longestPalindrome(s)); //"bb" 

@@ -44,7 +44,7 @@
         let charToAdd = (total % 2).toString();
         
         /** add it to result, now check if we have remainder using */
-        result = charToAdd + result;
+        result = charToAdd + result; // <-- becuase we reversed it 
         carry = Math.floor(total / 2);
     }
     

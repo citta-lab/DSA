@@ -1,8 +1,11 @@
 /** 
 
+  27. Remove Element
+
   Given an array and a value, remove all instances of that value in-place and return the new length.
   
-  leetcode: https://leetcode.com/explore/learn/card/array-and-string/205/array-two-pointer-technique/1157/
+  leetcode: https://leetcode.com/problems/remove-element/
+  leetcode-question:27
   
   Input: numbers = [1,5,7,5,9,10] value = 5
   Output: 4 ( index ) i.e numbers = [1,7,9,10] 

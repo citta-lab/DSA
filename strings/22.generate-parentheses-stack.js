@@ -38,6 +38,7 @@
         if(open < n){
             stack.push('(');
             backtrack(open+1, close, n);
+            /** hence we are only using stack as global variable we need to remove previously added paranthesis */
             stack.pop();            /** remove '(' from the stack during backtracking */
         }
         

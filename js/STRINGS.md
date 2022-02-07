@@ -78,5 +78,32 @@ The most easy way to convert any number to corresponding bit value is by doing
 (10).toString(2); // 1010
 ```
 
+## Longest repeated char 
+The idea here is to pick the first word from an array and then compare rest of the words by char by char.
+```js
+let strs = ["flower","flow","flight"];
+
+function repeat(strs){
+   let firstWord = strs[0];
+
+   /** now we compare each char from first word to rest of the word char by char */
+   for(let i=0; i<firstWord.length; i++){
+      let char = firstWord[i]; // f,
+
+      for(let j=1; j<strs.length; j++){
+         /** compares 'f' against first char of 'flow' and then 'flight', then 
+          * we pick up l from firstWord and compare againt second char of 'flow' and then 'flight' this keep repeating */
+         if(char !== strs[j].chatAt(i)){
+            return firstWord.substring(0, i);
+         }
+      }
+   }
+
+   /** if we didnt fail then we have firstWord as longest*/
+   return firstWord;
+}
+
+```
+
 
 

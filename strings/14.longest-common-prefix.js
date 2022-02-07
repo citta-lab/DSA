@@ -68,6 +68,10 @@ var longestCommonPrefix = function(strs) {
              step 4: if first word char is NOT EQUAL to rest of the word char
              then we break. Also i === strs[j].length to handle when the 
              input is ["a", "b"] 
+
+             compares 'f' against first char of 'flow' and then 'flight', then 
+             we pick up l from firstWord and compare againt second char of 
+             'flow' and then 'flight' this keep repeating 
              */
              if(char !== strs[j].charAt(i) || i === strs[j].length ){
                  return strs[0].substring(0, i)

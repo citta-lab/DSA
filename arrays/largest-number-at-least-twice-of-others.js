@@ -45,6 +45,11 @@
             /** else will keep track of possible 
             second max number found after finding
             fastMax. Example: [0,0,3,2] */ 
+
+            /** this is needed because we are going left to right, if we find
+             * second largest number at the end like in this example [0,0,3,2]
+             * we need to check if 3 is greater than twice of 2
+             */
             
             slowMax = num;
         }

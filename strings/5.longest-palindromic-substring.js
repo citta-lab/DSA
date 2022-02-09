@@ -15,6 +15,8 @@ leetcode-question:5
 leetcode:https://leetcode.com/problems/longest-palindromic-substring/
 video:https://www.youtube.com/watch?v=XYQecbcd6_c
 
+BLIND: 3 ( 3 / 75 )
+
 Hint: 
 Brutforce: if the given string is "babad" then we can build a combination of words by 
 looping it in nested forloops which will be O(n^2) and then we will have to scan each

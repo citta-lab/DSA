@@ -28,8 +28,12 @@ leetcode-question:3
 leetcode: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 Company: Google, Facebook
 
+BLIND: 2 ( 2 / 75 )
+
 Reference: https://duncan-mcardle.medium.com/leetcode-problem-2-longest-substring-without-repeating-characters-javascript-993890bf8eac
 video : https://www.youtube.com/watch?v=wiGpQwVHdE0
+
+
 */
 
 /** O(N) time and O(N) space [ SLIDING WINDOW ] */

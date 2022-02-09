@@ -24,3 +24,47 @@
  * - move left or right if one of them is less than or equal
  * 
  * */
+
+/** Time: O(N) and O(1) space */
+var maxArea = function(height) {
+    
+    let maxAreaResult = 0;
+    let left = 0;
+    let right = height.length - 1; 
+    
+    while(left < right){
+        
+        /** 
+            Step 1: 
+            Find if we have max area from given left, right
+            - calculate area every time 
+            - Area = length of shorter vertical line * distance between lines
+        */
+        let area = ( right - left ) * Math.min(height[left], height[right]);
+        maxAreaResult = Math.max(maxAreaResult, area);
+        
+        /** Step 2: 
+            move left or right if one is less than other so we check all
+            options 
+        */
+        if(height[left] <= height[right]){
+            left++
+        }else if(height[left] > height[right]){
+            right--
+        }
+    }
+    
+    return maxAreaResult;
+};
+
+let height = [1,8,6,2,5,4,8,3,7]
+console.log(maxArea(height)); // 49
+
+height = [1,8,6,2,5,4,1,3,1]
+console.log(maxArea(height)); //18
+
+height = [1,1,1,1,1,1,1]
+console.log(maxArea(height)); //6
+
+height = [1,0]
+console.log(maxArea(height)); //0

@@ -16,4 +16,11 @@
     - Use forloop for traversing the chars one at a time for both ODD and EVEN while loops
     - ODD: assing left = index, right = index and check palindrome inside while loop
     - EVEN : assing left = index, right index+1 and check palindrome inside while loop
+
+## 4. [Container With Most Water](https://github.com/citta-lab/DSA/blob/main/dp/11.container-with-most-water.js)
+    - use TWO pointers. start left at the begining and right at the end 
+    - calculate area everytime inside while loop and update to maxArea only if it's more
+    - Area = length of shorter vertical line * distance between lines 
+    - i.e `let area = min(height[left], height[right]) * (right - left);`
+    - move left or right if one of them is less than or equal to other one.
  

@@ -29,4 +29,6 @@
     - Result array shouldn't have same element in same position in the result set ( still confused )
     - we sort the array so we can array TWO SUM sorted array method 
     - if we find same elements in consecutive postion, we skip both in outer loop & in TWO SUM logic
+    - i.e skip in outerloop: `if(iThElement === nums[i-1]) { continue }`
+    - i.e skip inside TWO SUM: `while(leftElement === nums[left-1]) { left ++ }`
  

@@ -28,5 +28,5 @@
     - break this problem into a loop problem plus two sum sorted array problem 
     - Result array shouldn't have same element in same position in the result set ( still confused )
     - we sort the array so we can array TWO SUM sorted array method 
-    - if we find duplicate elements in consecutive postion then we skip both in outer loop & in TWO SUM logic
+    - if we find same elements in consecutive postion, we skip both in outer loop & in TWO SUM logic
  

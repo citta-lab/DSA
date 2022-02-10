@@ -24,6 +24,8 @@ Output: true
 leetcode-question:20
 leetcode:https://leetcode.com/problems/valid-parentheses/
 
+BLIND: 7 (7/75)
+
 Hint:
 How about we use hashMap to keep track of closing braces like `]`,`}`,`)`. 
 Use stack to push all open braces like `(`,`[`,`{`. 

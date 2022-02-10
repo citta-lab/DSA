@@ -45,3 +45,12 @@
     - move fast, n+1 times so our slow will be one step behind the nth element
     - second while loop should just check fast if we have done n+1 times fast. i.e `while(fast){...}`
     - return dummy.next instead of head so we can solve problems with just one element
+
+## 7. [Valid Parentheses](https://github.com/citta-lab/DSA/blob/main/strings/20.isValid-string.js)
+    - use hashmap for storing brances where key is closed brace and value is open brace.
+    - i.e `let hash = { ')':'(', ']':'[', '}','{' }`
+    - use stack where we will only add open brances 
+    - if we are processing closing brance then check corresponding open brance from hash and 
+    last element in stack are equal. If so we pop item from stack. 
+    - if stack is empty at the end then we had valid parentheses stack.length === 0 as answer. 
+    - Note: if we get just ']' as input then this fails so we need to have else check which return false when we are processing closing brace and stack/empty last item doesnt match 

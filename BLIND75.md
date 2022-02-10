@@ -47,12 +47,21 @@
     - return dummy.next instead of head so we can solve problems with just one element
 
 ## 7. [Valid Parentheses](https://github.com/citta-lab/DSA/blob/main/strings/20.isValid-string.js)
+
     - use hashmap for storing brances where key is closed brace and value is open brace.
     - i.e `let hash = { ')':'(', ']':'[', '}','{' }`
-    - use stack where we will only add open brances 
-    - if we are processing closing brance then check corresponding open brance from hash and 
-    last element in stack are equal. If so we pop item from stack. 
-    - if stack is empty at the end then we had valid parentheses stack.length === 0 as answer. 
+    - use stack where we will only add open brances
+    - if we are processing closing brance then check corresponding open brance from hash and
+    last element in stack are equal. If so we pop item from stack.
+    - if stack is empty at the end then we had valid parentheses stack.length === 0 as answer.
     - Note: if we get just ']' as input then this fails so we need to have else check
-     which return false when we are processing closing brace and stack/empty 
-     last item doesnt match 
+     which return false when we are processing closing brace and stack/empty
+     last item doesnt match
+
+## 7. [Merge Two Sorted Lists](https://github.com/citta-lab/DSA/blob/main/linkedList/21.merge-two-sorted-recursion-linkedList.js)
+
+    - use dummy and we will compare list1 and list2, then add pointer to dummy
+    - also have another pointer head/root pointing to dummy. so we can return head.next
+    - after every comparision we need to move either list1 or list2 and dummy.
+    - do last check to make sure we didn't leave anything in either list.
+    - i.e `return dummy.next = list1 ? list1 : list2`

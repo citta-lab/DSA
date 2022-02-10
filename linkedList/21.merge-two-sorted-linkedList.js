@@ -11,6 +11,8 @@
  * 
  * leetcode-question:21
  * leetcode:https://leetcode.com/problems/merge-two-sorted-lists/
+ * 
+ * BLIND: 8 (8/75)
  */
 
 

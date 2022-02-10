@@ -53,4 +53,6 @@
     - if we are processing closing brance then check corresponding open brance from hash and 
     last element in stack are equal. If so we pop item from stack. 
     - if stack is empty at the end then we had valid parentheses stack.length === 0 as answer. 
-    - Note: if we get just ']' as input then this fails so we need to have else check which return false when we are processing closing brace and stack/empty last item doesnt match 
+    - Note: if we get just ']' as input then this fails so we need to have else check
+     which return false when we are processing closing brace and stack/empty 
+     last item doesnt match 

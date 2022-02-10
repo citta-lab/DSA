@@ -6,6 +6,10 @@
  * IMPORTANT:
  * If the n position is equal to the size of linkedList then first element needs to be removed.
  * Then our n+1 logic fails. Last example covers that scenario. 
+ * 
+ * leetcode-question:19
+ * leetcode: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+ *
  */
 
  /**

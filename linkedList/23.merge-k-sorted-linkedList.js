@@ -1,6 +1,29 @@
-/**
- * Given K sorted linked list, merge all of the linked list and return final sorted list. 
- */
+/** 
+ * 
+ * 23. Merge k Sorted Lists 
+ * 
+ * You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+ * Merge all the linked-lists into one sorted linked-list and return it. 
+ * 
+ * Input: lists = [[1,4,5],[1,3,4],[2,6]]
+ * Output: [1,1,2,3,4,4,5,6]
+ * 
+ * Input: lists = []
+ * Output: []
+ * 
+ * Input: lists = [[]]
+ * Output: []
+ * 
+ * leetcode-question:23
+ * leetcode:https://leetcode.com/problems/merge-k-sorted-lists/
+ * video:https://www.youtube.com/watch?v=q5a5OiGbT6Q
+ * 
+ * BLIND: 9 (9/75)
+ * 
+ * Hint:
+ * - treat it like mergeTwo sorted linkedlist problem
+ * 
+ * */
 
 
 // GIVEN 

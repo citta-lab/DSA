@@ -58,10 +58,20 @@
      which return false when we are processing closing brace and stack/empty
      last item doesnt match
 
-## 7. [Merge Two Sorted Lists](https://github.com/citta-lab/DSA/blob/main/linkedList/21.merge-two-sorted-recursion-linkedList.js)
+## 8. [Merge Two Sorted Lists](https://github.com/citta-lab/DSA/blob/main/linkedList/21.merge-two-sorted-recursion-linkedList.js)
 
     - use dummy and we will compare list1 and list2, then add pointer to dummy
     - also have another pointer head/root pointing to dummy. so we can return head.next
     - after every comparision we need to move either list1 or list2 and dummy.
     - do last check to make sure we didn't leave anything in either list.
     - i.e `return dummy.next = list1 ? list1 : list2`
+
+## 9. [Merge k Sorted Lists](https://github.com/citta-lab/DSA/blob/main/linkedList/merge-k-sorted-linkedList.js)
+
+    - instead of two sorted linkedlist we have K number of linkedList
+    - Approach 1: time: O(n*m) and space: O(1)
+    -- we merge two linkedList at a time.
+    -- create mergeTwoSorted function. which returns head for merged two list
+    -- for first time, apply `mergeTwoSorted` on `lists[0]` and `lists[1]`.
+    -- use for loop starting at `i=2` and use the head from above and repeat `mergeTwoSorted(head, lists[i])`
+    -- do `if(!l1 && !l2) return dummy.next;` check in mergeTwoSorted for input like `[[]]`

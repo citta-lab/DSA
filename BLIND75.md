@@ -69,9 +69,13 @@
 ## 9. [Merge k Sorted Lists](https://github.com/citta-lab/DSA/blob/main/linkedList/merge-k-sorted-linkedList.js)
 
     - instead of two sorted linkedlist we have K number of linkedList
-    - Approach 1: time: O(n*m) and space: O(1)
+    
+    - Approach 1 (Not Optimal): time: O(N*K) where N is size of linkedList, K is number of linkedList and space: O(1)
     -- we merge two linkedList at a time.
     -- create mergeTwoSorted function. which returns head for merged two list
     -- for first time, apply `mergeTwoSorted` on `lists[0]` and `lists[1]`.
     -- use for loop starting at `i=2` and use the head from above and repeat `mergeTwoSorted(head, lists[i])`
     -- do `if(!l1 && !l2) return dummy.next;` check in mergeTwoSorted for input like `[[]]`
+    
+    - Approach 2: time: O(NlogK) and space: O(1)
+    

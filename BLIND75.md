@@ -71,11 +71,18 @@
     - instead of two sorted linkedlist we have K number of linkedList
     
     - Approach 1 (Not Optimal): time: O(N*K) where N is size of linkedList, K is number of linkedList and space: O(1)
-    -- we merge two linkedList at a time.
+    -- we merge two linkedList at a time in order
     -- create mergeTwoSorted function. which returns head for merged two list
     -- for first time, apply `mergeTwoSorted` on `lists[0]` and `lists[1]`.
     -- use for loop starting at `i=2` and use the head from above and repeat `mergeTwoSorted(head, lists[i])`
     -- do `if(!l1 && !l2) return dummy.next;` check in mergeTwoSorted for input like `[[]]`
     
     - Approach 2: time: O(NlogK) and space: O(1)
+    -- we merge two linkedList at a time but in pairs. Then we run merge again on those results.
+    -- will make use of mergeTwoSorted function which returns head for merged two lists
+    -- we will call mergeTwoSorted until we are left with one linkedList in lists 
+    -- i.e `while(lists.length > 1) { .... }`
+    -- we make use of tempMergedLists=[] to hold merged lists for every for loop, then assing 
+    tempMergedLists to lists. i.e 'lists = tempMergedLists` at the end of for loop.
+    -- we call mergeTwoSorted function with pairs i.e `for(let i=0; i<lists.length; i=i+2)`
     

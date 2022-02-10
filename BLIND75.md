@@ -23,4 +23,10 @@
     - Area = length of shorter vertical line * distance between lines 
     - i.e `let area = min(height[left], height[right]) * (right - left);`
     - move left or right if one of them is less than or equal to other one.
+
+## 5. [3Sum](https://github.com/citta-lab/DSA/blob/main/arrays/15.3sum.js)
+    - break this problem into a loop problem plus two sum sorted array problem 
+    - Result array shouldn't have same element in same position in the result set ( still confused )
+    - we sort the array so we can array TWO SUM sorted array method 
+    - if we find duplicate elements in consecutive postion then we skip both in outer loop and inside TWO SUM logic 
  

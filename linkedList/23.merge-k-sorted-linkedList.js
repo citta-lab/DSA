@@ -118,31 +118,67 @@ const mergeTwo = (l1, l2) => {
 
 // O(N log k) where O(n) time for merging two lists of n nodes ( for both ) and log2K for merging splitting.
 // O(1) space
-var mergeKListsTwo = function(lists) {
+/** time: O(N * logK) where N is total number of nodes in two lists */
+var mergeKLists = function(lists) {
     
-    let size = lists.length;
+    /** step 1: 
+        base base to handle when lists is [[]] or [] */ 
+    if(!lists.length || !lists) return null
     
-    if(!size) return null
-    
-    /** interval is number of times we will do merge at each layer */
-    let interval = 1;
-    while(interval < size){
-        /** every interval we start with 0, so we can save the result in 0th index */
-        let index = 0;
-        /** need to make sure index and interval cal doesnt cross the boundry */
-        while(index + interval < size){
-            /** store the result in the i'th index, index 0 always gets the value every interval */
-            lists[index] = mergeTwo(lists[index], lists[index+interval]);
-            /** need to move the index to two position after every time index = 0 + 1 * 2 */
-            index = index + interval * 2;
+    /** 
+    step 2: 
+    we merge two list (pairs) at a time until we are left with last one 
+    */
+    while(lists.length > 1){
+        
+        /** we will hold result of every pair lists merge, then push this to lists */
+        let newlyMergedLists = [];
+        
+        /** looping in pairs hence i=i+2 */
+        for(let i=0; i<lists.length; i=i+2){
+            let list1 = lists[i];
+            let list2 = lists[i+1] || null; /** if lists.length is odd this fails so null */
+            
+            /** calling our TWO SORTED LINKEDLIST helper */
+            let mergedListHead =  mergeTwoSorted(list1, list2);
+            
+            /** newMergedHead will be saved in our temp array */
+            newlyMergedLists.push(mergedListHead);
         }
         
-        interval = interval * 2;
+        /** imp: by doing this we keep merging until we are left with one list */
+        lists = newlyMergedLists;
     }
     
     return lists[0];
-    
 };
+
+function mergeTwoSorted(list1, list2){
+    
+    let dummy = new ListNode(null);
+    let head = dummy;
+    
+    if(!list1 && !list2) return dummy.next;
+    
+    while(list1 && list2){
+        
+        if(list1.val <= list2.val){
+            dummy.next = list1;
+            list1 = list1.next;
+        }else{
+            dummy.next = list2;
+            list2 = list2.next;
+        }
+        
+        dummy = dummy.next; 
+    }
+    
+    dummy.next = list1 ? list1 : list2;
+    
+    return head.next; 
+}
+
+
 
  nodeA = buildLinkedList([1]);
  nodeB = buildLinkedList([4]);

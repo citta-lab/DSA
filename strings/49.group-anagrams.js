@@ -58,3 +58,49 @@ var groupAnagrams = function(strs) {
     
     return result;
 };
+
+
+
+/** OPTIMAL */ 
+
+/** time: O(N*M*26) where N is number of strings, M is size of each string, 26 is const from alphabets
+    space: O(N*M)
+*/ 
+var groupAnagrams = function(strs) {
+    
+    /** key feature of anagram is it will have EXACT number of char count when compared in order
+    i.e eat -> 1e 1a 1t
+        tea -> 1t 1e 1a 
+        If we somehow hold them in order it will be 1a 1e 1t which can be our key
+    */ 
+    
+    /** map char count with combination of string */
+    let result = {}  /** like  {'1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0': [ 'eat', 'tea', 'ate' ] } */
+    
+    for(let str of strs){
+        
+        /** imp : each 0 for 26 alphabets */
+        let count = new Array(26).fill(0);
+        
+        for(let char of str){
+            
+            /** imp : now we need to map char to exact alphabet position in count */
+            let charASCII = char.charCodeAt(0);  // find ascii of a char 
+            let position = charASCII - 'a'.charCodeAt(0); // find char position with respect to a
+            
+            count[position] += 1;
+        }
+        
+        /** make key and value pairs */
+        if(!result[count]) result[count] = [];
+        result[count].push(str)
+    }
+    
+    /** return as array of arrays */
+    let ret = [];
+    for(let key in result){
+        ret.push(result[key])
+    }
+    
+    return ret
+};

@@ -69,20 +69,30 @@
 ## 9. [Merge k Sorted Lists](https://github.com/citta-lab/DSA/blob/main/linkedList/merge-k-sorted-linkedList.js)
 
     - instead of two sorted linkedlist we have K number of linkedList
-    
+
     - Approach 1 (Not Optimal): time: O(N*K) where N is size of linkedList, K is number of linkedList and space: O(1)
     -- we merge two linkedList at a time in order
     -- create mergeTwoSorted function. which returns head for merged two list
     -- for first time, apply `mergeTwoSorted` on `lists[0]` and `lists[1]`.
     -- use for loop starting at `i=2` and use the head from above and repeat `mergeTwoSorted(head, lists[i])`
     -- do `if(!l1 && !l2) return dummy.next;` check in mergeTwoSorted for input like `[[]]`
-    
+
     - Approach 2: time: O(NlogK) and space: O(1)
     -- we merge two linkedList at a time but in pairs. Then we run merge again on those results.
     -- will make use of mergeTwoSorted function which returns head for merged two lists
-    -- we will call mergeTwoSorted until we are left with one linkedList in lists 
+    -- we will call mergeTwoSorted until we are left with one linkedList in lists
     -- i.e `while(lists.length > 1) { .... }`
-    -- we make use of tempMergedLists=[] to hold merged lists for every for loop, then assing 
+    -- we make use of tempMergedLists=[] to hold merged lists for every for loop, then assing
     tempMergedLists to lists. i.e 'lists = tempMergedLists` at the end of for loop.
     -- we call mergeTwoSorted function with pairs i.e `for(let i=0; i<lists.length; i=i+2)`
-    
+
+## 10. [Search in Rotated Sorted Array](https://github.com/citta-lab/DSA/blob/main/arrays/33.search-in-rotated-sorted-array.js)
+
+    - Naive way is loopig and finding in O(N) time. But we need to do in O(logN)
+    - we can use Binary Search concept on sorted array and use if conditions to direct which way
+    the search needs to go as we dont have PERFECT sorted array
+    - write down BS for sorted array and call from parent like `return bs(nums, target, 0, nums.length-1)`
+    - if for some reason we find our target value LOWER than sorted array's left most value, we call binary search on right side of the MID
+    - if for some reason we find our target value GREATER than sorted array's right most value, we call binary search on left side of the MID
+    - also have normal binary search calling when target is less than mid, we go binary search on
+    left side and if target is more than mid then we go binary search on right side

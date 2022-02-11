@@ -99,8 +99,9 @@
     - also have normal binary search calling when target is less than mid, we go binary search
      on left side and if target is more than mid then we go binary search on right side
 
-## 11. [Combination Sum](https://github.com/citta-lab/DSA/blob/main/arrays/39.combination-sum.js)
-    - [Diagram Solving](https://github.com/citta-lab/DSA/blob/main/a-assets/combination-sum.png) the problem.
+## 11. [Combination Sum](https://github.com/citta-lab/DSA/blob/main/arrays/39.combination-sum.js) 
+[Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/combination-sum.png)
+
     - Hence we cannot have same combination of elements in diff permutations
     the problem cannot be solved using two loops 
     - treat this as tree probelm, we can do BACKTRACKING to alter the combination

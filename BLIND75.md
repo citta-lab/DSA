@@ -98,3 +98,8 @@
      we call binary search on left side of the MID
     - also have normal binary search calling when target is less than mid, we go binary search
      on left side and if target is more than mid then we go binary search on right side
+
+## 11. [Combination Sum](https://github.com/citta-lab/DSA/blob/main/arrays/33.search-in-rotated-sorted-array.js)
+
+
+## 12. [Rotate Image](https://github.com/citta-lab/DSA/blob/main/arrays/33.search-in-rotated-sorted-array.js)

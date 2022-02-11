@@ -99,7 +99,25 @@
     - also have normal binary search calling when target is less than mid, we go binary search
      on left side and if target is more than mid then we go binary search on right side
 
-## 11. [Combination Sum](https://github.com/citta-lab/DSA/blob/main/arrays/33.search-in-rotated-sorted-array.js)
+## 11. [Combination Sum](https://github.com/citta-lab/DSA/blob/main/arrays/39.combination-sum.js)
+    - Hence we cannot have same combination of elements in diff permutations
+    the problem cannot be solved using two loops 
+    - treat this as tree probelm, we can do BACKTRACKING to alter the combination
+    by adding and removing via DFS.
+    - Hence each element combination can be used manytimes once until we find TARGET or SUM exceeds target.  
+    - At root of the tree we will have two choice, one with including the i'th 
+    element in combination and another without including i'th element. 
+    - we keep adding other elements to these until we reach base case.
+    
 
 
-## 12. [Rotate Image](https://github.com/citta-lab/DSA/blob/main/arrays/33.search-in-rotated-sorted-array.js)
+## 12. [Rotate Image](https://github.com/citta-lab/DSA/blob/main/arrays/48.rotate-image.js)
+    - treat this as problem (outer matrix) and sub problem (inner matrix )
+    - we move value from top left -> top right -> bottom right --> bottom left and
+    lastly top left.
+    - so we need left,right boundry for column. top,bottom for row. 
+    - instead of moving clockwise ( as mentioned in second point ). we move
+    counter clock after saving TOP LEFT value in temp. Which will save having
+    to hold other values in temp.
+    - need for loop which runs uptp (r-l) range. This will help in moving pointers
+    from left to right 

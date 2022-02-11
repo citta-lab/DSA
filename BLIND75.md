@@ -92,7 +92,9 @@
     - we can use Binary Search concept on sorted array and use if conditions to direct which way
     the search needs to go as we dont have PERFECT sorted array
     - write down BS for sorted array and call from parent like `return bs(nums, target, 0, nums.length-1)`
-    - if for some reason we find our target value LOWER than sorted array's left most value, we call binary search on right side of the MID
-    - if for some reason we find our target value GREATER than sorted array's right most value, we call binary search on left side of the MID
-    - also have normal binary search calling when target is less than mid, we go binary search on
-    left side and if target is more than mid then we go binary search on right side
+    - if for some reason we find our target value LOWER than sorted array's left most value,
+     we call binary search on right side of the MID
+    - if for some reason we find our target value GREATER than sorted array's right most value,
+     we call binary search on left side of the MID
+    - also have normal binary search calling when target is less than mid, we go binary search
+     on left side and if target is more than mid then we go binary search on right side

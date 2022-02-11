@@ -1,11 +1,21 @@
 
-/** Given an array find the sub array which will form maxium sum. Example if the given array is like 
+/** 
+ * 
+ * 53. Maximum Subarray
+ * 
+ * Given an array find the sub array which will form maxium sum. Example if the given array is like 
  * [ 2,3,-9, 4,5,8,-3] then the subarray which can make the maxium sum would be [ 4, 5, 8] = 17.
  * 
  * Always start with brute force approach 
  * 
  * leetcode-question:53
  * leetcode:https://leetcode.com/problems/maximum-subarray/
+ *
+ * BLIND: 14 (14/75)
+ *
+ * Hint
+ * - we can do with O(n^2) bu keeping max and update max if running sum is more than max
+ * - we can do in O(n) if we update SUM only if SUM is more than current NUM. i.e SUM = Math.max(SUM, NUM) and Max = Math.max(Max, SUM)
  */
 
 // Time: O(N)

@@ -28,31 +28,28 @@
  * as O(N^2). 
 */
 var canJump = function(nums) {
-    let memo = [];
-    return jump(0, nums, memo);
+    return jump(0, nums);
  };
  
- function jump(index, nums, memo){
+ function jump(index, nums, memo=new Map()){
      
      if( index === nums.length-1) return true;
      
-     if(memo[index]) return memo[index];
+     if(memo.has(index)) return memo.get(index);
      
      let posibilities = nums[index];
      
-     for(let i=1; i<= nums[index]; i++){
+     for(let i=1; i<= posibilities; i++){
          let result = jump(index+i, nums, memo);
          if(result) {
-             memo[index] = result;
+             memo.set(index, result);
              return result
          }
      }
      
-     memo[index] = false;
+     memo.set(index, false);
      return false;
  }
-
-
 
 
 

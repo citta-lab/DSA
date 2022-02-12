@@ -123,3 +123,35 @@
     to hold other values in temp.
     - need for loop which runs uptp (r-l) range. This will help in moving pointers
     from left to right 
+
+## 13. [Group Anagrams](https://github.com/citta-lab/DSA/blob/69c40de704c6ba27edc7954b80c8c445d1841237/strings/49.group-anagrams.js)
+    -   Aproach 1: By Sorting Each String (Not Optimal: Time O(NMlogM))
+    -- anagram strings will match when they are sorted. i.e eat & tea will be aet
+    -- we go through each string, split them by space, sort them, join them to make a key
+    -- use sorted string as key and actual string as values.
+    -- loop though the hash to build resulting array
+
+    -   Aproach 1: By Counting Characters from Each String (Time O(NM))
+    -- anagram strings will match when they are sorted. i.e eat & tea will be aet
+    -- go through each string and it's char's then build key using char's ASCII
+    -- i.e `let count = new Array(26).fill(0)` 
+    and count[`${char}`.charCodeAt(0) - 'a'.charCodeAt(0)] += 1; 
+    -- store str with respect to 'count' key in hash
+    -- loop through hash to get resulting array
+
+## 14. [Maxium Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/53.max-sub-array-sum.js)
+    -   Appraoch 1: ( not optimal ) we could do using two forloop with 
+    max value holder and sum. O(n^2)
+    -   Appraoch 2: O(N) with same max and sum 
+    -- will have one loop, but sum and max will have first element value to start with
+    -- for loop will run from i=1, where sum will ONLY get updated when 
+    `sum = Math.max(sum, sum+nums[i])`. this prevents it going less than current sum.
+    -- max will be `max = Math.max(max, sum)`
+
+## 15. [Spiral Matrix](https://github.com/citta-lab/DSA/blob/main/arrays/spiral-matrix.js)
+    - we need 4 limiters 
+    - rowStart = 0, rowEnd = matrix.length-1, colStart=0, colEnd=matrix[0].length-1;
+    - we traverse in while loop as long as `while(rowStart <= rowEnd && colStart <= colEnd ){.}`
+    - will have 4 for loops inside to control the directions 
+    - imp: we need boundry check `if(rowStart > rowEnd || colStart > colEnd) break;` in place
+    after first two for loops

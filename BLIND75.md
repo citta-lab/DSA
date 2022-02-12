@@ -114,6 +114,8 @@
 
 
 ## 12. [Rotate Image](https://github.com/citta-lab/DSA/blob/main/arrays/48.rotate-image.js)
+[Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/rotate-image.png)
+
     - treat this as problem (outer matrix) and sub problem (inner matrix )
     - we move value from top left -> top right -> bottom right --> bottom left and
     lastly top left.

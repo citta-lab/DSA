@@ -157,3 +157,39 @@
     - will have 4 for loops inside to control the directions 
     - imp: we need boundry check `if(rowStart > rowEnd || colStart > colEnd) break;` in place
     after first two for loops
+
+## 16. [Jump Game](https://github.com/citta-lab/DSA/blob/main/dp-jump-game/55.jump-game.js)
+    
+    - appraoch 1: Dynamic Programming 
+    -- brutforce will result in O(n^n) time but adding memo will reduce it to O(n^2) 
+    -- brutforce is DP problem where main function will call helper function with index 0
+    and input array. i.e `return jumpHelper(0, nums)`
+    -- use `Map` instead of array for memo 
+
+    - appraoch 2: Greedy ( going from back to first will result in time: O(n) )
+    -- instead of going from start to destination (last). We can go from back
+    -- every time we decrement `i` we check if we can reach the destination from given index
+    -- i.e `if(i + maxJumpLength >= destination) { destination = i }` then we move destination
+    closer
+    -- check if our destination is at 0th index, if yes we can reach destination from start
+
+## 17. [Merge Intervals](https://github.com/citta-lab/DSA/blob/main/arrays/56.merge-intervals.js)
+    - If it is not sorted we will need to sort (O(logn)) AND total complexity is O(nlogn)
+    - Add first element to result and loop from second element 
+    - compare if new interating elements first item is LESS than last result elements second
+    item. 
+    - if yes then we merge. But we need to consider min of first position elements and maximum
+    of second position elements i.e `result[result.length-1][1] = Math.max(rSecond, newSecond);`
+    - if not we add iterating element to result, and move on 
+    i.e `result.push([newFirst, newSecond])`
+
+## 18. [Insert Interval](https://github.com/citta-lab/DSA/blob/main/arrays/57.insert-interval.js)
+    - given intervals is already sorted so time:O(n)
+    - while adding newInterval to sorted intervals we need to consider 3 things
+    - # handle newInterval if it needs to be added at first and return updated result array
+    -- i.e `return [...result, ...intervals.slice(i)];`
+    - # handle adding interval form intervals to result if newInterval comes after
+    - # handle merging newInterval until newInterval[1] is greater than interval[i][1]
+    -- i.e we can keep updating 
+    `newInterval = = [Math.min(first, newFirst), Math.max(second, newSecond)]`
+    - # handle adding newInterval at the end of intervals if newInterval[1] is greater than tail

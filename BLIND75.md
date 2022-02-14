@@ -202,3 +202,10 @@
     - we will call dfs with 0 index and initalize the MEMO with default `s.length : 1` as we need to return 1 if empty
     - if we find s starts with 0 then its invalid ( number ranges from 1-16 )
     - we will add dfs recursively only if second char pair satify range from 10-26
+    
+  ## 25. [Validate Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/98.validate-BST-in-order-recursive-tree.js)
+    - In valid BST root value will be greater than left children and less than right children
+    - If we are doing recursion, then have left and right min max value assigned like left = -Infinity and right = Infinity 
+    - validate if root.val will satisfy left < root.val < right 
+    - call left children and right children like `return  valid(root.left, left, root.val) &&  valid(root.right, root.val, right)' 
+    

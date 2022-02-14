@@ -193,3 +193,12 @@
     -- i.e we can keep updating 
     `newInterval = = [Math.min(first, newFirst), Math.max(second, newSecond)]`
     - # handle adding newInterval at the end of intervals if newInterval[1] is greater than tail
+    
+    
+  ## 24. [Decode Ways](https://github.com/citta-lab/DSA/blob/main/graphs/91.decode-ways-dfs.js)
+    - Tree combination can be used which will give 2^n time complexity as we have two choices to make every time
+    -- 1st choice using just 1 char and second choice to use 2 char as we have valid code from 1 - 26
+    - with dfs and memo we can solve this in O(n) time and space
+    - we will call dfs with 0 index and initalize the MEMO with default `s.length : 1` as we need to return 1 if empty
+    - if we find s starts with 0 then its invalid ( number ranges from 1-16 )
+    - we will add dfs recursively only if second char pair satify range from 10-26

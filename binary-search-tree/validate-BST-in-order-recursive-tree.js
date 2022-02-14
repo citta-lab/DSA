@@ -6,45 +6,26 @@ const { buildTree} = require('./helper/BinaryTree');
  * O(N) space as we will store all nodes
  * In ORDER ( left-root-right )
  */
-const validateBST = (root) => {
-    let pre = -Infinity;
-
-    /** 
-     * 1. valid binary tree  will have left value < root value < right value 
-     * 2. In order will print left, root and right. So at any given time value is increasing.
-     * 3. If we start with lowest value for `pre` then every next value should be greater
-     * or it is not binary search tree.
-     * 4. (IMPORTANT): hence this is recursive we need to make sure left and right part of the
-     * results are true (combined) not just one side of the tree.
-     * */
-
-    return inorderTraversal(root, pre);
+var isValidBST = function(root) {
+    let left = -Infinity;
+    let right = Infinity;
     
+    return valid(root, left, right);
 };
 
-const inorderTraversal = ( root, pre) => {
-    /** 
-     * Base condition
-     * - if root is null then it is valid binary search tree as nothing to compare
-     *  */
-    if(!root) return true;
-
-    /** 
-     * InOrder:
-     * left,
-     * root <- compare value here
-     * right
-     */
-    let left = inorderTraversal(root.left, pre);
+function valid(root, left, right){
     
-    if(root.val <= pre) return false;
-    if(root.val > pre) pre = root.val;
-
-    let right = inorderTraversal(root.right, pre);
-
-    /** final to decide if both left && tree result in true not just one */
-    return left && right
-
+    if(!root) return true;
+    
+    if(!(root.val < right && root.val > left)){
+        return false;
+    }
+    
+    let leftNode = valid(root.left, left, root.val);
+    let rightNode = valid(root.right, root.val, right);
+    
+    return leftNode && rightNode
+    
 }
 
 let node = buildTree([5,2,6,1,3]);

@@ -99,34 +99,35 @@
     - also have normal binary search calling when target is less than mid, we go binary search
      on left side and if target is more than mid then we go binary search on right side
 
-## 11. [Combination Sum](https://github.com/citta-lab/DSA/blob/main/arrays/39.combination-sum.js) 
+## 11. [Combination Sum](https://github.com/citta-lab/DSA/blob/main/arrays/39.combination-sum.js)
+
 [Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/combination-sum.png)
 
     - Hence we cannot have same combination of elements in diff permutations
-    the problem cannot be solved using two loops 
+    the problem cannot be solved using two loops
     - treat this as tree probelm, we can do BACKTRACKING to alter the combination
     by adding and removing via DFS.
-    - Hence each element combination can be used manytimes once until we find TARGET or SUM exceeds target.  
-    - At root of the tree we will have two choice, one with including the i'th 
-    element in combination and another without including i'th element. 
+    - Hence each element combination can be used manytimes once until we find TARGET or SUM exceeds target.
+    - At root of the tree we will have two choice, one with including the i'th
+    element in combination and another without including i'th element.
     - we keep adding other elements to these until we reach base case.
 
-
-
 ## 12. [Rotate Image](https://github.com/citta-lab/DSA/blob/main/arrays/48.rotate-image.js)
+
 [Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/rotate-image.png)
 
     - treat this as problem (outer matrix) and sub problem (inner matrix )
     - we move value from top left -> top right -> bottom right --> bottom left and
     lastly top left.
-    - so we need left,right boundry for column. top,bottom for row. 
+    - so we need left,right boundry for column. top,bottom for row.
     - instead of moving clockwise ( as mentioned in second point ). we move
     counter clock after saving TOP LEFT value in temp. Which will save having
     to hold other values in temp.
     - need for loop which runs uptp (r-l) range. This will help in moving pointers
-    from left to right 
+    from left to right
 
 ## 13. [Group Anagrams](https://github.com/citta-lab/DSA/blob/69c40de704c6ba27edc7954b80c8c445d1841237/strings/49.group-anagrams.js)
+
     -   Aproach 1: By Sorting Each String (Not Optimal: Time O(NMlogM))
     -- anagram strings will match when they are sorted. i.e eat & tea will be aet
     -- we go through each string, split them by space, sort them, join them to make a key
@@ -136,35 +137,37 @@
     -   Aproach 1: By Counting Characters from Each String (Time O(NM))
     -- anagram strings will match when they are sorted. i.e eat & tea will be aet
     -- go through each string and it's char's then build key using char's ASCII
-    -- i.e `let count = new Array(26).fill(0)` 
-    and count[`${char}`.charCodeAt(0) - 'a'.charCodeAt(0)] += 1; 
+    -- i.e `let count = new Array(26).fill(0)`
+    and count[`${char}`.charCodeAt(0) - 'a'.charCodeAt(0)] += 1;
     -- store str with respect to 'count' key in hash
     -- loop through hash to get resulting array
 
 ## 14. [Maxium Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/53.max-sub-array-sum.js)
-    -   Appraoch 1: ( not optimal ) we could do using two forloop with 
+
+    -   Appraoch 1: ( not optimal ) we could do using two forloop with
     max value holder and sum. O(n^2)
-    -   Appraoch 2: O(N) with same max and sum 
+    -   Appraoch 2: O(N) with same max and sum
     -- will have one loop, but sum and max will have first element value to start with
-    -- for loop will run from i=1, where sum will ONLY get updated when 
+    -- for loop will run from i=1, where sum will ONLY get updated when
     `sum = Math.max(sum, sum+nums[i])`. this prevents it going less than current sum.
     -- max will be `max = Math.max(max, sum)`
 
 ## 15. [Spiral Matrix](https://github.com/citta-lab/DSA/blob/main/arrays/spiral-matrix.js)
-    - we need 4 limiters 
+
+    - we need 4 limiters
     - rowStart = 0, rowEnd = matrix.length-1, colStart=0, colEnd=matrix[0].length-1;
     - we traverse in while loop as long as `while(rowStart <= rowEnd && colStart <= colEnd ){.}`
-    - will have 4 for loops inside to control the directions 
+    - will have 4 for loops inside to control the directions
     - imp: we need boundry check `if(rowStart > rowEnd || colStart > colEnd) break;` in place
     after first two for loops
 
 ## 16. [Jump Game](https://github.com/citta-lab/DSA/blob/main/dp-jump-game/55.jump-game.js)
-    
-    - appraoch 1: Dynamic Programming 
-    -- brutforce will result in O(n^n) time but adding memo will reduce it to O(n^2) 
+
+    - appraoch 1: Dynamic Programming
+    -- brutforce will result in O(n^n) time but adding memo will reduce it to O(n^2)
     -- brutforce is DP problem where main function will call helper function with index 0
     and input array. i.e `return jumpHelper(0, nums)`
-    -- use `Map` instead of array for memo 
+    -- use `Map` instead of array for memo
 
     - appraoch 2: Greedy ( going from back to first will result in time: O(n) )
     -- instead of going from start to destination (last). We can go from back
@@ -174,38 +177,45 @@
     -- check if our destination is at 0th index, if yes we can reach destination from start
 
 ## 17. [Merge Intervals](https://github.com/citta-lab/DSA/blob/main/arrays/56.merge-intervals.js)
+
     - If it is not sorted we will need to sort (O(logn)) AND total complexity is O(nlogn)
-    - Add first element to result and loop from second element 
+    - Add first element to result and loop from second element
     - compare if new interating elements first item is LESS than last result elements second
-    item. 
+    item.
     - if yes then we merge. But we need to consider min of first position elements and maximum
     of second position elements i.e `result[result.length-1][1] = Math.max(rSecond, newSecond);`
-    - if not we add iterating element to result, and move on 
+    - if not we add iterating element to result, and move on
     i.e `result.push([newFirst, newSecond])`
 
 ## 18. [Insert Interval](https://github.com/citta-lab/DSA/blob/main/arrays/57.insert-interval.js)
+
     - given intervals is already sorted so time:O(n)
     - while adding newInterval to sorted intervals we need to consider 3 things
     - # handle newInterval if it needs to be added at first and return updated result array
     -- i.e `return [...result, ...intervals.slice(i)];`
     - # handle adding interval form intervals to result if newInterval comes after
     - # handle merging newInterval until newInterval[1] is greater than interval[i][1]
-    -- i.e we can keep updating 
+    -- i.e we can keep updating
     `newInterval = = [Math.min(first, newFirst), Math.max(second, newSecond)]`
     - # handle adding newInterval at the end of intervals if newInterval[1] is greater than tail
-    
-    
-  ## 24. [Decode Ways](https://github.com/citta-lab/DSA/blob/main/graphs/91.decode-ways-dfs.js)
+
+## 24. [Decode Ways](https://github.com/citta-lab/DSA/blob/main/graphs/91.decode-ways-dfs.js)
+
     - Tree combination can be used which will give 2^n time complexity as we have two choices to make every time
     -- 1st choice using just 1 char and second choice to use 2 char as we have valid code from 1 - 26
     - with dfs and memo we can solve this in O(n) time and space
     - we will call dfs with 0 index and initalize the MEMO with default `s.length : 1` as we need to return 1 if empty
     - if we find s starts with 0 then its invalid ( number ranges from 1-16 )
     - we will add dfs recursively only if second char pair satify range from 10-26
-    
-  ## 25. [Validate Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/98.validate-BST-in-order-recursive-tree.js)
+
+## 25. [Validate Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/98.validate-BST-in-order-recursive-tree.js)
+
     - In valid BST root value will be greater than left children and less than right children
-    - If we are doing recursion, then have left and right min max value assigned like left = -Infinity and right = Infinity 
-    - validate if root.val will satisfy left < root.val < right 
-    - call left children and right children like `return  valid(root.left, left, root.val) &&  valid(root.right, root.val, right)' 
-    
+    - If we are doing recursion, then have left and right min max value assigned like left = -Infinity and right = Infinity
+    - validate if root.val will satisfy left < root.val < right
+    - call left children and right children like `return  valid(root.left, left, root.val) &&  valid(root.right, root.val, right)'
+
+## 26. [Same Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/100.same-tree.js)
+
+    - time:O(n) and sapce:O(logN) in best and O(n) in worst
+    - dfs and traversing both tree's together and comparing

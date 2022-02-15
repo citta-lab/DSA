@@ -219,3 +219,9 @@
 
     - time:O(n) and sapce:O(logN) in best and O(n) in worst
     - dfs and traversing both tree's together and comparing
+
+## 27. [Binary Tree Level Order Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/102.binary-tree-level-order-traversal-binary-tree.js)
+
+    - time:O(n) and sapce:O(n)
+    - Iterative method using bfs level order
+    - use queue.shift() to pop first element and queue.push() to add element

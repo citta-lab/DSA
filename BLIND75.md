@@ -225,3 +225,18 @@
     - time:O(n) and sapce:O(n)
     - Iterative method using bfs level order
     - use queue.shift() to pop first element and queue.push() to add element
+    
+## 28. [Maximum Depth of Binary Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/104.maximum-depth-in-binary-tree.js)
+
+    - time:O(n) and sapce:O(n)
+    - Iterative method using bfs level order
+    - use queue.shift() to pop first element and queue.push() to add element
+    - keep counter and increase it at the end of for loop
+    
+## 29. [Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
+
+    - preorder is ROOT, LEFT, RIGHT
+    - inorder is LEFT, ROOT, RIGHT
+    - first element of preorder is always ROOT. So we can creare new tree node from this (i.e node = preorder.shift() )
+    - finding index of node in inorder will help finding right and left part of new tree. (i.e pivot = inorder.indexOf(node))
+    - root.left = buildTree(preorder, inorder(0, privot) and root.right = buildTree(preorder, inorder(pivot+1)

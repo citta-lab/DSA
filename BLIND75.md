@@ -240,3 +240,10 @@
     - first element of preorder is always ROOT. So we can creare new tree node from this (i.e node = preorder.shift() )
     - finding index of node in inorder will help finding right and left part of new tree. (i.e pivot = inorder.indexOf(node))
     - root.left = buildTree(preorder, inorder(0, privot) and root.right = buildTree(preorder, inorder(pivot+1)
+    
+## 30. [Best Time to Buy and Sell Stock](https://github.com/citta-lab/DSA/blob/main/arrays/121.best%20-time-to-buy-and-sell-stock.js)
+
+    - bruteforce can be done with two for loops with i=0, j=i+1 i.e O(n^2)
+    - optimized can be done with O(n) by keeping minPrice and profit 
+    - we compare the current price is less than minPrice if so we assing price to minPrice and continue
+    - if the current price is more than minPrice, then we calculate profit and keep max profit in check 

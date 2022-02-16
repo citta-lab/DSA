@@ -280,3 +280,13 @@
     which will return pointer to respective clone rather than original node.
     - iterative over node's children and build cloneChild and push it to clone.childrens array.
     
+## 35. [Word Break](https://github.com/citta-lab/DSA/blob/main/graphs/139.word-break.js)
+
+   - we can solve this with recursion and memoization which will result in O(n^3) time
+   - will need to use TWO POINTER in recursion
+   - use Map for memo instead of array for Time Limit exceed exception
+   - call helper(s, wordDict, 0, memo) and use forloop/while inside helper for finding substring with
+   another pointer end = start + 1 ( to start with ).
+   - OR we can also solve this in DP with memoization will result in O(n^3) as well
+ 
+    

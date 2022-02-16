@@ -257,7 +257,7 @@
     - final return in helper will be like `return Math.max(root.val + leftMax, root.val + rightMax)`
     - start `let maxSum = -Infinity;`
 
-## 31. [Valid Palindrome](https://github.com/citta-lab/DSA/blob/main/strings/125.valid-palindrome.js)
+## 32. [Valid Palindrome](https://github.com/citta-lab/DSA/blob/main/strings/125.valid-palindrome.js)
 
     - use TWO POINTER with left = 0 and right = s.length-1. Move inward.
     - we will split, convert to lower and remove special char either using regex or charCodeAt() function.
@@ -265,16 +265,16 @@
     - need to build helper and use `var input_char = input.charCodeAt(0);` then compare
     for `if (input_char >= 97 && input_char <= 122 || input_char >= 48 && input_char <= 57){ return true }`
 
-## 32. [Longest Consecutive Sequence](https://github.com/citta-lab/DSA/blob/main/arrays/128.longest-consecutive-sequence.js)
+## 33. [Longest Consecutive Sequence](https://github.com/citta-lab/DSA/blob/main/arrays/128.longest-consecutive-sequence.js)
 
     - Not Optilmal : sort and then have curLength, maxLength =1 and find maxLength by comparing 
     - Optimal : using set we can look up if the given number in set has previous number. 
     If not then it is the start of the range we calculate. If the numer has left or previous in 
     the Set then we can assume it is not the start
     
-## 33. [Clone Graph](https://github.com/citta-lab/DSA/blob/main/graphs/133.clone-graph-dfs.js)
+## 34. [Clone Graph](https://github.com/citta-lab/DSA/blob/main/graphs/133.clone-graph-dfs.js)
 
-    - we will applu dfs. time: O(m+n) and space: O(N) where N is depth os stack
+    - we will apply dfs. time: O(m+n) and space: O(N) where N is depth os stack
     - use Map instead of Set so we can keep track of node -> cloneNode. 
     -- i.e visited.set(node, clone) and we can check `visited.has(node) then return visited.get(node)`
     which will return pointer to respective clone rather than original node.

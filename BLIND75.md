@@ -247,3 +247,11 @@
     - optimized can be done with O(n) by keeping minPrice and profit 
     - we compare the current price is less than minPrice if so we assing price to minPrice and continue
     - if the current price is more than minPrice, then we calculate profit and keep max profit in check 
+
+## 31. [Binary Tree Maximum Path Sum](https://github.com/citta-lab/DSA/blob/main/binary-tree/124.max-path-sum-binary-tree.js)
+
+    - we will need to calculate if we can find maximum value from root + left, or 
+    root + right or left + root + right. 
+    - we will keep maxSum and gets updated whenever we traverse however while traversing back we can only have either left + root or right + root. 
+    - final return in helper will be like `return Math.max(root.val + leftMax, root.val + rightMax)`
+    - start `let maxSum = -Infinity;`

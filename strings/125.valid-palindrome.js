@@ -60,6 +60,56 @@
     };
 
 
+    /** ANOTHER SOLUTION without Regex */
+    var isPalindrome = function(s) {
+    
+        if(!s) return true;
+       
+        let str = '';
+        for(let char of s.split('')){
+            if(char){
+                let lower = char.toLowerCase();
+                if(charCheck(lower)){
+                    str = str + lower
+                }
+            }
+        }
+       
+        let left = 0;
+        let right = str.length-1; 
+       
+        while(right >= left){
+            if(str[left] !== str[right]){
+                return false;
+            }
+            
+            left++
+            right--
+        }
+       
+        return true
+   };
+   
+   function charCheck(input) {
+           var input_char = input.charCodeAt(0);
+            
+           // CHECKING FOR ALPHABET
+           if (
+                (input_char >= 65 && input_char <= 90) ||
+                (input_char >= 97 && input_char <= 122)
+           ) { 
+               return true 
+           }
+              
+           // CHECKING FOR DIGITS
+           else if (input_char >= 48 && input_char <= 57){
+               return true
+           }
+              
+           // OTHERWISE SPECIAL CHARACTER
+           else return false;
+   }
+
     console.log(isPalindrome('@p')); // true    
     console.log(isPalindrome('11p')); // false
     console.log(isPalindrome('baba')); // false

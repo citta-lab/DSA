@@ -266,7 +266,8 @@
     for `if (input_char >= 97 && input_char <= 122 || input_char >= 48 && input_char <= 57){ return true }`
 
 ## 33. [Longest Consecutive Sequence](https://github.com/citta-lab/DSA/blob/main/arrays/128.longest-consecutive-sequence.js)
-    [Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/longest-consecutive-sequence.png)
+    
+   [Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/longest-consecutive-sequence.png)
     
     - Not Optilmal : sort and then have curLength, maxLength =1 and find maxLength by comparing 
     - Optimal : using set we can look up if the given number in set has previous number. 

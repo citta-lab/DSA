@@ -252,7 +252,8 @@
 
     - we will need to calculate if we can find maximum value from root + left, or 
     root + right or left + root + right. 
-    - we will keep maxSum and gets updated whenever we traverse however while traversing back we can only have either left + root or right + root. 
+    - we will keep maxSum and gets updated whenever we traverse however while 
+    traversing back we can only have either left + root or right + root. 
     - final return in helper will be like `return Math.max(root.val + leftMax, root.val + rightMax)`
     - start `let maxSum = -Infinity;`
 

@@ -255,3 +255,11 @@
     - we will keep maxSum and gets updated whenever we traverse however while traversing back we can only have either left + root or right + root. 
     - final return in helper will be like `return Math.max(root.val + leftMax, root.val + rightMax)`
     - start `let maxSum = -Infinity;`
+
+## 31. [Valid Palindrome](https://github.com/citta-lab/DSA/blob/main/strings/125.valid-palindrome.js)
+
+    - use TWO POINTER with left = 0 and right = s.length-1. Move inward.
+    - we will split, convert to lower and remove special char either using regex or charCodeAt() function.
+    - regex => s = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase()
+    - need to build helper and use `var input_char = input.charCodeAt(0);` then compare
+    for `if (input_char >= 97 && input_char <= 122 || input_char >= 48 && input_char <= 57){ return true }`

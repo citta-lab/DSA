@@ -264,3 +264,8 @@
     - regex => s = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase()
     - need to build helper and use `var input_char = input.charCodeAt(0);` then compare
     for `if (input_char >= 97 && input_char <= 122 || input_char >= 48 && input_char <= 57){ return true }`
+
+## 32. [Longest Consecutive Sequence](https://github.com/citta-lab/DSA/blob/main/strings/125.valid-palindrome.js)
+
+    - Not Optilmal : sort and then have curLength, maxLength =1 and find maxLength by comparing 
+    - Optimal : using set we can look up if the given number in set has previous number. If not then it is the start of the range we calculate. If the numer has left or previous in the Set then we can assume it is not the start

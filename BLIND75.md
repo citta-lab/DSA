@@ -299,5 +299,23 @@
     - call helper(s, wordDict, 0, memo) and use forloop/while inside helper for finding substring with 
     another pointer end = start + 1 ( to start with ).
     - OR we can also solve this in DP with memoization will result in O(n^3) as well
+    
+## 36. [Reorder List](https://github.com/citta-lab/DSA/blob/main/linkedList/reorder-linkedList.js)
+
+    - we need to do this in three steps. Find Mid, Reverse, Merge.
+    - Find Mid: slow = node.next where fast = node.next.next
+    - Reverse: future = cur.next; cur.next = prev; cur = future; prev = cur; and we return pre.
+    - Merge: head = l1; tmp = l1.next; l1.next = l2; l1 = tmp. Similary tmp = l2.next; l2.next = l1; l2 = tmp.
+    
+## 38. [Maximum Product Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/max-sub-array-product.js)
+
+   - Brute Force: Time: O(n^2) with two loops 
+   - Kadanes: Time: O(n)
+   - Have three variable. result points to first element so we return first element as default. curMin and curMax
+   - i.e result = nums[0], curMin = 1, curMax = 1
+   - Loop through each element and update the curMin, curMax, and result. finally return result.
+   - curMax = Math.max(num, num*curMax, num*curMin) 
+   - curMin = Math.min(num, num*curMax, num*curMin)
+   - result = Math.max(result, curMax)
  
     

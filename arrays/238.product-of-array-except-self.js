@@ -30,6 +30,14 @@ Hint:
 - then we calculate leftProduct array goes --> and rightProductArray goes <--
 - final result will be product of these values
 
+- Optimal : Time:O(n) and Space: O(1) exclusing result array
+- Same workflow as Optimal solution but instead of using leftProdctArr and rightProductArr
+we will just use productArr.
+- leftProductArr will be replaced with productArr and same workflow
+- while calculating for right inside for loop, we need to be cautious and do the below.
+-- `productArr[i] = producrtArr [i] * R`; where R = 1 at the begining
+-- `R *= productArr[i];`
+
 */
 
 /** time: O(n) and Space:O(n) */

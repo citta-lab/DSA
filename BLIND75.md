@@ -309,13 +309,13 @@
     
 ## 38. [Maximum Product Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/max-sub-array-product.js)
 
-   - Brute Force: Time: O(n^2) with two loops 
-   - Kadanes: Time: O(n)
-   - Have three variable. result points to first element so we return first element as default. curMin and curMax
-   - i.e result = nums[0], curMin = 1, curMax = 1
-   - Loop through each element and update the curMin, curMax, and result. finally return result.
-   - curMax = Math.max(num, num*curMax, num*curMin) 
-   - curMin = Math.min(num, num*curMax, num*curMin)
-   - result = Math.max(result, curMax)
+       - Brute Force: Time: O(n^2) with two loops 
+       - Kadanes: Time: O(n)
+       - Have three variable. result points to first element so we return first element as default. curMin and curMax
+       - i.e result = nums[0], curMin = 1, curMax = 1
+       - Loop through each element and update the curMin, curMax, and result. finally return result.
+       - curMax = Math.max(num, num*curMax, num*curMin) 
+       - curMin = Math.min(num, num*curMax, num*curMin)
+       - result = Math.max(result, curMax)
  
     

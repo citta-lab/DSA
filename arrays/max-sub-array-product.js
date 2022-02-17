@@ -16,6 +16,15 @@
  * leetcode: https://leetcode.com/problems/maximum-product-subarray/
  * leetcode-question:152
  * video: https://www.youtube.com/watch?v=lXVy6YWFcRM
+ * BLIND: 38 ( 38/75)
+ *
+ * Example to Run:
+ * nums = [8, -4, -2, 9] 
+ *
+ * curMax:    1 (default)| (8, 8*1, 8*1) => 8 | (-4, -32, -32) => -4  | (-2, 64, -2*-32) => 64 | (9, 64*9, -2*9) => 576 |
+ * curMin:    1 (default)| (8, 8*1, 8*1) => 8 | (-4, -32, -32) => -32 | (-2, 64, -2*-32) => -2 | (9, 64*9, -2*9) => -18 |
+ 
+ * maxResult: 8 (initial)| (8, 8) => 8 | (8, -4) => 8 | (8, 64) => 64 | (64, 576) => 576 )
  * 
  * */
 

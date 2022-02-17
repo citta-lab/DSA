@@ -32,7 +32,35 @@ Hint:
 
 */
 
-
+/** time: O(n) and Space:O(n) */
+var productExceptSelf = function(nums) {
+    
+    // example: nums = [1,2,3,4]
+    let leftProductArr = new Array(nums.length-1);
+    leftProductArr[0] = 1; /** no elements to left of index 0, hence its a product we default to 1 */
+    
+    for(let i=1; i<nums.length; i++){
+        leftProductArr[i] = leftProductArr[i-1] * nums[i-1];
+    }
+    
+    let rightProductArr = new Array(nums.length-1);
+    rightProductArr[nums.length-1] = 1; /** no elements to right of last index, hence its a product we default to 1 */
+    
+    for(let i=nums.length-2; i>=0; i--){
+        rightProductArr[i] = rightProductArr[i+1] * nums[i+1];
+    }
+    
+    // leftProductArr = [ 1, 1, 2, 6 ]
+    // rightProductArr = [ 24, 12, 4, 1 ]
+    
+    let productArr = new Array(nums.length-1);
+    
+    for(let i=0; i<nums.length; i++){
+        productArr[i] = leftProductArr[i] * rightProductArr[i];
+    }
+    
+    return productArr;
+};
 
 /** Time: O(n^2) and Space: O(n) */
 var productExceptSelf = function(nums) {

@@ -309,7 +309,7 @@
     - Reverse: future = cur.next; cur.next = prev; cur = future; prev = cur; and we return pre.
     - Merge: head = l1; tmp = l1.next; l1.next = l2; l1 = tmp. Similary tmp = l2.next; l2.next = l1; l2 = tmp.
     
-## 38. [Maximum Product Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/max-sub-array-product.js)
+## 38. [Maximum Product Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/152.maximum-product-subarray.js)
 
        - Brute Force: Time: O(n^2) with two loops 
        - Kadanes: Time: O(n)

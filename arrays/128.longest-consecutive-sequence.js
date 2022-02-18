@@ -23,6 +23,11 @@
  * 
  * Hint:
  * - Do in O(n)
+ * - Have nums in set which will help us check if we have a prev num of iterating num.
+ * - Check if we dont have prev num for iterating num. i.e `if(!numSet.has(num-1))`
+ * - If yes, then this is our start. curLen = 1 and will keep going forward. 
+ * i.e while(numSet.has(num+1)) { curLen += 1, num += 1 }
+ * - return max from Math.max(max, curLen)
  * */
 
 /** BRUTE FORCE with O(nlogN) */

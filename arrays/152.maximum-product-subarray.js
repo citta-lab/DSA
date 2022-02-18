@@ -1,4 +1,7 @@
 /** 
+ * 
+ * 152. Maximum Product Subarray
+ * 
  * Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product, and return the product.
  * The test cases are generated so that the answer will fit in a 32-bit integer. 
  * A subarray is a contiguous subsequence of the array. 
@@ -25,6 +28,10 @@
  * curMin:    1 (default)| (8, 8*1, 8*1) => 8 | (-4, -32, -32) => -32 | (-2, 64, -2*-32) => -2 | (9, 64*9, -2*9) => -18 |
  
  * maxResult: 8 (initial)| (8, 8) => 8 | (8, -4) => 8 | (8, 64) => 64 | (64, 576) => 576 )
+ * 
+ * Hint:
+ * The reason behind keeping track of max_so_far is to keep track of the accumulated product of positive numbers. 
+ * The reason behind keeping track of min_so_far is to properly handle negative numbers
  * 
  * */
 

@@ -237,9 +237,11 @@
 
     - preorder is ROOT, LEFT, RIGHT
     - inorder is LEFT, ROOT, RIGHT
-    - first element of preorder is always ROOT. So we can creare new tree node from this (i.e node = preorder.shift() )
-    - finding index of node in inorder will help finding right and left part of new tree. (i.e pivot = inorder.indexOf(node))
-    - root.left = buildTree(preorder, inorder(0, privot) and root.right = buildTree(preorder, inorder(pivot+1)
+    - first element of preorder is always ROOT. So we can creare new tree node from
+    this (i.e node = preorder.shift() )
+    - finding index of node in inorder will help finding right and left part 
+    of new tree. (i.e pivot = inorder.indexOf(node))
+    - root.left = buildTree(preorder, inorder(0, privot) and root.right = buildTre (preorder, inorder(pivot+1)
     
 ## 30. [Best Time to Buy and Sell Stock](https://github.com/citta-lab/DSA/blob/main/arrays/121.best%20-time-to-buy-and-sell-stock.js)
 

@@ -6,10 +6,11 @@ making a note as i forget the nitty gritty details as days goes on.
 ## Binary Tree 
 Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from leetcode. The repo here is seperated into binary-tree, binary-search-tree, nth-tree, graphs and linkedList-to-binary-tree to seperate the topics and focus on the common patterns. 
 ### Path Related Problems
-#### [257. Binary Tree Paths]
-#### [112. Path Sum]
-#### [113. Path Sum II]
-#### [124. Binary Tree Maximum Path Sum]
+- [112. Path Sum](https://github.com/citta-lab/DSA/blob/main/binary-tree/112.path-sum.js)
+- [113. Path Sum II](https://github.com/citta-lab/DSA/blob/main/binary-tree/113.path-sum-II.js)
+- [124. Binary Tree Maximum Path Sum](https://github.com/citta-lab/DSA/blob/main/binary-tree/124.max-path-sum-binary-tree.js)
+- [257. Binary Tree Paths](https://github.com/citta-lab/DSA/blob/main/binary-tree/257.binary-tree-paths.js)
+- [437. Path Sum III](https://github.com/citta-lab/DSA/blob/main/binary-tree/437.path-sum-III.js)
 
 
 ## Other JS Repos

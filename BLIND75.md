@@ -225,37 +225,37 @@
     - time:O(n) and sapce:O(n)
     - Iterative method using bfs level order
     - use queue.shift() to pop first element and queue.push() to add element
-    
+
 ## 28. [Maximum Depth of Binary Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/104.maximum-depth-in-binary-tree.js)
 
     - time:O(n) and sapce:O(n)
     - Iterative method using bfs level order
     - use queue.shift() to pop first element and queue.push() to add element
     - keep counter and increase it at the end of for loop
-    
+
 ## 29. [Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 
     - preorder is ROOT, LEFT, RIGHT
     - inorder is LEFT, ROOT, RIGHT
     - first element of preorder is always ROOT. So we can creare new tree node from
     this (i.e node = preorder.shift() )
-    - finding index of node in inorder will help finding right and left part 
+    - finding index of node in inorder will help finding right and left part
     of new tree. (i.e pivot = inorder.indexOf(node))
     - root.left = buildTree(preorder, inorder(0, privot) and root.right = buildTre (preorder, inorder(pivot+1)
-    
+
 ## 30. [Best Time to Buy and Sell Stock](https://github.com/citta-lab/DSA/blob/main/arrays/121.best%20-time-to-buy-and-sell-stock.js)
 
     - bruteforce can be done with two for loops with i=0, j=i+1 i.e O(n^2)
-    - optimized can be done with O(n) by keeping minPrice and profit 
+    - optimized can be done with O(n) by keeping minPrice and profit
     - we compare the current price is less than minPrice if so we assing price to minPrice and continue
-    - if the current price is more than minPrice, then we calculate profit and keep max profit in check 
+    - if the current price is more than minPrice, then we calculate profit and keep max profit in check
 
-## 31. [Binary Tree Maximum Path Sum](https://github.com/citta-lab/DSA/blob/main/binary-tree/124.max-path-sum-binary-tree.js)
+## 31. [Binary Tree Maximum Path Sum](https://github.com/citta-lab/DSA/blob/main/binary-tree/124.binary-tree-maximum-path-sum.js)
 
-    - we will need to calculate if we can find maximum value from root + left, or 
-    root + right or left + root + right. 
-    - we will keep maxSum and gets updated whenever we traverse however while 
-    traversing back we can only have either left + root or right + root. 
+    - we will need to calculate if we can find maximum value from root + left, or
+    root + right or left + root + right.
+    - we will keep maxSum and gets updated whenever we traverse however while
+    traversing back we can only have either left + root or right + root.
     - final return in helper will be like `return Math.max(root.val + leftMax, root.val + rightMax)`
     - start `let maxSum = -Infinity;`
 
@@ -268,28 +268,28 @@
     for `if (input_char >= 97 && input_char <= 122 || input_char >= 48 && input_char <= 57){ return true }`
 
 ## 33. [Longest Consecutive Sequence](https://github.com/citta-lab/DSA/blob/main/arrays/128.longest-consecutive-sequence.js)
-    
-   [Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/longest-consecutive-sequence.png)
-    
-    - Not Optilmal : sort and then have curLength, maxLength =1 and find maxLength by comparing 
-    - Optimal : using set we can look up if the given number in set has previous number. 
-    If not then it is the start of the range we calculate. If the numer has left or previous in 
+
+[Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/longest-consecutive-sequence.png)
+
+    - Not Optilmal : sort and then have curLength, maxLength =1 and find maxLength by comparing
+    - Optimal : using set we can look up if the given number in set has previous number.
+    If not then it is the start of the range we calculate. If the numer has left or previous in
     the Set then we can assume it is not the start
-    
+
 ## 34. [Clone Graph](https://github.com/citta-lab/DSA/blob/main/graphs/133.clone-graph-dfs.js)
 
     - we will apply dfs. time: O(m+n) and space: O(N) where N is depth os stack
-    - use Map instead of Set so we can keep track of node -> cloneNode. 
+    - use Map instead of Set so we can keep track of node -> cloneNode.
     -- i.e visited.set(node, clone) and we can check `visited.has(node) then return visited.get(node)`
     which will return pointer to respective clone rather than original node.
     - iterative over node's children and build cloneChild and push it to clone.childrens array.
-    
+
 ## 35. [Word Break](https://github.com/citta-lab/DSA/blob/main/graphs/139.word-break.js)
 
     - we can solve this with recursion and memoization which will result in O(n^3) time
     - will need to use TWO POINTER in recursion
     - use Map for memo instead of array for Time Limit exceed exception
-    - call helper(s, wordDict, 0, memo) and use forloop/while inside helper for finding substring with 
+    - call helper(s, wordDict, 0, memo) and use forloop/while inside helper for finding substring with
     another pointer end = start + 1 ( to start with ).
     - OR we can also solve this in DP with memoization will result in O(n^3) as well
 
@@ -298,26 +298,24 @@
     - we can solve this with recursion and memoization which will result in O(n^3) time
     - will need to use TWO POINTER in recursion
     - use Map for memo instead of array for Time Limit exceed exception
-    - call helper(s, wordDict, 0, memo) and use forloop/while inside helper for finding substring with 
+    - call helper(s, wordDict, 0, memo) and use forloop/while inside helper for finding substring with
     another pointer end = start + 1 ( to start with ).
     - OR we can also solve this in DP with memoization will result in O(n^3) as well
-    
+
 ## 36. [Reorder List](https://github.com/citta-lab/DSA/blob/main/linkedList/reorder-linkedList.js)
 
     - we need to do this in three steps. Find Mid, Reverse, Merge.
     - Find Mid: slow = node.next where fast = node.next.next
     - Reverse: future = cur.next; cur.next = prev; cur = future; prev = cur; and we return pre.
     - Merge: head = l1; tmp = l1.next; l1.next = l2; l1 = tmp. Similary tmp = l2.next; l2.next = l1; l2 = tmp.
-    
+
 ## 38. [Maximum Product Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/152.maximum-product-subarray.js)
 
-       - Brute Force: Time: O(n^2) with two loops 
+       - Brute Force: Time: O(n^2) with two loops
        - Kadanes: Time: O(n)
        - Have three variable. result points to first element so we return first element as default. curMin and curMax
        - i.e result = nums[0], curMin = 1, curMax = 1
        - Loop through each element and update the curMin, curMax, and result. finally return result.
-       - curMax = Math.max(num, num*curMax, num*curMin) 
+       - curMax = Math.max(num, num*curMax, num*curMin)
        - curMin = Math.min(num, num*curMax, num*curMin)
        - result = Math.max(result, curMax)
- 
-    

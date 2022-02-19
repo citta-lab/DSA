@@ -5,6 +5,11 @@ making a note as i forget the nitty gritty details as days goes on.
 
 ## Binary Tree 
 Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from leetcode. The repo here is seperated into binary-tree, binary-search-tree, nth-tree, graphs and linkedList-to-binary-tree to seperate the topics and focus on the common patterns. 
+### Path Related Problems
+#### [257. Binary Tree Paths]
+#### [112. Path Sum]
+#### [113. Path Sum II]
+#### [124. Binary Tree Maximum Path Sum]
 
 
 ## Other JS Repos

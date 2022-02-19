@@ -14,7 +14,8 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [124. Binary Tree Maximum Path Sum](https://github.com/citta-lab/DSA/blob/main/binary-tree/124.binary-tree-maximum-path-sum.js)
 - [257. Binary Tree Paths](https://github.com/citta-lab/DSA/blob/main/binary-tree/257.binary-tree-paths.js)
 - [437. Path Sum III](https://github.com/citta-lab/DSA/blob/main/binary-tree/437.path-sum-III.js)
-- [2096. Directions From Start to Destination nodes i.e UP LEFT RIGHT DOWN ]()
+- [2096. Directions From Start to Destination nodes i.e UP LEFT RIGHT DOWN ](https://github.com/citta-lab/DSA/blob/main/binary-tree/2096.step-by-step-directions-from-a-binary-tree-node-to-another.js)
+- [1740. Find Distance in a Binary Tree i.e START and DESTINATION ]()
 
 ## Other JS Repos
 

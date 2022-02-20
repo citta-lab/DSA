@@ -28,7 +28,7 @@
  * - rober can go from next house i.e let firstOption = robbery(nums, start+1)
  * */
 
-/** Time: O(n) and Space: O(n)  */
+/** [Not Optimal] > Time: O(n) and Space: O(n)  */
 var rob = function(nums) {
     let memo = new Array(nums.length).fill(-1);
     return robbery(nums, 0, memo);
@@ -48,3 +48,20 @@ function robbery(nums, start, memo){
     return ans;
 }
 
+/** Dynamic Programming Time:O(N) and Space:O(N) */
+var rob = function(nums) {
+  
+    /** prepare our nums with these two default so we can start robbing from first element */
+    let rob1 = 0;
+    let rob2 = 0; 
+    
+    // [rob1, rob2, n, n+1, n+2, ...]
+    for(let n of nums){
+        let temp = Math.max(rob1 + n, rob2);
+        rob1 = rob2;
+        rob2 = temp;
+    }
+    
+    /** end of our result will have the max */
+    return rob2
+};

@@ -365,3 +365,7 @@
     - DFS will check row/col our of bound check, visited check, water check and returns false for all
     - DFS on all 4 ways and finally return true
 
+## 43. [Reverse Linked List](https://github.com/citta-lab/DSA/blob/main/linkedList/206.reverse-linkedList.js)
+    - have dummy point to null
+    - temp = head.next; head.next = dummy; dummy = head; head = temp;
+

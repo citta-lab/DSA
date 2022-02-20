@@ -311,46 +311,57 @@
 
 ## 38. [Maximum Product Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/152.maximum-product-subarray.js)
 
-       - Brute Force: Time: O(n^2) with two loops
-       - Kadanes: Time: O(n)
-       - Have three variable. result points to first element so we return first element as default. curMin and curMax
-       - i.e result = nums[0], curMin = 1, curMax = 1
-       - Loop through each element and update the curMin, curMax, and result. finally return result.
-       - curMax = Math.max(num, num*curMax, num*curMin)
-       - curMin = Math.min(num, num*curMax, num*curMin)
-       - result = Math.max(result, curMax)
+    - Brute Force: Time: O(n^2) with two loops
+    - Kadanes: Time: O(n)
+    - Have three variable. result points to first element so we return first element as default. curMin and curMax
+    - i.e result = nums[0], curMin = 1, curMax = 1
+    - Loop through each element and update the curMin, curMax, and result. finally return result.
+    - curMax = Math.max(num, num*curMax, num*curMin)
+    - curMin = Math.min(num, num*curMax, num*curMin)
+    - result = Math.max(result, curMax)
 
 ## 39. [Find Minimum in Rotated Sorted Array](https://github.com/citta-lab/DSA/blob/main/arrays/153.find-minimum-in-rotated-sorted-array.js)
-       - Hence this needs to be solved in O(logn). We will use binary search 
-       - Binary search is done on sorted array but we have sorted with pivot. So will need small
-       alteration to nomal BS.
-       - we will have left = 0; right = nums.length-1 and result = nums[0].
-       - with in while check if the given array is already sorted then return left most value comapred
-       to result (i.e nums[0])
-       - if we didnt do early return then find mid, check if mid is smallest compare to result. 
-       - check if left part of mid is already sorted, then move left pointer to mid+1 else right
-       pointers to mid-1
+    - Time: O(logN) Space: O(1)
+    - Hence this needs to be solved in O(logn). We will use binary search 
+    - Binary search is done on sorted array but we have sorted with pivot. So will need small
+    alteration to nomal BS.
+    - we will have left = 0; right = nums.length-1 and result = nums[0].
+    - with in while check if the given array is already sorted then return left most value comapred
+    to result (i.e nums[0])
+    - if we didnt do early return then find mid, check if mid is smallest compare to result. 
+    - check if left part of mid is already sorted, then move left pointer to mid+1 else right
+    pointers to mid-1
 
 
 ## 40. [Reverse Bits]()
        - 
 
 ## 41. [Number of 1 Bits](https://github.com/citta-lab/DSA/blob/main/bits/191.number-of-1-bits.js)
-       - we will need to do bit shifting and masking i.e mask = 1
-       - we will need to calculate for 32 bit. 
-       -- i.e `for(let i=0; i<32; i++)`
-       - if we add 1 to the given bits we will get 0 if bits has 1 or 0 if bits has 0.
-       -- `if((mask & n) !== 0){ count ++ }`
-       - if the result is 0, then we can say bits has 1 and we increase the count. 
-       - then we need to mask or shit i.e mask <<= 1;
+    - Time: O(N) and Space:O(N)
+    - we will need to do bit shifting and masking i.e mask = 1
+    - we will need to calculate for 32 bit. 
+    -- i.e `for(let i=0; i<32; i++)`
+    - if we add 1 to the given bits we will get 0 if bits has 1 or 0 if bits has 0.
+    -- `if((mask & n) !== 0){ count ++ }`
+    - if the result is 0, then we can say bits has 1 and we increase the count. 
+    - then we need to mask or shit i.e mask <<= 1;
 
 ## 42. [House Robber](https://github.com/citta-lab/DSA/blob/main/dp/198.house-robber.js)
-       - can we solved with recursion & memoization which will have time: O(N) and space:O(N)
-       - can also be solved using DP with time:O(N) and Space:O(1)
-       - in DP,
-       -- we initialize rob1 and rob2 be ZERO. will be used as pre-steps for given nums.
-       -- i.e // [rob1, rob2, n, n+1, n+2, ...]
-       -- while traversing the nums array. we will need to calculate max gain between two options
-       -- temp = Math.max(rob1+nums[n], rob2); 
-       -- move the pointers rob1 and rob2 i.e rob1 = rob2; rob2 = temp
+    - Time: O(N) and Space:O(N)
+    - can we solved with recursion & memoization which will have 
+    - can also be solved using DP with time:O(N) and Space:O(1)
+    - in DP,
+    -- we initialize rob1 and rob2 be ZERO. will be used as pre-steps for given nums.
+    -- i.e // [rob1, rob2, n, n+1, n+2, ...]
+    -- while traversing the nums array. we will need to calculate max gain between two options
+    -- temp = Math.max(rob1+nums[n], rob2); 
+    -- move the pointers rob1 and rob2 i.e rob1 = rob2; rob2 = temp
+
+## 42. [Number of Islands](https://github.com/citta-lab/DSA/blob/main/graphs/200.number-of-island-dfs.js)
+    - Time: O(M*N) and Space: O(M*N)
+    - DFS heper will be called with grid,row, col, visited. 
+    - we need to call on each sell so it will be two for loops to call DFS.
+    - we can precheck before calling DFS and if it returns true we incrment count
+    - DFS will check row/col our of bound check, visited check, water check and returns false for all
+    - DFS on all 4 ways and finally return true
 

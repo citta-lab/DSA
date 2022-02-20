@@ -20,6 +20,11 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [2096. Directions From Start to Destination nodes ( i.e UP LEFT RIGHT DOWN )](https://github.com/citta-lab/DSA/blob/main/binary-tree/2096.step-by-step-directions-from-a-binary-tree-node-to-another.js)
 - [1740. Find Distance in a Binary Tree ( i.e START and DESTINATION )](https://github.com/citta-lab/DSA/blob/main/binary-tree/1740.find-distance-in-a-binary-tree.js)
 
+
+## Arrays
+
+### 
+
 ## Other JS Repos
 
 - [Easy-Medium](https://github.com/anubhavsrivastava/leetcodeJS)

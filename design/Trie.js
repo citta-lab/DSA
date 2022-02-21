@@ -10,7 +10,9 @@
  * BLIND: 46 (46/75)
  * 
  * Functional Based : https://github.com/citta-lab/DSA/blob/main/trie/208.implement-trie-prefix-tree-functional.js
- */
+ * Example Diagram : https://github.com/citta-lab/DSA/blob/main/a-assets/trie.png
+ * 
+ * /
 
 /** TrieNode for building Trie */
 class TrieNode {

@@ -403,6 +403,9 @@
     adjList to be empty. i.e `visited.delete(course); adjList[course] = [];`
 
 ## 46. [Implement Trie (Prefix Tree)](https://github.com/citta-lab/DSA/blob/main/design/Trie.js)
+
+[Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/trie.png)
+
     - define TrieNode with children (empty hashmap) and endOfWord boolean defaulted to false
     - define Trie with constructor this.root = new TrieNode();
     - define insert method which takes word. we check for each char in word for node.children

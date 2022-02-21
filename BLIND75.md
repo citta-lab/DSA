@@ -199,6 +199,22 @@
     `newInterval = = [Math.min(first, newFirst), Math.max(second, newSecond)]`
     - # handle adding newInterval at the end of intervals if newInterval[1] is greater than tail
 
+## 21. [Set Matrix Zeroes](https://github.com/citta-lab/DSA/blob/main/linkedList/206.reverse-linkedList.js)
+
+    - Second Optimal: Time: O(m*n) and Space: O(m+n) using two 1-D array (rowArray, colArray) to hold
+    the values corresponding to matrix[row][col].
+    -- first time for loop to update rowArray and colArray based on matrix cell values
+    -- second time for loop to update the matrix based on rowArray and colArray matching cell values
+
+    - Best Optimal : Time: O(n*m) and Space: O(1) using one variable to hold matrix[0][0] value and
+    using first row and column as reference to update the rest of the matrix.
+    -- instead of using rowArray and colArray we use matrix's first row and col as reference
+    -- we will hold rowZero = false as default which will reflect matrix[0][0] value
+    -- we will do three update process
+    -- first to update the row/col values based on first row and first col values
+    -- second to update the row's first column values based on matrix[0][0] (i.e first cell)
+    -- third to update the first column's first rows values if rowZero is true
+
 ## 24. [Decode Ways](https://github.com/citta-lab/DSA/blob/main/graphs/91.decode-ways-dfs.js)
 
     - Tree combination can be used which will give 2^n time complexity as we have two choices to make every time
@@ -321,51 +337,55 @@
     - result = Math.max(result, curMax)
 
 ## 39. [Find Minimum in Rotated Sorted Array](https://github.com/citta-lab/DSA/blob/main/arrays/153.find-minimum-in-rotated-sorted-array.js)
+
     - Time: O(logN) Space: O(1)
-    - Hence this needs to be solved in O(logn). We will use binary search 
+    - Hence this needs to be solved in O(logn). We will use binary search
     - Binary search is done on sorted array but we have sorted with pivot. So will need small
     alteration to nomal BS.
     - we will have left = 0; right = nums.length-1 and result = nums[0].
     - with in while check if the given array is already sorted then return left most value comapred
     to result (i.e nums[0])
-    - if we didnt do early return then find mid, check if mid is smallest compare to result. 
+    - if we didnt do early return then find mid, check if mid is smallest compare to result.
     - check if left part of mid is already sorted, then move left pointer to mid+1 else right
     pointers to mid-1
 
-
 ## 40. [Reverse Bits]()
-       - 
+
+       -
 
 ## 41. [Number of 1 Bits](https://github.com/citta-lab/DSA/blob/main/bits/191.number-of-1-bits.js)
+
     - Time: O(N) and Space:O(N)
     - we will need to do bit shifting and masking i.e mask = 1
-    - we will need to calculate for 32 bit. 
+    - we will need to calculate for 32 bit.
     -- i.e `for(let i=0; i<32; i++)`
     - if we add 1 to the given bits we will get 0 if bits has 1 or 0 if bits has 0.
     -- `if((mask & n) !== 0){ count ++ }`
-    - if the result is 0, then we can say bits has 1 and we increase the count. 
+    - if the result is 0, then we can say bits has 1 and we increase the count.
     - then we need to mask or shit i.e mask <<= 1;
 
 ## 42. [House Robber](https://github.com/citta-lab/DSA/blob/main/dp/198.house-robber.js)
+
     - Time: O(N) and Space:O(N)
-    - can we solved with recursion & memoization which will have 
+    - can we solved with recursion & memoization which will have
     - can also be solved using DP with time:O(N) and Space:O(1)
     - in DP,
     -- we initialize rob1 and rob2 be ZERO. will be used as pre-steps for given nums.
     -- i.e // [rob1, rob2, n, n+1, n+2, ...]
     -- while traversing the nums array. we will need to calculate max gain between two options
-    -- temp = Math.max(rob1+nums[n], rob2); 
+    -- temp = Math.max(rob1+nums[n], rob2);
     -- move the pointers rob1 and rob2 i.e rob1 = rob2; rob2 = temp
 
 ## 42. [Number of Islands](https://github.com/citta-lab/DSA/blob/main/graphs/200.number-of-island-dfs.js)
+
     - Time: O(M*N) and Space: O(M*N)
-    - DFS heper will be called with grid,row, col, visited. 
+    - DFS heper will be called with grid,row, col, visited.
     - we need to call on each sell so it will be two for loops to call DFS.
     - we can precheck before calling DFS and if it returns true we incrment count
     - DFS will check row/col our of bound check, visited check, water check and returns false for all
     - DFS on all 4 ways and finally return true
 
 ## 43. [Reverse Linked List](https://github.com/citta-lab/DSA/blob/main/linkedList/206.reverse-linkedList.js)
+
     - have dummy point to null
     - temp = head.next; head.next = dummy; dummy = head; head = temp;
-

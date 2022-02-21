@@ -376,7 +376,7 @@
     -- temp = Math.max(rob1+nums[n], rob2);
     -- move the pointers rob1 and rob2 i.e rob1 = rob2; rob2 = temp
 
-## 42. [Number of Islands](https://github.com/citta-lab/DSA/blob/main/graphs/200.number-of-island-dfs.js)
+## 43. [Number of Islands](https://github.com/citta-lab/DSA/blob/main/graphs/200.number-of-island-dfs.js)
 
     - Time: O(M*N) and Space: O(M*N)
     - DFS heper will be called with grid,row, col, visited.
@@ -385,7 +385,19 @@
     - DFS will check row/col our of bound check, visited check, water check and returns false for all
     - DFS on all 4 ways and finally return true
 
-## 43. [Reverse Linked List](https://github.com/citta-lab/DSA/blob/main/linkedList/206.reverse-linkedList.js)
+## 44. [Reverse Linked List](https://github.com/citta-lab/DSA/blob/main/linkedList/206.reverse-linkedList.js)
 
     - have dummy point to null
     - temp = head.next; head.next = dummy; dummy = head; head = temp;
+
+## 45. [Course Schedule](https://github.com/citta-lab/DSA/blob/main/linkedList/206.reverse-linkedList.js)
+
+    - Will do DFS recursiuon on the adjList
+    - Will initialize the adjList with courses by looping over numCourses.
+    - will add [course, pre] = pair from preReq's and add course dependecies in adjList
+    - will call DFS for all the courses from numCourses 
+    - dfs should have visited check, adjList[course].length === 0 check to return true,
+    looping all pre from preReqs using DFS
+    - we will only do early false return
+    - end of all DFS we will need to remove course from visited set and update course in
+    adjList to be empty. i.e `visited.delete(course); adjList[course] = [];`

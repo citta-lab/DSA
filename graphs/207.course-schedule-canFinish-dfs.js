@@ -1,4 +1,7 @@
 /** 
+ * 
+ * 207. Course Schedule
+ * 
  * Course Schedule : 
  * There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. 
  * You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must 
@@ -11,12 +14,15 @@
  * Input: numCourses = 2, prerequisites = [[1,0],[0,1]] 
  * Output: false
  * 
+ * leetcode-question:207
  * leetcode: https://leetcode.com/problems/course-schedule/
  * video: https://www.youtube.com/watch?v=EgI5nU9etnU
+ * Blind: 45 (45/75)
  * 
  * Hints:
  * - we need to loop though all the courses based on numCourses so we apply dfs on each. 
- * - need to delete course from Set and empty the course value in map after processing so we dont process again
+ * - need to delete course from visited Set and empty the course value in map/adjList 
+ * after processing so we dont process again.
  * - directed graph, so we need to build map with empty array for all courses first. 
 */
 

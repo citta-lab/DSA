@@ -1,6 +1,13 @@
 /** 
+ * 
+ * 236. Lowest Common Ancestor of a Binary Tree
+ * 
  * Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+ * 
+ * leetcode-question:236
  * leetcode : https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
+ * BLIND: 54 (54/75)
+ *
  *  */
 
  var lowestCommonAncestor = function(root, p, q) {
@@ -9,6 +16,7 @@
     if(!root) return null;
  
     /** if either of them are equal to root then root is the common parent */
+    /** if p and q are values not nodes then if(root.val === p || root.val === q) return root; */
     if(root === p || root === q) return root;
  
     /** similar to BST we send left and right part */

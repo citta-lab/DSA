@@ -425,3 +425,17 @@
     - Inside DFS, will loop though char of word and break the problem into handline char with '.' and without 
     -- if char is '.' then we extract all values from node.children ( so we can find try matching on every child node ). then call DFS recursively with same word, i+1, child. i.e DFS(word, i+1, child)
     -- if char is not '.' then will do normal search workflow
+
+
+
+## 54. [Lowest Common Ancestor of a Binary Tree)](https://github.com/citta-lab/DSA/blob/main/trie/211.design-add-and-search-words-data-structure.js)
+    - LCA / getLCA / get common parent 
+    - We will need to do recursion on left and right node 
+    - base conditions: if root is null we return root
+    - base conditions: if ONE of given node is equal to root then root must be the parent 
+    -- if(root === p || root === q) return root
+    - recursion: run LCA on left and right node of root.
+    -- left = LCA(root.left, p, q); right = LCA(root.right, p, q);
+    - if we get value from both left and right we return root (if(left && right) return root)
+    - if one of then is true (i.e both p & q belongs to either left or right ) then we return that side.
+    -- return left ? left : right

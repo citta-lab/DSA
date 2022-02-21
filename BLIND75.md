@@ -428,7 +428,7 @@
 
 
 
-## 54. [Lowest Common Ancestor of a Binary Tree)](https://github.com/citta-lab/DSA/blob/main/trie/211.design-add-and-search-words-data-structure.js)
+## 54. [Lowest Common Ancestor of a Binary Tree)](https://github.com/citta-lab/DSA/blob/main/binary-tree/236.lowest-common-ancestor-of-a-binary-tree.js)
     - LCA / getLCA / get common parent 
     - We will need to do recursion on left and right node 
     - base conditions: if root is null we return root

@@ -9,7 +9,7 @@
  * video:https://www.youtube.com/watch?v=oobqoCJlHA0
  * BLIND: 46 (46/75)
  * 
- * Functional Based : 
+ * Functional Based : https://github.com/citta-lab/DSA/blob/main/trie/208.implement-trie-prefix-tree-functional.js
  */
 
 /** TrieNode for building Trie */

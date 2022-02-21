@@ -11,7 +11,7 @@
  * video:https://www.youtube.com/watch?v=oobqoCJlHA0
  * BLIND: 46 (46/75)
  * 
- * Class Based: 
+ * Class Based: https://github.com/citta-lab/DSA/blob/main/design/Trie.js 
  */
 
 /** Trie node class */

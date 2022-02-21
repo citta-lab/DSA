@@ -1,10 +1,33 @@
 /** 
-
-Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST. 
-leetcode: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
-youtube: https://www.youtube.com/watch?v=gs2LMfuOR9k
+ * 
+ * 235. Lowest Common Ancestor of a Binary Search Tree
+ * 
+ * Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST. 
+ * 
+ * leetcode:235
+ * leetcode: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
+ * video: https://www.youtube.com/watch?v=gs2LMfuOR9k
+ * BLIND: 53 (53/75)
 */ 
 
+
+/** BINARY SEARCH ( RECURSION ) */
+
+/** best case: O(log N) time and O(log N) space AND O(N) time and O(N) space for worst */
+var lowestCommonAncestor = function(root, p, q) {
+    
+   if(!root) return root;
+   
+   if(root === p || root === q) return root;
+   
+   if(p.val <= root.val && q.val <= root.val){
+       return lowestCommonAncestor(root.left, p, q);
+   }else if (p.val >= root.val && q.val >= root.val){
+       return lowestCommonAncestor(root.right, p, q);
+   }else{
+       return root;
+   }
+};
 
 /** BINARY SEARCH ( ITERATIVE ) */
 
@@ -35,21 +58,4 @@ var lowestCommonAncestor = function(root, p, q) {
 
 
 
-/** BINARY SEARCH ( RECURSION ) */
 
-/** best case: O(log N) time and O(log N) space AND O(N) time and O(N) space for worst */
-var lowestCommonAncestor = function(root, p, q) {
-   return helper(root, p, q);
-};
-
-const helper = (root, p, q) => {
- 
-    let nodeVal = root.val;
-    let pVal = p.val;
-    let qVal = q.val;
-    
-    if( pVal < nodeVal && qVal < nodeVal ) return helper(root.left, p, q);
-    if( pVal > nodeVal && qVal > nodeVal ) return helper(root.right, p, q);
-    return root;
-    
-}

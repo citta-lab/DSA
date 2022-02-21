@@ -416,7 +416,7 @@
     - define startsWith and follow the same as search but at the end we simply return "TRUE"
     and no need to check if we reached end of the word.
 
-## 47. [Design Add and Search Words Data Structure)](https://github.com/citta-lab/DSA/blob/main/design/Trie.js)
+## 47. [Design Add and Search Words Data Structure)](https://github.com/citta-lab/DSA/blob/main/trie/211.design-add-and-search-words-data-structure.js)
 
     - Same Trie implementation as above except search will now need to handle basic search when word has all alphabets like 'abc' and also when wild card is used like '.ab'.
     - Define TrieNode, Implement Trie class with addWord function (same as insert trie method) 

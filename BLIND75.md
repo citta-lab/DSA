@@ -415,3 +415,13 @@
     keep moving pointer. At the end return `node.endOfWord;`
     - define startsWith and follow the same as search but at the end we simply return "TRUE"
     and no need to check if we reached end of the word.
+
+## 47. [Design Add and Search Words Data Structure)](https://github.com/citta-lab/DSA/blob/main/design/Trie.js)
+
+    - Same Trie implementation as above except search will now need to handle basic search when word has all alphabets like 'abc' and also when wild card is used like '.ab'.
+    - Define TrieNode, Implement Trie class with addWord function (same as insert trie method) 
+    - Define Search method which will pass info to DFS and returns only when DFS returns true.
+    - DFS will take word, node, startIndex and will return node.endOfWord at the end.
+    - Inside DFS, will loop though char of word and break the problem into handline char with '.' and without 
+    -- if char is '.' then we extract all values from node.children ( so we can find try matching on every child node ). then call DFS recursively with same word, i+1, child. i.e DFS(word, i+1, child)
+    -- if char is not '.' then will do normal search workflow

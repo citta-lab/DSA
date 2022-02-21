@@ -427,6 +427,15 @@
     -- if char is not '.' then will do normal search workflow
 
 
+## 53. [ Lowest Common Ancestor of a Binary Search Tree)](https://github.com/citta-lab/DSA/blob/main/binary-tree/236.lowest-common-ancestor-of-a-binary-tree.js)
+    - LCA / getLCA / get common parent 
+    - We will need to do recursion on left or right node as it is balanced tree
+    - base conditions: if root is null we return root
+    - we check if p.val and q.val is less than root.val then we do recursion on left
+    -- return LCA(root.left, p , q)
+    - we check if p.val and q.val is greater than root.val then we do recursion on right
+    -- return LCA(root.right, p, q)
+    - if neither then we simply return root as it is BST and it must be balanced already
 
 ## 54. [Lowest Common Ancestor of a Binary Tree)](https://github.com/citta-lab/DSA/blob/main/binary-tree/236.lowest-common-ancestor-of-a-binary-tree.js)
     - LCA / getLCA / get common parent 

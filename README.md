@@ -21,7 +21,10 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [1740. Find Distance in a Binary Tree ( i.e START and DESTINATION )](https://github.com/citta-lab/DSA/blob/main/binary-tree/1740.find-distance-in-a-binary-tree.js)
 
 
-## Arrays
+## Graph
+### Word Search (using DFS)
+- [Word Search (true/false)](https://github.com/citta-lab/DSA/blob/main/graphs/79.word-search-dfs.js)
+- [Word Search II (array of words)]()
 
 ### 
 

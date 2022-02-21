@@ -390,12 +390,12 @@
     - have dummy point to null
     - temp = head.next; head.next = dummy; dummy = head; head = temp;
 
-## 45. [Course Schedule](https://github.com/citta-lab/DSA/blob/main/linkedList/206.reverse-linkedList.js)
+## 45. [Course Schedule](https://github.com/citta-lab/DSA/blob/main/graphs/207.course-schedule-canFinish-dfs.js)
 
     - Will do DFS recursiuon on the adjList
     - Will initialize the adjList with courses by looping over numCourses.
     - will add [course, pre] = pair from preReq's and add course dependecies in adjList
-    - will call DFS for all the courses from numCourses 
+    - will call DFS for all the courses from numCourses
     - dfs should have visited check, adjList[course].length === 0 check to return true,
     looping all pre from preReqs using DFS
     - we will only do early false return

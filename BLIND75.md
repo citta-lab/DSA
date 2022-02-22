@@ -398,9 +398,9 @@
     - will call DFS for all the courses from numCourses
     - dfs should have visited check, adjList[course].length === 0 check to return true,
     looping all pre from preReqs using DFS
-    - we will only do early false return
+    - we will only do early false return <-- IMP
     - end of all DFS we will need to remove course from visited set and update course in
-    adjList to be empty. i.e `visited.delete(course); adjList[course] = [];`
+    adjList to be empty. i.e `visited.delete(course); adjList[course] = [];` <-- IMP 
 
 ## 46. [Implement Trie (Prefix Tree)](https://github.com/citta-lab/DSA/blob/main/design/Trie.js)
 

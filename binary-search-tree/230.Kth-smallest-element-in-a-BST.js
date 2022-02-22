@@ -10,7 +10,7 @@
    Output: 1
  * 
 *  leetcode-question:230
- * leetcode: https://leetcode.com/problems/kth-smallest-element-in-a-bst/
+ * leetcode: https://github.com/citta-lab/DSA/blob/main/binary-search-tree/230.Kth-smallest-element-in-a-BST.js
  * BLIND:52(52/75)
  * */
 

@@ -392,15 +392,16 @@
 
 ## 45. [Course Schedule](https://github.com/citta-lab/DSA/blob/main/graphs/207.course-schedule-canFinish-dfs.js)
 
+    - Time: O(N+M) where N is number of courses and M is number of dependencies. Space: O(N+M) 
     - Will do DFS recursiuon on the adjList
     - Will initialize the adjList with courses by looping over numCourses.
-    - will add [course, pre] = pair from preReq's and add course dependecies in adjList
+    - will add [course, pre] = pair from preReq's and add course dependecies in adjList like `adjList[course].push(pre)`
     - will call DFS for all the courses from numCourses
     - dfs should have visited check, adjList[course].length === 0 check to return true,
     looping all pre from preReqs using DFS
-    - we will only do early false return <-- IMP
+    - we will only do early false return <-- ***IMP***
     - end of all DFS we will need to remove course from visited set and update course in
-    adjList to be empty. i.e `visited.delete(course); adjList[course] = [];` <-- IMP 
+    adjList to be empty. i.e `visited.delete(course); adjList[course] = [];` <-- ***IMP***
 
 ## 46. [Implement Trie (Prefix Tree)](https://github.com/citta-lab/DSA/blob/main/design/Trie.js)
 

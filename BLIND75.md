@@ -430,6 +430,19 @@
    - Best Appraoch: Use Set which will result in O(n) time and O(n) sapce
    - Second Best Approach: Sorting and then checking with TWO pointers. time:O(nlogn) and space:O(1)
 
+
+## 52. [Kth Smallest Element in a BST](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
+    - Best Appraoch: 
+    - Time:O(n) and Space:O(1) if we exclude ans array
+    - calculate left product by starting prodArray[0] = 1.
+    - prodArray[i] = prodArray[i-1] * nums[i-1] will fill the product of rest of the cell
+    - Use rightProductSum = 1 as product holder of right
+    - loop though the  prodArray from right to left by doing so we will calulate produt and
+    rightProductSum
+    -- i.e productArray[i] = rightProductArray * productArray[i1]
+    -- update rightProdArray as rightProductSum = rightProductSum * nums[i];
+    - Second Best Approach:
+
 ## 53. [ Lowest Common Ancestor of a Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
     - LCA / getLCA / get common parent 
     - We will need to do recursion on left or right node as it is balanced tree
@@ -469,3 +482,16 @@
     - calculate rightProductarray from right to left where rightProductArray[nums.length-1] = 1;
     -- i.e rightProductarray[i] = rightProductarray[i+1] * nums[i+1];
     - finally we will have one more array which does product of these two
+
+
+## 55. [Product of Array Except Self](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
+    - Best Appraoch: 
+    - Time:O(n) and Space:O(1) if we exclude ans array
+    - calculate left product by starting prodArray[0] = 1.
+    - prodArray[i] = prodArray[i-1] * nums[i-1] will fill the product of rest of the cell
+    - Use rightProductSum = 1 as product holder of right
+    - loop though the  prodArray from right to left by doing so we will calulate produt and
+    rightProductSum
+    -- i.e productArray[i] = rightProductArray * productArray[i1]
+    -- update rightProdArray as rightProductSum = rightProductSum * nums[i];
+    - Second Best Approach:

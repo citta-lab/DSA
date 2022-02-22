@@ -26,6 +26,7 @@
  * - directed graph, so we need to build map with empty array for all courses first. 
 */
 
+/** Time: O(|N|+|M|) where |N| is number of courses and |M| is number of dependencies. Space: O(|N|+|M|) */
 var canFinish = function(numCourses, prerequisites) {
     
     let courseMap = {};

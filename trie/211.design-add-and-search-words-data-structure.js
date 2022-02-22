@@ -34,6 +34,9 @@
  * which is normal trie search. 
  */
 
+/** Time: O(M) for well defined words without dots. Where M is key length and N is number of words. 
+    Time:O(N*26^m) for '...words' where M represents ...
+    Space: O(1) for well defined words. O(M) for undefined '...' words */
 /** TrieNode for inserting char as nodes */
 class TrieNode{
     constructor(){

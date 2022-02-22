@@ -426,10 +426,16 @@
     -- if char is '.' then we extract all values from node.children ( so we can find try matching on every child node ). then call DFS recursively with same word, i+1, child. i.e DFS(word, i+1, child)
     -- if char is not '.' then will do normal search workflow
 
-## 50. [ Contains Duplicate)](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
+## 50. [ Contains Duplicate](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
    - Best Appraoch: Use Set which will result in O(n) time and O(n) sapce
    - Second Best Approach: Sorting and then checking with TWO pointers. time:O(nlogn) and space:O(1)
 
+## 51. [Invert Binary Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/226.invert-binary-tree.js)
+   - Time:O(n) and Space:O(n) 
+   - Can be done recursively or iterative appraoch
+   - In recursive, `root.left = invert(root.right); root.right = invert(root.left)`
+   - In iteravtive, `let node = stack.pop(); let temp = node.left; node.left = node.right; node.right = temp` and add node.left and node.right
+   to stack.
 
 ## 52. [Kth Smallest Element in a BST](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/230.Kth-smallest-element-in-a-BST.js)
     - Best Appraoch: 

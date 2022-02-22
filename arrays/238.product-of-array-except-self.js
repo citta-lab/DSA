@@ -31,6 +31,7 @@ Hint:
 - final result will be product of these values
 
 - Optimal : Time:O(n) and Space: O(1) exclusing result array
+- Understandably so, the output array does not count towards the space complexity
 - Same workflow as Optimal solution but instead of using leftProdctArr and rightProductArr
 we will just use productArr.
 - leftProductArr will be replaced with productArr and same workflow
@@ -39,6 +40,28 @@ we will just use productArr.
 -- `R *= productArr[i];`
 
 */
+
+/** time:O(n) and Space:O(1) if answer array space is exluced otherwise O(n) */
+/** this is enhancement of below (second algorithm) which takes O(n) time/space */
+var productExceptSelf = function(nums) {
+    
+    let prodArray = new Array(nums.length-1);
+    
+    prodArray[0] = 1;
+    
+    for(let i=1; i<nums.length; i++){
+         let prod = nums[i-1] * prodArray[i-1];
+         prodArray[i] = prod;
+    }
+    
+    let rightProductSum = 1; /** replaces the rightArray */
+    for(let i=nums.length-1; i>=0; i--){
+        prodArray[i] = rightProductSum * prodArray[i];
+        rightProductSum = rightProductSum * nums[i];
+    }
+    
+    return prodArray
+};
 
 /** time: O(n) and Space:O(n) */
 var productExceptSelf = function(nums) {

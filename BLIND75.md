@@ -426,8 +426,11 @@
     -- if char is '.' then we extract all values from node.children ( so we can find try matching on every child node ). then call DFS recursively with same word, i+1, child. i.e DFS(word, i+1, child)
     -- if char is not '.' then will do normal search workflow
 
+## 50. [ Contains Duplicate)](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
+   - Best Appraoch: Use Set which will result in O(n) time and O(n) sapce
+   - Second Best Approach: Sorting and then checking with TWO pointers. time:O(nlogn) and space:O(1)
 
-## 53. [ Lowest Common Ancestor of a Binary Search Tree)](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
+## 53. [ Lowest Common Ancestor of a Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
     - LCA / getLCA / get common parent 
     - We will need to do recursion on left or right node as it is balanced tree
     - base conditions: if root is null we return root
@@ -437,7 +440,7 @@
     -- return LCA(root.right, p, q)
     - if neither then we simply return root as it is BST and it must be balanced already
 
-## 54. [Lowest Common Ancestor of a Binary Tree)](https://github.com/citta-lab/DSA/blob/main/binary-tree/236.lowest-common-ancestor-of-a-binary-tree.js)
+## 54. [Lowest Common Ancestor of a Binary Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/236.lowest-common-ancestor-of-a-binary-tree.js)
     - LCA / getLCA / get common parent 
     - We will need to do recursion on left and right node 
     - base conditions: if root is null we return root
@@ -448,3 +451,21 @@
     - if we get value from both left and right we return root (if(left && right) return root)
     - if one of then is true (i.e both p & q belongs to either left or right ) then we return that side.
     -- return left ? left : right
+
+## 54. [Product of Array Except Self](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
+    - Best Appraoch: 
+    - Time:O(n) and Space:O(1) if we exclude ans array
+    - calculate left product by starting prodArray[0] = 1.
+    - prodArray[i] = prodArray[i-1] * nums[i-1] will fill the product of rest of the cell
+    - Use rightProductSum = 1 as product holder of right
+    - loop though the  prodArray from right to left by doing so we will calulate produt and
+    rightProductSum
+    -- i.e productArray[i] = rightProductArray * productArray[i1]
+    -- update rightProdArray as rightProductSum = rightProductSum * nums[i];
+    - Second Best Approach:
+    - Time:O(n) and Space:O(n)
+    - calculate leftProductArray from left to right where leftProductArray[0] = 1;
+    -- i.e leftProductArray[i] = leftProductArray[i-1] * nums[i-1];
+    - calculate rightProductarray from right to left where rightProductArray[nums.length-1] = 1;
+    -- i.e rightProductarray[i] = rightProductarray[i+1] * nums[i+1];
+    - finally we will have one more array which does product of these two

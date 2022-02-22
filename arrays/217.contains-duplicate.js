@@ -41,3 +41,23 @@
     
     return false;
 };
+
+
+/** time: O(nlogn) and space:O(1) */
+var containsDuplicate = function(nums) {
+    nums.sort((a,b) => a-b); // <-- O(nlogn)
+    
+    let left = 0;
+    let right = left+1;
+    
+    while(right < nums.length){
+        if(nums[left] === nums[right]){
+            return true;
+        }
+        
+        left++
+        right++
+    }
+    
+    return false;
+};

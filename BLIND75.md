@@ -235,6 +235,8 @@
 
     - time:O(n) and sapce:O(logN) in best and O(n) in worst
     - dfs and traversing both tree's together and comparing
+    - dfs should compare left and right side with &&. 
+    -- `if(p && q && p.val === q.val) return dfs(p.left, q.left) && dfs(p.right, q.right)`
 
 ## 27. [Binary Tree Level Order Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/102.binary-tree-level-order-traversal-binary-tree.js)
 

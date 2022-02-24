@@ -248,8 +248,8 @@
 
     - time:O(n) and sapce:O(n)
     - Iterative method using bfs level order
-    - use queue.shift() to pop first element and queue.push() to add element
-    - keep counter and increase it at the end of for loop
+    - use queue.shift() to pop first element and queue.push() to add left and right element
+    - keep counter and increase it at the end of for loop <--- *** IMP ***
 
 ## 29. [Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 

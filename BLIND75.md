@@ -226,10 +226,12 @@
 
 ## 25. [Validate Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/98.validate-BST-in-order-recursive-tree.js)
 
+    - Time: O(N) and Space:O(N)
     - In valid BST root value will be greater than left children and less than right children
     - If we are doing recursion, then have left and right min max value assigned like left = -Infinity and right = Infinity
     - validate if root.val will satisfy left < root.val < right
-    - call left children and right children like `return  valid(root.left, left, root.val) &&  valid(root.right, root.val, right)'
+    - call left children and right children 
+    like `return  valid(root.left, left, root.val) &&  valid(root.right, root.val, right)'
 
 ## 26. [Same Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/100.same-tree.js)
 

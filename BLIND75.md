@@ -388,7 +388,9 @@
 ## 44. [Reverse Linked List](https://github.com/citta-lab/DSA/blob/main/linkedList/206.reverse-linkedList.js)
 
     - have dummy point to null
+    - use while loop i.e while(head)
     - temp = head.next; head.next = dummy; dummy = head; head = temp;
+    - return dummy
 
 ## 45. [Course Schedule](https://github.com/citta-lab/DSA/blob/main/graphs/207.course-schedule-canFinish-dfs.js)
 

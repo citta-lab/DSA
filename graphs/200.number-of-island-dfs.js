@@ -12,7 +12,7 @@
  * 
  * */
 
-/** time :O(M*N) and space: O(M*N) */
+/** time :  O(M*N) and space: O(M*N) */
  var numIslands = function(grid) {
     let count = 0;
     let visited = new Set();

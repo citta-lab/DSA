@@ -18,6 +18,42 @@
  * Topic: MASK  SHIFT  HAMMING HAMMINGWEIGHT
  * */
 
+
+ /** Time:O(32) => O(1) and Space: O(1) */
+ var hammingWeight = function(n) {
+    let count = 0;
+    let mask = 1;
+    
+    for(let i=0; i<32; i++){
+        if((n & mask) === 1){
+           count++ 
+        }
+        
+        /** instead of moving mask to left, we move number to right */
+        n = n >> 1
+    }
+    
+    return count
+};
+
+/**  Time Exceeded Limit >> Using mod % */
+var hammingWeight = function(n) {
+    let count = 0;
+    while(n){
+        let ans = n % 2; /** either result in 1 or 0 */
+        if(ans){
+            count ++
+        }
+        
+        /** shift bit to right so we mod again */
+        n = n >> 1
+    }
+    
+    return count
+};
+
+
+ /** Another appraoch  */
  var hammingWeight = function(n) {
     
     let count = 0; /** number of 1's */

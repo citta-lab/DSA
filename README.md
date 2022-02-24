@@ -22,6 +22,14 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [2096. Directions From Start to Destination nodes ( i.e UP LEFT RIGHT DOWN )](https://github.com/citta-lab/DSA/blob/main/binary-tree/2096.step-by-step-directions-from-a-binary-tree-node-to-another.js)
 - [1740. Find Distance in a Binary Tree ( i.e START and DESTINATION )](https://github.com/citta-lab/DSA/blob/main/binary-tree/1740.find-distance-in-a-binary-tree.js)
 
+### Tree Validation 
+- [98. Validate Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/98.validate-BST-in-order-recursive-tree.js)
+- [100. Same Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/100.same-tree.js)
+
+### POSTORDER, INORDER, PREORDER and LEVELORDER Traverse 
+- [102. Binary Tree Level Order Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/102.binary-tree-level-order-traversal-binary-tree.js)
+- [104. Maximum Depth of Binary Tree (level order)](https://github.com/citta-lab/DSA/blob/main/binary-tree/104.maximum-depth-in-binary-tree.js)
+- [105. Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/105.construct-binary-tree-from-preorder-and-inorder-traversal.js) 
 
 ## Graph
 - [GRAPHS]()

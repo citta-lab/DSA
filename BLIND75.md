@@ -261,26 +261,33 @@
 
 ## 30. [Best Time to Buy and Sell Stock](https://github.com/citta-lab/DSA/blob/main/arrays/121.best%20-time-to-buy-and-sell-stock.js)
 
-    - bruteforce can be done with two for loops with i=0, j=i+1 i.e O(n^2)
-    - optimized can be done with O(n) by keeping minPrice and profit
-    - we compare the current price is less than minPrice if so we assing price to minPrice and continue
-    - if the current price is more than minPrice, then we calculate profit and keep max profit in check
+    - Bruteforce:  Time: O(n^2) can be done with two for loops with i=0, j=i+1;
+    - Optimized:  Time: O(n) by keeping `minPrice` and `profit` as global variable.
+    -- Goal here is to find the min price first and once we no longer find it we calculate profit.
+    - find minPrice by `if(price < minPrice) { minPrice = price; continue }`. we continue to next.
+    - if we find price > minPrice we calculate profit.
+    -- i.e `if(price - minPrice > profit) { profit = price - minPrice }`
 
 ## 31. [Binary Tree Maximum Path Sum](https://github.com/citta-lab/DSA/blob/main/binary-tree/124.binary-tree-maximum-path-sum.js)
 
-    - we will need to calculate if we can find maximum value from root + left, or
-    root + right or left + root + right.
-    - we will keep maxSum and gets updated whenever we traverse however while
-    traversing back we can only have either left + root or right + root.
-    - final return in helper will be like `return Math.max(root.val + leftMax, root.val + rightMax)`
-    - start `let maxSum = -Infinity;`
+    - Time: O(N) Space:(H) where H is the height of the tree
+    - Will apply DFS ( inline function so we can reference local variable )
+    - Will have global max which will get updated by DFS. i.e `let maxSum = -Infinity;`
+    - DFS base will check for root null and return 0;
+    - we calculate left by calling DFS with root.left i.e `left = DFS(root.left)`;
+    - we calculate right by calling DFS with root.right i.e `right = DFS(root.right)`;
+    - we will need max of these compared to '0' so we always have +ve value. <-- *** IMP ***
+    -- example: root = [2,-1,-2] and we should only consider 2 and ignore rest
+    - we update max by comparing max and combination of leftMax + root.val + rightMax
+    - ew return max between leftMax + root.val or rightMax + root.val
 
 ## 32. [Valid Palindrome](https://github.com/citta-lab/DSA/blob/main/strings/125.valid-palindrome.js)
 
+    - Time: O(N) even with regex (used by string replace as well), Space:O(1)
     - use TWO POINTER with left = 0 and right = s.length-1. Move inward.
     - we will split, convert to lower and remove special char either using regex or charCodeAt() function.
-    - regex => s = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase()
-    - need to build helper and use `var input_char = input.charCodeAt(0);` then compare
+    - With regex => `s = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase()`
+    - Without regex : need to build helper and use `var input_char = input.charCodeAt(0);` then compare
     for `if (input_char >= 97 && input_char <= 122 || input_char >= 48 && input_char <= 57){ return true }`
 
 ## 33. [Longest Consecutive Sequence](https://github.com/citta-lab/DSA/blob/main/arrays/128.longest-consecutive-sequence.js)
@@ -292,7 +299,7 @@
     - Optimal : Time:O(n) and Space:O(n)
     - Use Set to store nums ( removes duplicates )
     - Using set we can look up if the given number in set has previous number. Example: if '1' doesnt
-    have previous number we get the clue it is the starting. 
+    have previous number we get the clue it is the starting.
     If not then it is the start of the range we calculate. If the numer has left or previous in
     the Set then we can assume it is not the start
 
@@ -398,7 +405,7 @@
 
 ## 45. [Course Schedule](https://github.com/citta-lab/DSA/blob/main/graphs/207.course-schedule-canFinish-dfs.js)
 
-    - Time: O(N+M) where N is number of courses and M is number of dependencies. Space: O(N+M) 
+    - Time: O(N+M) where N is number of courses and M is number of dependencies. Space: O(N+M)
     - Will do DFS recursiuon on the adjList
     - Will initialize the adjList with courses by looping over numCourses.
     - will add [course, pre] = pair from preReq's and add course dependecies in adjList like `adjList[course].push(pre)`
@@ -424,42 +431,47 @@
     and no need to check if we reached end of the word.
 
 ## 47. [Design Add and Search Words Data Structure)](https://github.com/citta-lab/DSA/blob/main/trie/211.design-add-and-search-words-data-structure.js)
+
     - Time: O(M) for well defined words without '..' dots. M is key length & N is number of words. Space: O(1)
-    - Time: O(N * 2^M) for '..words' where M represnts '...'. Space:O(M) for undefined words from recursion. 
-    - Same Trie implementation as above except search will now need to handle basic search when word has all 
+    - Time: O(N * 2^M) for '..words' where M represnts '...'. Space:O(M) for undefined words from recursion.
+    - Same Trie implementation as above except search will now need to handle basic search when word has all
     alphabets like 'abc' and also when wild card is used like '.ab'.
-    - Define TrieNode, Implement Trie class with addWord function (same as insert trie method) 
+    - Define TrieNode, Implement Trie class with addWord function (same as insert trie method)
     - Define Search method which will pass info to DFS and returns only when DFS returns true.
     - DFS will take word, node, startIndex and will return node.endOfWord at the end.
-    - Inside DFS, will loop though char of word and break the problem into handline char with '.' and without 
-    -- if char is '.' then we extract all values from node.children ( so we can find try matching on every child node ). 
+    - Inside DFS, will loop though char of word and break the problem into handline char with '.' and without
+    -- if char is '.' then we extract all values from node.children ( so we can find try matching on every child node ).
     then call DFS recursively with same word, i+1, child. i.e DFS(word, i+1, child)
     -- if char is not '.' then will do normal search workflow
 
 ## 50. [ Contains Duplicate](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
-   - Best Appraoch: Use Set which will result in O(n) time and O(n) sapce
-   - Second Best Approach: Sorting and then checking with TWO pointers. time:O(nlogn) and space:O(1)
+
+- Best Appraoch: Use Set which will result in O(n) time and O(n) sapce
+- Second Best Approach: Sorting and then checking with TWO pointers. time:O(nlogn) and space:O(1)
 
 ## 51. [Invert Binary Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/226.invert-binary-tree.js)
-   - Time:O(n) and Space:O(n) 
-   - Can be done recursively or iterative appraoch
-   - In recursive, `root.left = invert(root.right); root.right = invert(root.left)`
-   - In iteravtive, `let node = stack.pop(); let temp = node.left; node.left = node.right; node.right = temp` and add node.left and node.right
-   to stack.
+
+- Time:O(n) and Space:O(n)
+- Can be done recursively or iterative appraoch
+- In recursive, `root.left = invert(root.right); root.right = invert(root.left)`
+- In iteravtive, `let node = stack.pop(); let temp = node.left; node.left = node.right; node.right = temp` and add node.left and node.right
+  to stack.
 
 ## 52. [Kth Smallest Element in a BST](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/230.Kth-smallest-element-in-a-BST.js)
-    - Best Appraoch: 
+
+    - Best Appraoch:
     - Time:O(n) and Space:O(logn) in average case and O(n) in worst
     - Do in oder processing in iterative manner
     - return k-1 index from array built from in order processing
-    
+
     - Second Best Approach:
     - Time:O(n) and Space:O(n) from recursion
     - Do in oder processing in recursion
     - return k-1 index from array built from in order processing
 
 ## 53. [ Lowest Common Ancestor of a Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/235.lowest-common-ancestor-of-a-binary-search-tree.js)
-    - LCA / getLCA / get common parent 
+
+    - LCA / getLCA / get common parent
     - We will need to do recursion on left or right node as it is balanced tree
     - base conditions: if root is null we return root
     - we check if p.val and q.val is less than root.val then we do recursion on left
@@ -469,10 +481,11 @@
     - if neither then we simply return root as it is BST and it must be balanced already
 
 ## 54. [Lowest Common Ancestor of a Binary Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/236.lowest-common-ancestor-of-a-binary-tree.js)
-    - LCA / getLCA / get common parent 
-    - We will need to do recursion on left and right node 
+
+    - LCA / getLCA / get common parent
+    - We will need to do recursion on left and right node
     - base conditions: if root is null we return root
-    - base conditions: if ONE of given node is equal to root then root must be the parent 
+    - base conditions: if ONE of given node is equal to root then root must be the parent
     -- if(root === p || root === q) return root
     - recursion: run LCA on left and right node of root.
     -- left = LCA(root.left, p, q); right = LCA(root.right, p, q);
@@ -481,7 +494,8 @@
     -- return left ? left : right
 
 ## 54. [Product of Array Except Self](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
-    - Best Appraoch: 
+
+    - Best Appraoch:
     - Time:O(n) and Space:O(1) if we exclude ans array
     - calculate left product by starting prodArray[0] = 1.
     - prodArray[i] = prodArray[i-1] * nums[i-1] will fill the product of rest of the cell
@@ -498,9 +512,9 @@
     -- i.e rightProductarray[i] = rightProductarray[i+1] * nums[i+1];
     - finally we will have one more array which does product of these two
 
-
 ## 55. [Product of Array Except Self](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
-    - Best Appraoch: 
+
+    - Best Appraoch:
     - Time:O(n) and Space:O(1) if we exclude ans array
     - calculate left product by starting prodArray[0] = 1.
     - prodArray[i] = prodArray[i-1] * nums[i-1] will fill the product of rest of the cell

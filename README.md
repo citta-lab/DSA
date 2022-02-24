@@ -24,9 +24,13 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 
 
 ## Graph
-### Word Search (using DFS)
-- [Word Search (true/false)](https://github.com/citta-lab/DSA/blob/main/graphs/79.word-search-dfs.js)
-- [Word Search II (array of words)]()
+- [GRAPHS]()
+
+## Dynamic Programming 
+
+### Sell & Buy 
+- [121. Best Time to Buy and Sell Stock](https://github.com/citta-lab/DSA/blob/main/arrays/121.best%20-time-to-buy-and-sell-stock.js)
+- 
 
 ### 
 

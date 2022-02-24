@@ -28,3 +28,12 @@
        - We check if sub exist in WordDict words, then call DFS recursively by changing startIndex to end.
        -- i.e `if(wordDict.includes(sub){ ... }`
        - we return if we get true and also add startIndex to memo at end if we didnt do early return
+
+## 2. [133. Clone Graph](https://github.com/citta-lab/DSA/blob/main/graphs/139.word-break.js)
+      - Time:O(N+M) where N is no nodes and M are children Space: O(N) depth of the tree
+      - Will do DFS reucursion with node and a map (i.nodeMap) to hold node and it's respective clone
+      - DFS base condition will check for empty node, if clone of node exists in map.
+      -- i.e `if(nodeMap.has(node)) return nodeMap.get(node);` /** returns clone of the node */
+      - create new clone node, add it to map then process the node children using for loop.
+      - Will call DFS on each child of node and result is stored in cloneChild which is pushed to clone
+      children. i.e `

@@ -287,8 +287,12 @@
 
 [Ans: Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/longest-consecutive-sequence.png)
 
-    - Not Optilmal : sort and then have curLength, maxLength =1 and find maxLength by comparing
-    - Optimal : using set we can look up if the given number in set has previous number.
+    - Not Optilmal : Time:O(nlogn) and Space:O(1)
+    - sort and then have curLength, maxLength =1 and find maxLength by comparing
+    - Optimal : Time:O(n) and Space:O(n)
+    - Use Set to store nums ( removes duplicates )
+    - Using set we can look up if the given number in set has previous number. Example: if '1' doesnt
+    have previous number we get the clue it is the starting. 
     If not then it is the start of the range we calculate. If the numer has left or previous in
     the Set then we can assume it is not the start
 

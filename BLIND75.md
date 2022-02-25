@@ -548,15 +548,13 @@
     -- update rightProdArray as rightProductSum = rightProductSum * nums[i];
     - Second Best Approach:
 
-## 56. [Valid Anagram](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
+## 56. [Valid Anagram](https://github.com/citta-lab/DSA/blob/main/strings/242.valid-anagram.js)
+
+    - Not the Best Appraoch:
+    - Time:O(nlogn) and Space:O(1) if we sort them
 
     - Best Appraoch:
-    - Time:O(n) and Space:O(1) if we exclude ans array
-    - calculate left product by starting prodArray[0] = 1.
-    - prodArray[i] = prodArray[i-1] * nums[i-1] will fill the product of rest of the cell
-    - Use rightProductSum = 1 as product holder of right
-    - loop though the  prodArray from right to left by doing so we will calulate produt and
-    rightProductSum
-    -- i.e productArray[i] = rightProductArray * productArray[i1]
-    -- update rightProdArray as rightProductSum = rightProductSum * nums[i];
-    - Second Best Approach:
+    - Time: O(N) and Space: O(N) using hash map.
+    - will do three for loops, one for counting s char in one map, in second loop we
+    decrement char from the map.
+    - in last loop we check if count is 0, otherwise throw an error

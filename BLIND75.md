@@ -558,3 +558,14 @@
     - will do three for loops, one for counting s char in one map, in second loop we
     decrement char from the map.
     - in last loop we check if count is 0, otherwise throw an error
+
+## 56. [Meeting Rooms](https://github.com/citta-lab/DSA/blob/main/strings/242.valid-anagram.js)
+
+    - Bruteforce:
+    - Time:O(n^2) Space:O(1)
+    - Using two forloops to find the combinations 
+
+    - Best Appraoch:
+    - Time: O(nlogn) Space:O(1)
+    - sort them by start value
+    - if curStart time less than previous endTime then we return FALSE

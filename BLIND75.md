@@ -215,6 +215,25 @@
     -- second to update the row's first column values based on matrix[0][0] (i.e first cell)
     -- third to update the first column's first rows values if rowZero is true
 
+## 22. [Minimum Window Substring](https://github.com/citta-lab/DSA/blob/0e74e2a8079c1f7f2a0aca7df45da3d8c8cc7a0f/strings/76.minimum-window-substring.js)
+
+    - Time: O(S+T) Space: O(S+T)
+    - Sliding window
+    - Need two hash maps
+    - need to shrink left after finding the substring containing second strings all char
+
+## 23. [Word Search](https://github.com/citta-lab/DSA/blob/main/graphs/79.word-search-dfs.js)
+
+    - Time: O(n+m * 4^n) where n is chars of search word. Space: O(m*n)
+    - Apply DFS with Backtracking
+    - BackTracking : Second example will fail if we dont delete visited entry at the end
+    of completing dfs.
+    - WordIndex: we need wordIndex in DFS which we will use it to check if we completed
+    the complete WORD comparision.
+    -- i.e if(startIndex === word.length-1) return true.
+    - Compare Each character with Word: we need to check if traversing in matrix cell value matches with word chars by our StartIndex. i.e `if(matrix[row][col] !== word.charAt(startIndex))
+    return false`
+
 ## 24. [Decode Ways](https://github.com/citta-lab/DSA/blob/main/graphs/91.decode-ways-dfs.js)
 
     - Tree combination can be used which will give 2^n time complexity as we have two choices to make every time
@@ -230,14 +249,14 @@
     - In valid BST root value will be greater than left children and less than right children
     - If we are doing recursion, then have left and right min max value assigned like left = -Infinity and right = Infinity
     - validate if root.val will satisfy left < root.val < right
-    - call left children and right children 
+    - call left children and right children
     like `return  valid(root.left, left, root.val) &&  valid(root.right, root.val, right)'
 
 ## 26. [Same Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/100.same-tree.js)
 
     - time:O(n) and sapce:O(logN) in best and O(n) in worst
     - dfs and traversing both tree's together and comparing
-    - dfs should compare left and right side with &&. 
+    - dfs should compare left and right side with &&.
     -- `if(p && q && p.val === q.val) return dfs(p.left, q.left) && dfs(p.right, q.right)`
 
 ## 27. [Binary Tree Level Order Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/102.binary-tree-level-order-traversal-binary-tree.js)

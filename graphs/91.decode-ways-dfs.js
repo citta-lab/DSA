@@ -45,15 +45,19 @@ var numDecodings = function(s) {
    
     /** memoization and we initialize cache with 1 for length, i.e if empty string we will return 1 */
     let memo = { }
-    memo[s.length] = 1;
+    // OR use this memo[s.length] = 1;
     
     function dfs(s, index){
         
         /** base case */
         if(index > s.length) return 0;
         
+        /** base condition to keep counting */
+        if(index === s.length) return 1;
+
         /** base case: if the string starts with 0 then it's invalid as we dont have match */
         if(s[index] === '0') return 0;
+
         
         /** if we have memorized then return */
         if(memo[index]) return memo[index];

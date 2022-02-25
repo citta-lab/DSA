@@ -4,6 +4,8 @@
 
      - Time: O(n+m * 4^n) where n is chars of search word. Space: O(m*n)
      - Apply DFS with Backtracking
+
+     Implementation Details:
      - BackTracking : Second example will fail if we dont delete visited entry at the end of completing dfs.
      - WordIndex: we need wordIndex in DFS which we will use it to check if we completed the complete WORD comparision.
      -- i.e if(startIndex === word.length-1) return true.
@@ -18,6 +20,7 @@
        - memo = [] gives time limit but if we use map it will be fine.
        - memo = new Map(). then use memo.set(key, value) for setting and memo.has(key) checking, memo.get(key)
 
+       Implementation Details:
        - Apply DFS with startIndex = 0 which will be for given string
        - DFS base should be `if(s.length === startIndex) return true`
        - We will do sliding window on string s and compare if char in string s in present in wordDicts words
@@ -32,6 +35,8 @@
 
       - Time:O(N+M) where N is no nodes and M are children Space: O(N) depth of the tree
       - Will do DFS reucursion with node and a map (i.nodeMap) to hold node and it's respective clone
+
+      Implementation Details:
       - DFS base condition will check for empty node, if clone of node exists in map.
       -- i.e `if(nodeMap.has(node)) return nodeMap.get(node);` /** returns clone of the node */
       - create new clone node, add it to map then process the node children using for loop.
@@ -42,6 +47,8 @@
 
       - BruteForce without Memo :- Time: O(2^n)
       - DFS with Memo :- Time:O(n) and Space:O(n)
+
+      Implementation Details:
       - Will do DFS with starting at 0 index.
       - DFS will have Three base condition.
       -- index > s.length return 0

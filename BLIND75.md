@@ -569,3 +569,13 @@
     - Time: O(nlogn) Space:O(1)
     - sort them by start value
     - if curStart time less than previous endTime then we return FALSE
+
+## 57. [Meeting Rooms](https://github.com/citta-lab/DSA/blob/main/arrays/253.meeting-rooms-II.js)
+
+    - Best Appraoch:
+    - Time: O(nlogn) Space:O(n)
+    - Seperate start and end values to diff array and sort them.
+    - Do while loop with start,end = 0. Here we will have to handle two scenario
+    -- Non-Overlap: if(start < end) we increment room count
+    -- Overlap: if(start >= end) we decrement room count
+    - return max between count vs maxCount (which holds max value we found in count)

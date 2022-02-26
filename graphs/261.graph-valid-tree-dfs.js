@@ -15,6 +15,11 @@
  * 
  * 
  * Hint: can use DFS or Union Find
+ * - Time: O(N+M) and Space:(N+M) where N is height 
+ * - DFS called with starting node i.e parent
+ * - Need to build adjList 
+ * - In DFS, we need to only call DFS on child if `parent !== child`
+ * - We need to check we traversed all the nodes. i.e `visited.size === n`
  * 
 */
 
@@ -60,6 +65,7 @@ var validTree = function(n, edges) {
     if(!result) return false;
     
     /** we need this to address if there are two unconnected graphs are given */
+    /** checking we traversed all the nodes in the graph */
     return visited.size === n;
 };
 

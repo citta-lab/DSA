@@ -516,7 +516,7 @@
     - if one of then is true (i.e both p & q belongs to either left or right ) then we return that side.
     -- return left ? left : right
 
-## 55. [Product of Array Except Self](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
+## 54. [Product of Array Except Self](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
 
     - Best Appraoch:
     - Time:O(n) and Space:O(1) if we exclude ans array
@@ -535,7 +535,7 @@
     -- i.e rightProductarray[i] = rightProductarray[i+1] * nums[i+1];
     - finally we will have one more array which does product of these two
 
-## 56. [Product of Array Except Self](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
+## 55. [Product of Array Except Self](https://github.com/citta-lab/DSA/blob/9e7511b9ac8b1b2039d9b42ff9f93e519ec0653d/arrays/238.product-of-array-except-self.js)
 
     - Best Appraoch:
     - Time:O(n) and Space:O(1) if we exclude ans array
@@ -548,7 +548,7 @@
     -- update rightProdArray as rightProductSum = rightProductSum * nums[i];
     - Second Best Approach:
 
-## 57. [Valid Anagram](https://github.com/citta-lab/DSA/blob/main/strings/242.valid-anagram.js)
+## 56. [Valid Anagram](https://github.com/citta-lab/DSA/blob/main/strings/242.valid-anagram.js)
 
     - Not the Best Appraoch:
     - Time:O(nlogn) and Space:O(1) if we sort them
@@ -559,7 +559,7 @@
     decrement char from the map.
     - in last loop we check if count is 0, otherwise throw an error
 
-## 58. [Meeting Rooms](https://github.com/citta-lab/DSA/blob/main/arrays/252.meeting-rooms.js)
+## 57. [Meeting Rooms](https://github.com/citta-lab/DSA/blob/main/arrays/252.meeting-rooms.js)
 
     - Bruteforce:
     - Time:O(n^2) Space:O(1)
@@ -570,7 +570,7 @@
     - sort them by start value
     - if curStart time less than previous endTime then we return FALSE
 
-## 59. [Meeting Rooms](https://github.com/citta-lab/DSA/blob/main/arrays/253.meeting-rooms-II.js)
+## 58. [Meeting Rooms II](https://github.com/citta-lab/DSA/blob/main/arrays/253.meeting-rooms-II.js)
 
     - Best Appraoch:
     - Time: O(nlogn) Space:O(n)
@@ -580,7 +580,7 @@
     -- Overlap: if(start >= end) we decrement room count
     - return max between count vs maxCount (which holds max value we found in count)
 
-## 60. [Graph Valid Tree](https://github.com/citta-lab/DSA/blob/main/graphs/261.graph-valid-tree-dfs.js)
+## 59. [Graph Valid Tree](https://github.com/citta-lab/DSA/blob/main/graphs/261.graph-valid-tree-dfs.js)
 
     - Time: O(N+M) and Space:(N+M) where N is height
     - DFS called with starting node i.e parent
@@ -588,10 +588,39 @@
     - In DFS, we need to only call DFS on child if `parent !== child`
     - We need to check we traversed all the nodes. i.e `visited.size === n`
 
-## 61. [Missing Number](https://github.com/citta-lab/DSA/blob/main/arrays/268.missing-number.js)
+## 60. [Missing Number](https://github.com/citta-lab/DSA/blob/main/arrays/268.missing-number.js)
 
     - Time: O(n) and Space: O(n)
     - Using combination of Set and loop to find the missing number
     - Confirm if the given number always starts from 0 and ranges from 0.
     - If yes, then we can simply treat last number is nums.length + 1.
     - will do for loop and check if we have missing number in Set until last num.
+
+## 61. [Alien Dictionary](https://github.com/citta-lab/DSA/blob/main/graphs/alien-dictionary-dfs.js)
+
+    - Time: O(n) and Space: O(H) where n is number of chars in all words
+    - DFS with Postorder ( postorder will help in solving DAG issues with DFS)
+    - AdjList:
+    -- initialize adjList with chars from all words
+    -- we map one char by taking from wordOne and wordTwo as long as they are not same.
+    and we break instead of checking rest ( as chars after doesn't help us with order )
+    - Wrong input check:
+    -- we need to check if the given words are in lexical order as they say.
+    -- i.e small length word should be at first as long as they have same prefix
+    - DFS:
+    -- call DFS with all elements in adjList ( to handle multiple disconnected graph)
+    -- will need to have hasCycle check and visited check to avoid checking
+    -- DFS will process in POSTORDER manner and pushes char to result array
+    -- we reverse and return result array
+
+## 62. [Encode and Decode Strings](https://github.com/citta-lab/DSA/blob/main/strings/271.encode-and-decode-strings.js)
+
+    - Time: O(N) and Space:O(N)
+    - Need to consider handlign number and special chars.
+    - encode formula : length of the word + # + word => 5#Hello
+    - Decode: start with index = 0 and while loop until index < length of string
+    -- use tempIndex = index ( so we can update the index for next word )
+    -- Use another while loop to move "tempIndex" until char is not equal to #
+    -- Now process number comes before # and same it after parseInt.
+    -- Find word using substring, push it to result array
+    -- process next word so we update index = tempIndex + 1 + numSize

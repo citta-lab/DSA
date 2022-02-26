@@ -22,29 +22,34 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [2096. Directions From Start to Destination nodes ( i.e UP LEFT RIGHT DOWN )](https://github.com/citta-lab/DSA/blob/main/binary-tree/2096.step-by-step-directions-from-a-binary-tree-node-to-another.js)
 - [1740. Find Distance in a Binary Tree ( i.e START and DESTINATION )](https://github.com/citta-lab/DSA/blob/main/binary-tree/1740.find-distance-in-a-binary-tree.js)
 
-### Tree Validation 
+### Tree Validation
+
 - [98. Validate Binary Search Tree](https://github.com/citta-lab/DSA/blob/main/binary-search-tree/98.validate-BST-in-order-recursive-tree.js)
 - [100. Same Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/100.same-tree.js)
 
-### POSTORDER, INORDER, PREORDER and LEVELORDER Traverse 
+### POSTORDER, INORDER, PREORDER and LEVELORDER Traverse
+
 - [102. Binary Tree Level Order Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/102.binary-tree-level-order-traversal-binary-tree.js)
 - [104. Maximum Depth of Binary Tree (level order)](https://github.com/citta-lab/DSA/blob/main/binary-tree/104.maximum-depth-in-binary-tree.js)
-- [105. Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/105.construct-binary-tree-from-preorder-and-inorder-traversal.js) 
+- [105. Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/citta-lab/DSA/blob/main/binary-tree/105.construct-binary-tree-from-preorder-and-inorder-traversal.js)
 
 ## Graph
+
 - [GRAPHS]()
 
-## Dynamic Programming 
+## Dynamic Programming
 
 ### Buy & Sell Stocks
+
 - [121. Best Time to Buy and Sell Stock](https://github.com/citta-lab/DSA/blob/main/arrays/121.best%20-time-to-buy-and-sell-stock.js)
 - [122. Best Time to Buy and Sell Stock II](https://github.com/citta-lab/DSA/blob/main/dp/122.best-time-to-buy-and-sell-stock-II.js)
-- 
+-
 
 ## Arrays
 
 ### TWO POINTER
-- - [26. Remove Duplicates from Sorted Array]
+
+- [26. Remove Duplicates from Sorted Array](https://github.com/citta-lab/DSA/blob/main/arrays/26.remove-duplicates-from-sorted-array.js)
 - [27. Remove Element](https://github.com/citta-lab/DSA/blob/main/arrays/27.remove-element-array.js)
 
 ## Other JS Repos

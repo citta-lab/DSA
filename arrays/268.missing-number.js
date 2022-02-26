@@ -29,7 +29,7 @@
  * - Time: O(n) and space: O(1)
  * - find expected sum i.e (nums.length * nums.length+1)/2
  * - find sum of all nums. i.e nums.reduce((pre,ac) => pre+ac, 0)
- * - missing number is expected-sum
+ * - missing number is expected-sum 
  * */
 
 /** Time: O(n) Space:O(n) */

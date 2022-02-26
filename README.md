@@ -41,7 +41,11 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [122. Best Time to Buy and Sell Stock II](https://github.com/citta-lab/DSA/blob/main/dp/122.best-time-to-buy-and-sell-stock-II.js)
 - 
 
-### 
+## Arrays
+
+### TWO POINTER
+- - [26. Remove Duplicates from Sorted Array]
+- [27. Remove Element](https://github.com/citta-lab/DSA/blob/main/arrays/27.remove-element-array.js)
 
 ## Other JS Repos
 

@@ -579,3 +579,12 @@
     -- Non-Overlap: if(start < end) we increment room count
     -- Overlap: if(start >= end) we decrement room count
     - return max between count vs maxCount (which holds max value we found in count)
+
+
+## 58. [Graph Valid Tree](https://github.com/citta-lab/DSA/blob/main/graphs/261.graph-valid-tree-dfs.js)
+
+    - Time: O(N+M) and Space:(N+M) where N is height 
+    - DFS called with starting node i.e parent
+    - Need to build adjList 
+    - In DFS, we need to only call DFS on child if `parent !== child`
+    - We need to check we traversed all the nodes. i.e `visited.size === n`

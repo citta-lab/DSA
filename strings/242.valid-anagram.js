@@ -47,3 +47,18 @@
     
     return true
 };
+
+
+/** OPTION 2 */
+var isAnagram = function(s, t) {
+    let str = s.split('');
+    let ttr = t.split('');
+    
+    str.sort();
+    ttr.sort();
+    
+    let sortedStr = str.join('');
+    let sortedTtr = ttr.join('');
+    
+    return sortedStr === sortedTtr
+};

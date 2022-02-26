@@ -559,7 +559,7 @@
     decrement char from the map.
     - in last loop we check if count is 0, otherwise throw an error
 
-## 56. [Meeting Rooms](https://github.com/citta-lab/DSA/blob/main/strings/242.valid-anagram.js)
+## 56. [Meeting Rooms](https://github.com/citta-lab/DSA/blob/main/arrays/252.meeting-rooms.js)
 
     - Bruteforce:
     - Time:O(n^2) Space:O(1)

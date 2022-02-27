@@ -16,6 +16,7 @@
  * 
  * leetcode-question:300
  * leetcode:https://leetcode.com/problems/longest-increasing-subsequence/
+ * video: https://www.youtube.com/watch?v=cjWnW0hdF1Y
  * 
  * BLIND: 64 (64/75)
  * 
@@ -26,6 +27,9 @@
  * - Only update dp array if current num is greater than previous ( increasing )
  * - dp[i] should always get updated with max possible length from previous
  * -- i.e let max = Math.max(dp[i], dp[j]+1);
+ * 
+ * - DFS with memo
+ * - Time:O(N^2) and Space:O(N)
  * */
 
  /** Time:O(N^2) and Space:O(N) */

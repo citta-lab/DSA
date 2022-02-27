@@ -624,3 +624,30 @@
     -- Now process number comes before # and same it after parseInt.
     -- Find word using substring, push it to result array
     -- process next word so we update index = tempIndex + 1 + numSize
+
+## 62. [Find Median from Data Stream](https://github.com/citta-lab/DSA/blob/main/heap/295.find-median-from-data-stream.js)
+
+    - Time: O(N) and Space:O(N)
+    - Need to consider handlign number and special chars.
+    - encode formula : length of the word + # + word => 5#Hello
+    - Decode: start with index = 0 and while loop until index < length of string
+    -- use tempIndex = index ( so we can update the index for next word )
+    -- Use another while loop to move "tempIndex" until char is not equal to #
+    -- Now process number comes before # and same it after parseInt.
+    -- Find word using substring, push it to result array
+    -- process next word so we update index = tempIndex + 1 + numSize
+
+## 63. [Longest Increasing Subsequence](https://github.com/citta-lab/DSA/blob/main/dp/300.longest-increasing-subsequence.js)
+
+[Ans: DFS Diagram Solution](https://github.com/citta-lab/DSA/blob/main/a-assets/longest-increasing-subsequence-dfs.png)
+
+    - Time: O(N^2) and Space:O(N)
+    - Option 1: Can be done with DFS and memoization
+    - Option 2: Dynamic programming by dividing this into sub problem and recurrence
+    - DP:
+    -- We will initialize dp array of same size with 1 as default value. Default length
+    to reach these i'th value is 1.
+    -- we will use TWO forloops and starting at i=1. Everytime we will calculate max
+    length we could find by checking previous dp. i.e when we are at dp[3] we will calculate
+    dp[3] value by using combination of dp[0], dp[1], dp[2].
+    -- will return max value from the dp array

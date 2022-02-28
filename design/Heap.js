@@ -41,6 +41,7 @@
  * 
  */
 
+/** Example of Max Heap implementaion */
 class Heap {
     constructor(){
         this.heap = []

@@ -1,4 +1,8 @@
-/** Given n nodes and edges for undirected graph find the number of 
+/**
+ * 
+ * 323. Number of Connected Components in an Undirected Graph
+ * 
+ * Given n nodes and edges for undirected graph find the number of 
  * components and Return the number of connected components in the graph.
  * (i.e) Number of Connected Components in an Undirected Graph. 
  * 
@@ -8,7 +12,9 @@
  */
 
 /**
- *  This is another solution for finding number of connected components using Union Find. If you interested in DFS recursion then visit here https://github.com/citta-lab/DSA/blob/244c7b503b6338a480132bf4309470a36a8d1ebd/graphs/NumberOfConnectedComponents.js
+ *  This is another solution for finding number of connected components using Union Find.
+ *  If you interested in DFS recursion then visit 
+ *  here https://github.com/citta-lab/DSA/blob/244c7b503b6338a480132bf4309470a36a8d1ebd/graphs/NumberOfConnectedComponents.js
  */
 
 // Union Find with Path Compression  

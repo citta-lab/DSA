@@ -1,4 +1,7 @@
-/** Given n nodes and edges for undirected graph find the number of 
+/** 
+ * 323. Number of Connected Components in an Undirected Graph
+ * 
+ * Given n nodes and edges for undirected graph find the number of 
  * components and Return the number of connected components in the graph.
  * (i.e) Number of Connected Components in an Undirected Graph. 
  * 
@@ -6,6 +9,17 @@
  * 
  * leetcode: https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
  * leetcode-question:323
+ * BLIND: 66 (66/75)
+ * 
+ * Hint:
+ * - DFS with visiting set
+ * - Time: O(N*M) where N is number of nodes and M is child for each node
+ * - Space: O(N) where it is the max height of the tree
+ * - Pay attention given "N" might have more nodes than given "edges"
+ * - DFS should return 1 at the end to indicate it traversed the complete graph
+ * - Might need to parseInt the node as key's are in string vs values are in int
+ * 
+ * - Union Find
  * 
  */
 var countComponents = function(n, edges) {

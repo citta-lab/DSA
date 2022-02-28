@@ -41,3 +41,108 @@
  * 
  */
 
+class Heap {
+    constructor(){
+        this.heap = []
+    }
+
+    getParentIdx(i){
+        return Math.floor((i-2/2));
+    }
+
+    getLeftChildIdx(i){
+        return i*2+1;
+    }
+
+    getRightChildIdx(i){
+        return i*2+2;
+    }
+
+    /** used while heapifying due to insert/delete actions */
+    swap(index1, index2){
+        let temp = this.heap[index1];
+        this.heap[index1] = this.heap[index2];
+        this.heap[index2] = temp;
+    }
+
+    /** add elements to last of the array and then heapify to rearrange */
+    push(key){
+        this.heap.push(key);
+        this.heapifyUp();
+    }
+
+    heapifyUp(){
+
+        let currentIdx = this.heap.length-1;
+        
+        /** 
+         * if current value is more than it's parent, we need to swap until current value becomes the parent
+         * of all lesser child values. Hence swap and then update the current index to parent of it's current
+         * index. 
+         */
+        while(this.heap[currentIdx] > this.heap[this.getParentIdx(currentIdx)]){
+            this.swap(currentIdx, this.getParentIdx(currentIdx));
+            currentIdx = this.getParentIdx(currentIdx);
+        }
+    }
+
+    poll(){
+        let maxElement = this.heap[0]; /** first element is always max */
+        this.heap[0] = this.heap[this.heap.length-1]; /** assign last left most value to top */
+        this.heap.length -- /** reduce the length as we just took one element off the array */
+        this.heapifyDown(); /** readjust */
+        
+        return maxElement;
+    }
+
+    heapifyDown(){
+        let currentIdx = 0; /** index of top element */
+
+        /** 
+         * Step 0: find if we have left child as our binary heap must have left child otherwise it is empty
+         * Step 1: find biggest child between left and right
+         * Step 2: swap current value with biggest value using swap and passing index
+         * Step 3: update current to the latest biggest value we swapped with so we can keep checking
+         */
+
+        while(this.heap[this.getLeftChildIdx(currentIdx)]){
+            let biggestChildIdx = this.getLeftChildIdx(currentIdx);
+
+            if(this.heap[this.getRightChildIdx(currentIdx)] 
+            && this.heap[this.getRightChildIdx(currentIdx)] > this.heap[this.getLeftChildIdx(currentIdx)]){
+                biggestChildIdx = this.getRightChildIdx(currentIdx);
+            }
+
+            if(this.heap[currentIdx] < this.heap[biggestChildIdx]){
+                this.swap(currentIdx, biggestChildIdx);
+                currentIdx = biggestChildIdx;
+            }else{
+                return
+            }
+
+        }
+
+    }
+}
+
+
+let heap = new Heap();
+heap.push(25)
+heap.push(5)
+heap.push(40)
+heap.push(70)
+heap.push(90)
+heap.push(44)
+
+console.log(heap.heap.join(',')); // 90,70,44,40,25,5
+
+let a = [];
+a.push(heap.poll());
+a.push(heap.poll());
+a.push(heap.poll());
+a.push(heap.poll());
+a.push(heap.poll());
+
+/** top 5 max values */
+console.log(a); // [ 90, 70, 44, 40, 25 ]
+

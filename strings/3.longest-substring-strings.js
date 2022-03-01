@@ -1,6 +1,6 @@
 /** 
  * 
- * 3. Longest Substring Without Repeating Characters
+ * 3. Longest Substring Without Repeating Characters || Longest Substring Without Repeating Characters
  * 
  * Given a string s, find the length of the longest substring without 
  * repeating characters.
@@ -32,6 +32,12 @@ BLIND: 2 ( 2 / 75 )
 
 Reference: https://duncan-mcardle.medium.com/leetcode-problem-2-longest-substring-without-repeating-characters-javascript-993890bf8eac
 video : https://www.youtube.com/watch?v=wiGpQwVHdE0
+
+Hint
+- Use left and right pointer 
+- move right pointer and check if char derived from right pointer exisit in hash, if Yes
+-- remove left char from hash i.e hash[s[left]]
+-- move left pointer ++
 
 
 */

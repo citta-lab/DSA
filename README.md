@@ -49,6 +49,7 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 
 ### TWO POINTER
 
+- [3. Longest Substring Without Repeating Characters](https://github.com/citta-lab/DSA/blob/main/strings/3.longest-substring-strings.js)
 - [26. Remove Duplicates from Sorted Array](https://github.com/citta-lab/DSA/blob/main/arrays/26.remove-duplicates-from-sorted-array.js)
 - [27. Remove Element](https://github.com/citta-lab/DSA/blob/main/arrays/27.remove-element-array.js)
 

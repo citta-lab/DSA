@@ -1,6 +1,6 @@
 # BLIND 75
 
-## 1. [Two Sum](https://github.com/citta-lab/DSA/blob/main/arrays/1.two-sum.js)
+## 1. [Two Sum](https://github.com/citta-lab/DSA/blob/main/arrays/001.two-sum.js)
 
     - use hash to store `num:index` while traversing
     - check `diff = target - num` exist in hash. i.e `hash[diff] >= 0`

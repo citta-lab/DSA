@@ -24,7 +24,9 @@
  * Hint: 
  * - Array is not SORTED 
  * - Use HashMap to track of num and index ( not the diff )
- * - Make sure to check for Zero as we will have zero index 
+ * - Make sure to check for Zero as we will have zero index
+ * - max = Math.max(max, right-left+1) so it outside of while loop
+ * - Inner while loop should only delete leftChat from set and increment left (i.e left++) 
  * */
 
 /** Time: O(N) and Space: O(N) */

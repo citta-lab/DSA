@@ -23,7 +23,18 @@
  *  - bruteforce O(n^3) can be done but we will have duplicate in same position
  *  - Breaking the problem into subproblem. i.e for every element we will have two-sum running. 
  *  - Two-SUM needs sorted array
- *  - if we find two same elements in sorted array we skip it both in outerloop and inner tow-sum 
+ *  - if we find two same elements ( duplicate ) in sorted array we skip it both in outerloop and inner tow-sum 
+ *
+ *
+ * Test Scenario:
+ *
+ * Input: [-1,0,1,2,-1,-4] fails if we dont handle duplicates before WHILE loop
+ * Ans: [[-1,-1,2],[-1,0,1],[-1,0,1]] 
+ * i.e  if(i > 0 && nums[i] === nums[i-1]) { continue } 
+ *
+ * Input: [-2,0,0,2,2] fails if we dont handle duplicate position element scenario in WHILE loop
+ * Ans: [[-2,0,2]]
+ * i.e while(nums[left] === nums[left-1] && left < right ){ left ++ } 
  */
 
 /** time: O(n^2) i.e O(nlogN) from sort + O(n^2) from while loops  */ 

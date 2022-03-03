@@ -40,6 +40,17 @@
             /** we will hold [top][l] value in temp and rotate counter clockwise
             which will save us not worry about having to keep temp for all elements
             if we had rotated in clocjwise way */
+         
+            /** BUILD THIS WITHOUT ADDING i first */
+            /**
+               let temp = matrix[top][l];
+
+               // counter clock wise
+               matrix[top][l] = matrix[bottom][l];
+               matrix[bottom][l] = matrix[bottom][r];
+               matrix[bottom][r] = matrix[top][r];
+               matrix[top][r] = temp;
+            */
 
             /** store the top left value in temp and go counter clockwise */
             let temp = matrix[top][l+i];

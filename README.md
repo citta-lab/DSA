@@ -54,6 +54,7 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [27. Remove Element](https://github.com/citta-lab/DSA/blob/main/arrays/27.remove-element-array.js)
 
 ### THREE POINTER
+- [15. 3Sum ](https://github.com/citta-lab/DSA/blob/main/arrays/015.3sum.js)
 - []
 
 ## Other JS Repos

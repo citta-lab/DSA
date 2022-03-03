@@ -72,7 +72,7 @@ var threeSum = function(nums) {
                 left += 1
                 right -= 1
                 
-                /** handling same duplicate position element scenario we did earlier */
+                /** handling same duplicate position element scenario we did earlier ex: [-2,0,0,2,2] */
                 while(nums[left] === nums[left-1] && left < right ){
                     left += 1
                 }

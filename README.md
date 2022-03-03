@@ -53,6 +53,9 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [26. Remove Duplicates from Sorted Array](https://github.com/citta-lab/DSA/blob/main/arrays/26.remove-duplicates-from-sorted-array.js)
 - [27. Remove Element](https://github.com/citta-lab/DSA/blob/main/arrays/27.remove-element-array.js)
 
+### THREE POINTER
+- []
+
 ## Other JS Repos
 
 - [Easy-Medium](https://github.com/anubhavsrivastava/leetcodeJS)

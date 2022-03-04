@@ -19,6 +19,7 @@
  * Hint
  * - Time: O(n^2) and Space: O(logn) or O(n) based on quick or merge sort
  * - THREE pointer with left and right starting at i=1 and i=nums.length-1
+ * - need to SORT 
  * - check for duplicate adjacent numbers when i > 0. i.e if(i>0 && nums[i] === nums[i-1]){ continue}
  * - calculate sum of three
  * - check if absolute value of sum-target < result-target if so update result = sum

@@ -54,6 +54,7 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [27. Remove Element](https://github.com/citta-lab/DSA/blob/main/arrays/27.remove-element-array.js)
 
 ### THREE POINTER
+
 - [15. 3Sum ](https://github.com/citta-lab/DSA/blob/main/arrays/015.3sum.js)
 - [16. 3Sum Closest ](https://github.com/citta-lab/DSA/blob/main/arrays/016.3sum-closest.js)
 
@@ -65,6 +66,7 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [javascript-interview-questions](https://github.com/sudheerj/javascript-interview-questions)
 - [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)
 - [The Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#never_blocking)
+- [ECMA TC39 Standards](https://tc39.es/ecma262/#sec-intro)
 
 ## More Reads
 

@@ -48,6 +48,16 @@ var missingNumber = function(nums) {
     }
 };
 
+/** Time:O(N) and Space:(1) */
+var missingNumber = function(nums) {
+    
+    for(let i=0; i<nums.length+1; i++){
+        if(!nums.includes(i)){ /** ECMA scripts mentions this is O(1) operation */
+            return i
+        }
+    }
+};
+
 /** Time:O(n) and Space:O(1) */
 var missingNumber = function(nums) {
     

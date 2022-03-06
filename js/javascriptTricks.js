@@ -132,4 +132,11 @@ const given = [NaN, Infinity, 12, NaN, 7]
 const max = Math.max(...(given.filter(x => x))); // Infinity
 const result = max === Infinity ? -1 : max; // -1
 
+/** Map */
+/** Increase count in map for a given key */
+map.set(key, map.get(key)+1); 
+
+/** loop though map */
+for(let key of map.keys()){...} /** map.keys() returns array */
+
 

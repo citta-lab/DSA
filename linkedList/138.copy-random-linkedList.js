@@ -15,6 +15,9 @@
  * video: https://www.youtube.com/watch?v=5Y2EiZST97Y
  * 
  * Company: Facebook, Google, Microsoft 
+ *
+ * Hint:
+ * - will use map to hold the current current node and copied node
  * 
  * */
 

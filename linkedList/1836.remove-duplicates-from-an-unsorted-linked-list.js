@@ -1,4 +1,7 @@
 /**
+ * 
+ * 1836. Remove Duplicates From an Unsorted Linked List
+ * 
  * If the given linked list is of unsorted then please do delete all the occurance of the node value and 
  * return the linkedList without any duplicates and it's nodes.
  * 
@@ -16,6 +19,44 @@ function ListNode(val, next) {
    this.val = (val===undefined ? 0 : val)
    this.next = (next===undefined ? null : next)
 }
+
+
+var deleteDuplicatesUnsortedModified = function(head) {
+    
+    /** STEP 1: count number of occurence so in next pass we can remove the node */
+    let countMap = {}
+    let root = head;
+    while(root){
+        if(countMap[root.val]){
+            countMap[root.val]++
+        }else{
+            countMap[root.val] = 1
+        }
+        root = root.next;
+    }
+    
+
+    /** STEP 2: Need a pointer before node so we can even remove the head it it's repeated more than 1 */
+    let dummy = new ListNode(null);
+    dummy.next = head;
+    
+    /** STEP 3: go through the linkedList and check the countMap for occurance */
+    let cur = dummy;
+    while(cur){
+        /** while will run entire list whenwe find count more than 1, helps removing all the occurance */
+        while(cur.next && countMap[cur.next.val] > 1){
+            cur.next = cur.next.next;
+        }
+
+        /** if while happens or not we need to move pointer to next to check next element */
+        cur = cur.next;
+    }
+    
+    return dummy.next;
+};
+
+
+/** ANOTHER SOLUTION with TLE */
 
 /** O(n) time and O(n) space */
 /** NOTE: This fails with Time Exceeded when larger linkedList is added. Modified solution is after this */
@@ -55,41 +96,6 @@ var deleteDuplicatesUnsorted = function(head) {
     return dummy.next;
 };
 
-
-
-var deleteDuplicatesUnsortedModified = function(head) {
-    
-    /** STEP 1: count number of occurence so in next pass we can remove the node */
-    let countMap = {}
-    let root = head;
-    while(root){
-        if(countMap[root.val]){
-            countMap[root.val]++
-        }else{
-            countMap[root.val] = 1
-        }
-        root = root.next;
-    }
-    
-
-    /** STEP 2: Need a pointer before node so we can even remove the head it it's repeated more than 1 */
-    let dummy = new ListNode(null);
-    dummy.next = head;
-    
-    /** STEP 3: go through the linkedList and check the countMap for occurance */
-    let cur = dummy;
-    while(cur){
-        /** while will run entire list whenwe find count more than 1, helps removing all the occurance */
-        while(cur.next && countMap[cur.next.val] > 1){
-            cur.next = cur.next.next;
-        }
-
-        /** if while happens or not we need to move pointer to next to check next element */
-        cur = cur.next;
-    }
-    
-    return dummy.next;
-};
 
 
 let head = buildLinkedList([1,2,3,2,4]);

@@ -20,8 +20,11 @@ Input: times = [[1,2,1],[2,1,3]], n = 2, k = 2
 Output: 3
 
 Hint:
-we need to find minimum time it takes for signal to reach all nodes. So if we find the shortest path to all its ( time is the weight ) node then maximum 
+- Will do BFS so we can exhuast all the options from the given node
+- we need to find minimum time it takes for signal to reach all nodes. So if we find the shortest path to all its ( time is the weight ) node then maximum 
 time it takes to reach anynode is the best (minimum) time it needs for signal to reach all nodes.
+- Need minHeap so it will always have min value at the top
+- JS doesnt have heap datastructure so will have helper function called getMin()
 
 Shortest Path Logic : BFS with Dijsktra ( as we have +ve weight )
 */

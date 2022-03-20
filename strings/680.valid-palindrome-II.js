@@ -17,6 +17,7 @@
  * leetcode-question:680
  * leetcode:https://leetcode.com/problems/valid-palindrome-ii/
  * video: https://www.youtube.com/watch?v=L_74qbyPHXE
+ * Company: FACEBOOK
  * 
  * HINT:
  * use INWARDS pointers instead of outwards which might make us handle ODD and EVEN check 

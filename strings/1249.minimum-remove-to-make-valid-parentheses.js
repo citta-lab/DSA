@@ -24,6 +24,8 @@ leetcode: https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses
 Company:FACEBOOK
 
 Hint:
+- Time:O(N) and Space:O(N)
+- Important to use str = s.split('') as we will need to updated string value to '' based on index
 - Need to know the index of extra brace we need to remove
 - use STACK to keep track of indexes for ( and pop when we see )
 - if we have extra ( or ) then we updated it to empty i.e str[i] = ''

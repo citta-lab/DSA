@@ -1,6 +1,8 @@
 /** 
 
-1249. Minimum Remove to Make Valid Parentheses. Given a string s of '(' , ')' and lowercase English characters.
+1249. Minimum Remove to Make Valid Parentheses. 
+
+Given a string s of '(' , ')' and lowercase English characters.
 
 Your task is to remove the minimum number of parentheses ( '(' or ')', in any positions ) so that the resulting parentheses string is valid and return any valid string.
 
@@ -19,6 +21,12 @@ Output: "lee(t(c)o)de"
 
 leetcode-question:1249
 leetcode: https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
+Company:FACEBOOK
+
+Hint:
+- Need to know the index of extra brace we need to remove
+- use STACK to keep track of indexes for ( and pop when we see )
+- if we have extra ( or ) then we updated it to empty i.e str[i] = ''
 */
 
 var minRemoveToMakeValid = function(s) {

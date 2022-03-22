@@ -8,6 +8,16 @@
  * leetcode: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  * video: https://www.youtube.com/watch?v=gs2LMfuOR9k
  * BLIND: 53 (53/75)
+ * 
+ * Hint:
+ * - Time:O(N) and Space:O(N) but in ITERATIVE Space:O(1)
+ * - checking if root.val === p && root.val === q will work if and only p,q values
+ * are following the BST pattern exa: p=2, q=8. If we had p=8 and q=2 then having 
+ * this check will act as BOTTLE NECK. so we SHOUDN't comapre this rather check for
+ * left and right side.
+ * - if p & q less than root then go left
+ * - if p & q more than root then go right
+ * - else return root
 */ 
 
 

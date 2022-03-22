@@ -21,6 +21,7 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [236. Lowest Common Ancestor of a Binary Tree](https://github.com/citta-lab/DSA/blob/main/binary-tree/236.lowest-common-ancestor-of-a-binary-tree.js)
 - [1644. Lowest Common Ancestor of a Binary Tree II](https://github.com/citta-lab/DSA/blob/main/binary-tree/1644.lowest-common-ancestor-of-a-binary-tree-II.js)
 - [1650. Lowest Common Ancestor of a Binary Tree III](https://github.com/citta-lab/DSA/blob/main/binary-tree/1650.lowest-common-ancestor-of-a-binary-tree-III.js)
+- [1676. Lowest Common Ancestor of a Binary Tree IV](https://github.com/citta-lab/DSA/blob/main/binary-tree/1676.lowest-common-ancestor-of-a-binary-tree-IV.js)
 - [2096. Directions From Start to Destination nodes ( i.e UP LEFT RIGHT DOWN )](https://github.com/citta-lab/DSA/blob/main/binary-tree/2096.step-by-step-directions-from-a-binary-tree-node-to-another.js)
 - [1740. Find Distance in a Binary Tree ( i.e START and DESTINATION )](https://github.com/citta-lab/DSA/blob/main/binary-tree/1740.find-distance-in-a-binary-tree.js)
 

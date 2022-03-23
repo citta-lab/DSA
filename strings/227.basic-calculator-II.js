@@ -25,8 +25,8 @@
     - will use STACK to figureout and execute * and/or / operation first then
     perform + and/or /
     - need to handle when numbers are '2' or '22' or '222' etc 
-    - so if we have string like "3+2*2" then we keep pushing chars to stack until we 
-    find * or /. example stack=[3,+2]
+    - our SIGN varibale will hold previous SYMBOLS (+/-) so when we are processing
+    current CHAR we can make use of it to push CHAR to stack
     
     */
 
@@ -50,6 +50,7 @@
             num += char;
         }
         
+        /** we are only interested in going inside if we find SYMBOLS */
         if(isNaN(char)){
             
             /** step 3.1: convert string to num so we can do operations */
@@ -86,3 +87,7 @@
         return a+b
       },0)
 };
+
+let s = "55*2";
+let sum = calculate(s);
+console.log(sum);

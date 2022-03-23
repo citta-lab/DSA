@@ -7,7 +7,7 @@
     "skipFiles": [
         "<node_internals>/**"
     ],
-    "program": "${workspaceFolder}/",
+    "program": "${workspaceFolder}/strings/",
     "runtimeExecutable": "npm",
     "runtimeArgs": ["run-script", "debug"]
   }

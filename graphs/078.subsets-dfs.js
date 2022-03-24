@@ -17,7 +17,7 @@
  * video:https://www.youtube.com/watch?v=REOH22Xwdkk
  * 
  * Hint:
- * - Bruteforce (backtracking): O(N*2^n) and Space:O(N*2^n)
+ * - Bruteforce (backtracking): O(N*2^n) and Space:O(N)
  * - Not an array or permutation problem.
  * - we need to have unique subset combination by adding and removing 
  * current number.
@@ -42,7 +42,7 @@
  * this continues ....
 */
 
-/** Time: O(N*2^n) and Space:O(N*2^n) */
+/** Time: O(N*2^n) and Space:O(N) */
 var subsets = function(nums) {
     let result =[];
     let subset = [];

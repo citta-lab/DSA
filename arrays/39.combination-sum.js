@@ -68,3 +68,39 @@ var combinationSum = function(candidates, target) {
     
     return result;
 };
+
+
+/**
+ *
+ * ANOTHER WAY OF WRITING THE SAME ( similar to 78.subset problem )
+ *
+ */
+
+var combinationSum = function(candidates, target) {
+    let result = [];
+    let subset = [];
+    
+    function dfs(position){
+        
+        if(position >= candidates.length) return 
+        
+        let sum = subset.reduce((a,b) => a + b, 0);
+        if(sum > target) return 
+        
+        if(sum === target){
+            let copy = [...subset];
+            result.push(copy);
+            return
+        }
+        
+        subset.push(candidates[position]);
+        dfs(position)
+        
+        subset.pop();
+        dfs(position+1)
+    }
+    
+    dfs(0)
+    
+    return result
+};

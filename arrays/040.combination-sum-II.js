@@ -35,7 +35,70 @@
     -- position >= arr.length to return 
     
     */
+    
+    /** Time: O(n*2^n) and Space:O(N) */
+    var combinationSum2 = function(candidates, target) {
+    let result = [];
+    
+       /** helps in comparing duplicates if they numbers are sorted */
+       candidates.sort((a, b) => a - b);
 
+       function dfs(ithElement, curResult, sum){
+
+           /** base : when we find the combination */
+           if(sum === target){
+               /** array uses reference and we are using the same curResult in rest of cal */
+               let copy = [...curResult];
+               result.push(copy);
+               return;
+           }
+
+           /** base : if we go out of bound */
+           if(ithElement >= candidates.length){
+               return;
+           }
+
+           /** base : if combination sum is more than target */
+           if(sum > target){
+               return;
+           }
+
+           /** Step 1: considering the current element in our result and updating the sum */
+           curResult.push(candidates[ithElement]);
+           dfs(ithElement+1, curResult, sum + candidates[ithElement]);
+
+           /** Step 2: removing the current element from rest of the combination
+           and considering from next element (i.e i+1 ) */
+           curResult.pop();
+           // skip if we have same adjacent numbers
+           while(ithElement < candidates.length && candidates[ithElement] === candidates[ithElement+1]){
+               ithElement ++
+           }
+           dfs(ithElement+1, curResult, sum);
+       }
+
+       dfs(0, [], 0);
+
+       return result
+ };
+
+
+
+
+
+
+    /**
+     **************************************************************************************
+     * 
+     *      SAME AS ABOVE but with reducer to find SUM
+     *
+     *************************************************************************************
+     */
+
+
+
+
+    /** SAME as ABOVE but using reducer to find SUM ( FAILS in second test case though ) */
     var combinationSum2 = function(candidates, target) {
       let result = [];
       let subset = [];

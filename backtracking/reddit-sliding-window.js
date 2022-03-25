@@ -8,14 +8,15 @@
  */
 
  const daysAndTraffic = {
-	'01-01-2020': {
-	  'ios': { unique: 123, pageviews: 456 },
-	  'android': { unique: 345, pageviews: 789 }
-	},
+	
 	'01-02-2020': {
 	  'ios': { unique: 1234, pageviews: 4567 },
 	  'android': { unique: 3456, pageviews: 6789 }
 	},
+    '01-01-2020': {
+        'ios': { unique: 123, pageviews: 456 },
+        'android': { unique: 345, pageviews: 789 }
+      },
     '01-03-2020': {
         'ios': { unique: 121, pageviews: 467 },
         'android': { unique: 356, pageviews: 689 }
@@ -23,10 +24,6 @@
       '01-04-2020': {
         'ios': { unique: 122, pageviews: 457 },
         'android': { unique: 345, pageviews: 689 }
-    },
-      '01-05-2020': {
-        'ios': { unique: 34, pageviews: 67 },
-        'android': { unique: 34, pageviews: 89 }
     },
       '01-06-2020': {
         'ios': { unique: 232, pageviews: 712 },
@@ -43,12 +40,18 @@
       '01-09-2020': {
         'ios': { unique: 554, pageviews: 5567 },
         'android': { unique: 666, pageviews: 6559 }
-    }
+    },
+    '01-05-2020': {
+        'ios': { unique: 34, pageviews: 67 },
+        'android': { unique: 34, pageviews: 89 }
+    },
 }
 
 
 let viwesWithDays = (obj) => {
-    return Object.keys(obj).map((key) => {
+    return Object.keys(obj)
+    .sort((a,b) => new Date(a) - new Date(b))
+    .map((key) => {
         let sum = 0;
         let perDay = obj[key];
         let iosSum = perDay.ios.unique + perDay.ios.pageviews;

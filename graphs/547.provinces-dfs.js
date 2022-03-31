@@ -1,4 +1,10 @@
-/** Given an two dimentional array of water ( 0 ) and land ( 1 ) calculate number of
+/** 
+ *
+ *  547. Number of Provinces ( DFS ) 
+ * 
+ * also called as Friend Circle problem 
+ * 
+ * Given an two dimentional array of water ( 0 ) and land ( 1 ) calculate number of
  * provinces.
  * 
  * Important:

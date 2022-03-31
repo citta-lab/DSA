@@ -1,5 +1,6 @@
 /**  
- * 
+ * 210. Course Schedule II
+ *
  * Course Schedule II
  * 
  * There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1.
@@ -16,12 +17,19 @@
  * Input: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]
  * Output: [0,2,1,3]
  * 
+ * leetcode-question:210
  * leetcode:https://leetcode.com/problems/course-schedule-ii/
  * video:https://www.youtube.com/watch?v=Akt3glAwyfY
  * toposort: https://www.youtube.com/watch?v=eL-KzMXSXXI&t=477s 
  * 
- * HINT: toposort algorithm
+ * HINT: 
+ * - toposort algorithm
+ * - will need two Set. visted and hasCycle
+ * - hasCycle behave like usual visited and visited helps in not adding course to result
+ * - if(visited.has(course)) return true <-- IMP
+ * - visited.add(course) <-- IMP do this after pre checks 
  * 
+ * Advance to https://github.com/citta-lab/DSA/blob/main/graphs/207.course-schedule-canFinish-dfs.js
  * */
 
   
@@ -72,6 +80,7 @@ var findOrder = function(numCourses, prerequisites) {
         
     }
     
+    /** IMP: call dfs by sending course from numCourses not from adjList */
     for(let course=0; course < numCourses; course++){
         let result = dfs(course);;
         if(!result) return []; /** if we find no dependecy, base requirement */

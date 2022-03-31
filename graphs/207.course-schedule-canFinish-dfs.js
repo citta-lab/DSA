@@ -13,6 +13,12 @@
  * Example: 
  * Input: numCourses = 2, prerequisites = [[1,0],[0,1]] 
  * Output: false
+ *
+ * Input: numCourses = 5, prereqs = [[1,4],[2,4],[3,1],[3,2]] <-- fails if we dont  visited.delete(course); and courseMap[course] = [];
+ * Output: true
+ *
+ * Input: numCourses = 2, prereqs = [[1,0],[0,1]] <-- fails if we dont have visited
+ * Output: false
  * 
  * leetcode-question:207
  * leetcode: https://leetcode.com/problems/course-schedule/

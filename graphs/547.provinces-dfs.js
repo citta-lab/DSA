@@ -86,7 +86,7 @@ const buildGraph = (edges, graph={}) => {
                 if(!graph[i]) graph[i] = []
                 if(!graph[j]) graph[j] = []
 
-                /** only push j value to i, if we push i to j as well then we will have two entries  */
+                /** (optimization) : only push j value to i, if we push i to j as well then we will have two entries  */
                 if(i !== j){
                      graph[i].push(j);
                 }

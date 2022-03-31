@@ -19,8 +19,10 @@
  * https://leetcode.com/problems/number-of-islands/submissions/
  * https://leetcode.com/problems/number-of-provinces/solution/ 
  * 
- * HINT: 
- * Read the problem carefully, the given two dimentional array doesnt represent the node but the 
+ * HINT: <------ IMP
+ * - Dont use Matrix directly in DFS
+ * - Draw the node from given matrix so we need to build adjList 
+ * - Read the problem carefully, the given two dimentional array doesnt represent the node but the 
  * node's corresponding EDGES. If we overlook and implment similar logic like in island then this problem will
  * fail for example data set [[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]. Hence we need to iterate over the m*n
  * matrix ( edges ) to form a graph, then apply DFS. 

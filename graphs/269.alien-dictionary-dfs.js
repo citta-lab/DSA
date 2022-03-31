@@ -12,6 +12,9 @@
  * 
  * Input: words = ["ab","adc"]
  * Output: "abcd"
+ *
+ *
+ * Input: words = ["z","z"]
  * 
  * leetcode-question:269
  * leetcode:https://leetcode.com/problems/alien-dictionary/

@@ -47,7 +47,7 @@ var findCircleNum = function(isConnected) {
     let count = 0; /** province count */
     
     /** hence given co-ordinates represents node's edges, we need graph for dfs */
-    const graph = buildGraph(isConnected);
+    const graph = buildGraph(isConnected); /** example: graph = { '0': [ 0, 1 ], '1': [ 0, 1 ], '2': [ 2 ] } */
     
     for(let node in graph){
         let result = dfs(node, graph, visited);

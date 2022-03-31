@@ -13,12 +13,32 @@
   BRUTFORCE : DFS 
   OPTIMIZED: DFS + MEMOIZATION 
   
+  Input:  [[3,4,5],[3,2,6],[2,2,1]]  <-- fails if the memo is placed before checking parentVal >= curVal
+  Output: 4
+  
+  Input: matrix = [[9,9,4],[6,6,8],[2,1,1]]
+  Output: 4
+  
+  Input: matrix = [[3,4,5],[3,2,6],[2,2,1]]
+  Output: 4
+  
+  
   Hint: Can be done by DFS but we need to do memoization to prevent Time limit as we are not keeping track of visited cell to avoid 
   checking already visited node ( because we need to find the best increasing path )
+  - DFS with memoization (array or map)
+  - Dont need to have visited Set() as we need to visit all cells everytime 
+  - Dont worry about looking at cells values to decide if if it is increasing rather FOCUS on current CELL and parent CELL
+  - pass parentCellValue to DFS ( start with -1 or inifinity )
+  - IMP: if(curCellVal <= parentCellVal) return 0 <-- this way we only count if it is increasing 
   
   */
 
-/** BRUTEFORCE with just DFS ( will fail with time limit ) */
+
+/********************************************************************
+ * 
+ * Bruteforce without Memoization ( will fail with TLE )
+ * 
+ ********************************************************************/
 
 /** Time: O(2^m+n) as search needs to be repeated for all increasing cell.
     Space: O(m*n) or O(h) which is due the depth of the tree for DFS */
@@ -71,7 +91,14 @@ const dfsI = (row, col, array, parentValue) => {
 
 
 
-/** DFS with MEMOIZATION */
+
+
+
+/********************************************************************
+ * 
+ * DFS with Memorization (with array)
+ * 
+ ********************************************************************/
 
 /** 
  * Time: O(m*n) as we will only visit once and retrieve values from memo if it's already calculated
@@ -131,3 +158,72 @@ const dfs = (row, col, array, parentValue, memo) => {
   /** return the value for current processed node/cell */
   return maxPath
 }
+
+
+
+
+
+
+
+
+
+/********************************************************************
+ * 
+ * DFS with Memorization (with Map)
+ * 
+ ********************************************************************/
+
+/** SAME as above but using Map for memoization */
+var longestIncreasingPath = function(matrix) {
+    
+    let maxPath = -Infinity;
+    let memo = new Map()
+    let parentVal = -1;
+    
+    for(let i=0; i<matrix.length; i++){
+        for(let j=0; j<matrix[0].length; j++){
+            let path = dfs(i, j, matrix, memo, parentVal)
+            maxPath = Math.max(maxPath, path)
+        }
+    }
+    
+    function dfs(row, col, matrix, memo, parentVal) {
+        
+        let maxPath = 0
+        
+        let rowInBound = row >= 0 && row < matrix.length;
+        let colInBound = col >= 0 && col < matrix[0].length;
+        
+        if(!rowInBound || !colInBound){
+            return 0
+        }
+        
+       
+        let cellVal = matrix[row][col]
+        if(cellVal <= parentVal){
+            return 0
+        }
+        
+         let hash = `${row}-${col}`
+        if(memo.has(hash)){
+            return memo.get(hash)
+        }
+        
+        maxPath = Math.max(maxPath, dfs(row+1, col, matrix, memo, cellVal))
+        maxPath = Math.max(maxPath, dfs(row-1, col, matrix, memo, cellVal))
+        maxPath = Math.max(maxPath, dfs(row, col+1, matrix, memo, cellVal))
+        maxPath = Math.max(maxPath, dfs(row, col-1, matrix, memo, cellVal))
+        
+        maxPath++
+        
+        memo.set(hash, maxPath)
+        return maxPath
+        
+    }
+    
+    return maxPath
+    
+};
+
+
+

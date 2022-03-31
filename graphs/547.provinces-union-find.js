@@ -1,4 +1,8 @@
-/** Given an two dimentional array of water ( 0 ) and land ( 1 ) calculate number of
+/** 
+ * 
+ * 547. Number of Provinces ( UNION FIND WAY )
+ * 
+ * Given an two dimentional array of water ( 0 ) and land ( 1 ) calculate number of
  * island.
  * 
  * Important:

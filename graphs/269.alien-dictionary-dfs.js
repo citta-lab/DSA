@@ -15,6 +15,9 @@
  *
  *
  * Input: words = ["z","z"]
+ *
+ * Inout: words = ["wrt","wrtkj"] <-- will fail if wordOne.length and wordTwo.length is not compared right
+ * Output: "jkrtw"
  * 
  * leetcode-question:269
  * leetcode:https://leetcode.com/problems/alien-dictionary/

@@ -1,10 +1,26 @@
-/** Spiral Matrix or Spiral Two Dimentional Array or Spiral Array 
+/** 
+
+54. Spiral Matrix
+
+Spiral Matrix or Spiral Two Dimentional Array or Spiral Array 
 Given an m x n matrix, return all elements of the matrix in spiral order.
 
 Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 Output: [1,2,3,6,9,8,7,4,5]
 
+Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+Output: [1,2,3,4,8,12,11,10,9,5,6,7]
+
+Input: matrix = [[7],[9],[6]]
+Output: [7,9,6]
+
 leetcode:https://leetcode.com/explore/learn/card/array-and-string/202/introduction-to-2d-array/1168/
+leetcode-question:54
+leetcode:https://leetcode.com/problems/spiral-matrix/
+
+Hint:
+- Make sure to use while(rowStart <= rowEnd && colStart <= colEnd) to call in loop
+- use break condition in between if(rowStart > rowEnd || colStart > colEnd) break
 */
 
 var spiralOrder = function(matrix) {

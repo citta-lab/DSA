@@ -52,7 +52,7 @@ var minWindow = function(s, t) {
     if(t === '' || t.length === 0) return '';
     
     let countT = {};      /** holds t's char count and will not change */
-    let countWindow = {}; /** holds s's count for all t's char using sliding window */
+    let countS = {};      /** holds s's count for all t's char using sliding window */
     
     /** fill countT with char:count */
     for(let char of t) {
@@ -79,8 +79,8 @@ var minWindow = function(s, t) {
         let char = s[right];
         
         /** initializing and counting each char of s */
-        if(!countWindow[char]) countWindow[char] = 0;
-        countWindow[char] += 1;
+        if(!countS[char]) countS[char] = 0;
+        countS[char] += 1;
         
         /** if current char is present in t ( avoids checking other chars ) */
         if(t.includes(char)){
@@ -88,7 +88,7 @@ var minWindow = function(s, t) {
             /** if we match then we update HAVE which reflects 
             we are getting closer to NEED */
             
-            if(countWindow[char] === countT[char]){
+            if(countS[char] === countT[char]){
                 have += 1;
             }
         }
@@ -110,9 +110,9 @@ var minWindow = function(s, t) {
             we also need to make sure to update "have" only if the char
             count in "have" becomes less than "need" */
             
-            countWindow[s[left]] -= 1;
+            countS[s[left]] -= 1;
             
-            if(countT[s[left]] && countWindow[s[left]] < countT[s[left]]){
+            if(countT[s[left]] && countS[s[left]] < countT[s[left]]){
                 have -= 1;
             }
             

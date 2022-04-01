@@ -30,6 +30,46 @@
  *
  */
 
+/*************************************************************************
+ *
+ * Bruteforce 
+ * Time:O(NlogN) and Space:O(N)
+ *
+ *
+ *************************************************************************/
+
+
+/** Time:O(NlogN) Space:O(N) */
+var firstMissingPositive = function(nums) {
+    
+    /** we ignore any values less than or equal to zero */
+    nums = nums.filter((a) => a > 0);
+    
+    /** sort them so we can check from left to right */
+    nums.sort((a,b) => a-b)
+    
+    /** remove duplicates */
+    let numsSet = new Set(nums)
+    
+    let i = 1;
+    for(let num of numsSet){
+        /** if our i and num doesnt match then we found the missing */
+        if(i !== num) return i;
+        i++
+    }
+    
+    /** we didnt find missing and now i===nums.length anyway */
+    return i
+};
+
+
+/*************************************************************************
+ *
+ * Optimal with Time:O(N) and Space:O(1)
+ *
+ *
+ *************************************************************************/
+
  /** Time:O(N) and Space:O(1) */
 var firstMissingPositive = function(nums) {
     

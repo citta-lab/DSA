@@ -39,6 +39,47 @@
  respective number to result
  */
  
+/******************************************************************
+ *
+ *       BruteForce with Time:O(Nk) where k is window size
+ *
+ * ***************************************************************/
+
+/** Time:O(Nk) and Space:O(N-k+1) */
+var maxSlidingWindow = function(nums, k) {
+    
+    let left = 0;
+    let right = left + k;
+    
+    let slidingWindowMax = [];
+    
+    while(right < nums.length + 1){
+        
+        let max = -Infinity;
+        for(let i=left; i<right; i++){
+            max = Math.max(max, nums[i]);
+        }
+        
+        slidingWindowMax.push(max);
+        
+        /** move the slide by one */
+        left++
+        right++
+    }
+    
+    return slidingWindowMax
+};
+
+
+
+/******************************************************************
+ *
+ *       Optimal with Time:O(n) and Space:O(n) 
+ *       but here we have O(nK) as we are using array operations
+ *
+ *
+ * ***************************************************************/
+
 
 var maxSlidingWindow = function(nums, k) {
     

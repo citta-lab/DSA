@@ -14,7 +14,9 @@
  * leetcode:https://leetcode.com/problems/graph-valid-tree/
  * 
  * 
- * Hint: can use DFS or Union Find
+ * Hint: 
+ * - can use DFS or Union Find
+ * - we should have n-1 edges ( two nodes need to make an edge)
  * 
 */
 

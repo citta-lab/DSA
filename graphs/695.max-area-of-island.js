@@ -23,7 +23,7 @@
  *
  * Hint: 
  * Same problem as minArea but here we are doing maxArea 
- * https://github.com/citta-lab/DSA/blob/main/graphs/minimumIsland-dfs.js
+ * https://github.com/citta-lab/DSA/blob/main/graphs/6950.min-area-of-island.js
  */
 
 

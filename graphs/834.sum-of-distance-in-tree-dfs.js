@@ -1,5 +1,5 @@
 /**
- * Sum of Distance in Tree
+ * 834. Sum of Distance in Tree | 834. Sum of Distances in Tree
  * 
  * There is an undirected connected tree with n nodes labeled from 0 to n - 1 and n - 1 edges.
  * You are given the integer n and the array edges where edges[i] = [ai, bi] indicates that 

@@ -9,7 +9,14 @@
  * Example:
  * Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
  * Output: true
+ *
+ * Input: n=5, edges = [[0,1],[0,4],[1,4],[2,3]]
+ * Output: false
  * 
+ * Input: n=4, edges = [[0,1],[2,3]]                <--- should have n-1 edges test 
+ * Output: false
+ *
+ *
  * leetcode-question:261
  * leetcode:https://leetcode.com/problems/graph-valid-tree/
  * 

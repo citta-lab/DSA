@@ -1,6 +1,8 @@
 /** 
 *
-* Min Area of Island
+* Min Area of Island 
+*
+* Similar to Max Area of Island hence tagging to 695 as 6950
 * 
 * given two dimentional array return the minimum size of an island. Given grid of land and water with m*n matrix 
 * 

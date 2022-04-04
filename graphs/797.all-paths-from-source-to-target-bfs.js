@@ -14,7 +14,7 @@
  * leetcode-question:797
  * leetcode:https://leetcode.com/problems/all-paths-from-source-to-target/
  * 
- * DO DFS WITH BACKTRACKING ( easier )
+ * DO DFS WITH BACKTRACKING ( easier ) i.e check here https://github.com/citta-lab/DSA/blob/main/graphs/797.all-paths-from-source-to-target-dfs-backtrack.js
  * 
  * */
 

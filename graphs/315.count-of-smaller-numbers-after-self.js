@@ -11,11 +11,13 @@
  * leetcode-question:315
  * leetcode:https://leetcode.com/problems/count-of-smaller-numbers-after-self/
  *
+ * [ IMPORTANT ] : need to work on optimal solution 
  *
  * Hint:
  * - Bruteforce:: Time:O(n^2) Space:O(n)
  * - Optimal Approach can be done with Merge Sort or Binary Index Tree. Time:O(N log M)
  */
+
 
 /** Time:O(N^2) and Space:O(N) */
 var countSmaller = function(nums) {

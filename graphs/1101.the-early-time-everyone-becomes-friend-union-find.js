@@ -1,5 +1,5 @@
 /**  
- * The Earliest Moment When Everyone Become Friends 
+ * 1101. The Earliest Moment When Everyone Become Friends
  * 
  * There are n people in a social group labeled from 0 to n - 1. You are given an array logs where logs[i] = [timestampi, xi, yi] 
  * indicates that xi and yi will be friends at the time timestampi.
@@ -8,9 +8,12 @@
  * of someone acquainted with b. Return the earliest time for which every person became 
  * acquainted with every other person. If there is no such earliest time, return -1.
  * 
- * leetcode:https://leetcode.com/explore/learn/card/graph/618/disjoint-set/3912/
+ * 
  * 
  * hint: union find
+ * leetcode-question:1101
+ * leetcode:https://leetcode.com/explore/learn/card/graph/618/disjoint-set/3912/
+ * leetcode:https://leetcode.com/problems/the-earliest-moment-when-everyone-become-friends/
  * 
  * */
 

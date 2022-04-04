@@ -1,5 +1,7 @@
 /** 
  * 
+ * 127. Word Ladder
+ * 
  * A transformation sequence from word beginWord to word endWord using a 
  * dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:
  * 1. Every adjacent pair of words differs by a single letter. 
@@ -17,6 +19,15 @@
  * leetcode: https://leetcode.com/problems/word-ladder/
  * leetcode-question:127
  * Company: google 
+ * 
+ * Hint
+ * - Time: O(M^2 * N)
+ * - BFS so we can find the endWord quicker using LEVEL order
+ * - Need to make adjList with all comvinations on wordList 
+ * - Need to make combinations on word while looking for combinations 
+ * - both can use `let wordPattern = word.substring(0, i)+'*'+word.substring(i+1);` pattern to make combination
+ * -- i.e 'hit' --> ['*it', 'h*t', 'hi*'] from this
+ * -- if word === endWord we return level 
  */
 
 /** 

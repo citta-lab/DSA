@@ -21,6 +21,17 @@
  * 
  * leetcode-question:116
  * leetcode:https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
+ * 
+ * Hint
+ * - Time:O(N) and Space:O(N)
+ * - BFS as we want to map nodes level by level
+ * - Level order and Perfect binary tree is the key
+ * - we want to map node.next to next node in the queue.
+ * -- hence our node is popped from start using node = queue.shift(), next node in the queue
+ * is next in line.
+ * -- so we can map node.next === queue[0] which is leftNode --> rightNode
+ * -- we only want to do this if we have more than one node remaining
+ * -- if(i !== size)
  *
  */
 

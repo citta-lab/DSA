@@ -56,6 +56,7 @@ function DFS(s, wordDict, start, memo){
     let end = start + 1;
     while(end <= s.length){
         
+        /** will use this if we find this in the wordDict while forming result */
         let subStringWord = s.substring(start, end);
         
         if(wordDict.includes(subStringWord)){

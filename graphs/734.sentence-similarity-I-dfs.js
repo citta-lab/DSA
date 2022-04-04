@@ -1,4 +1,8 @@
 /**
+ *
+ * 734. Sentence Similarity
+ *
+ * 
  * sentence1 and sentence2 are array of words which makes a sentence. Find if sentence 1 and sentence 2 words are identical 
  * given given an array of string pairs similarPairs where similarPairs[i] = [xi, yi] indicates that the two words xi and yi are similar.
  * 

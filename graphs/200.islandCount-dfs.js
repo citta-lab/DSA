@@ -1,4 +1,6 @@
 /** 
+ *  IMPORTANT:
+ * ( IS not exactly Number of Island Problem, check other problem with 200.number-of-island question ) 
  * 
  * 200. Number of Islands
  * 

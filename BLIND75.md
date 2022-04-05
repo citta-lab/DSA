@@ -144,7 +144,7 @@
     -- store str with respect to 'count' key in hash
     -- loop through hash to get resulting array
 
-## 14. [Maxium Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/53.max-sub-array-sum.js)
+## 14. [Maxium Subarray](https://github.com/citta-lab/DSA/blob/main/arrays/053.max-sub-array-sum.js)
 
     -   Appraoch 1: ( not optimal ) we could do using two forloop with
     max value holder and sum. O(n^2)
@@ -154,7 +154,7 @@
     `sum = Math.max(sum, sum+nums[i])`. this prevents it going less than current sum.
     -- max will be `max = Math.max(max, sum)`
 
-## 15. [Spiral Matrix](https://github.com/citta-lab/DSA/blob/main/arrays/spiral-matrix.js)
+## 15. [Spiral Matrix](https://github.com/citta-lab/DSA/blob/main/arrays/054.spiral-matrix.js)
 
     - we need 4 limiters
     - rowStart = 0, rowEnd = matrix.length-1, colStart=0, colEnd=matrix[0].length-1;

@@ -38,15 +38,15 @@
     - i.e skip in outerloop: `if(iThElement === nums[i-1]) { continue }`
     - i.e skip inside TWO SUM: `while(leftElement === nums[left-1]) { left ++ }`
 
-## 6. [Remove Nth Node From End of List](https://github.com/citta-lab/DSA/blob/main/linkedList/19.remove-nth-from-end-linkedList.js)
+## 6. [Remove Nth Node From End of List](https://github.com/citta-lab/DSA/blob/main/linkedList/019.remove-nth-from-end-linkedList.js)
 
     - TWO pointers slow and fast start at dummy
-    - use DUMMY and dummy.next = head
+    - use DUMMY (dummy = new ListNode() ) and dummy.next = head ( helps in solving two elements )
     - move fast, n+1 times so our slow will be one step behind the nth element
     - second while loop should just check fast if we have done n+1 times fast. i.e `while(fast){...}`
     - return dummy.next instead of head so we can solve problems with just one element
 
-## 7. [Valid Parentheses](https://github.com/citta-lab/DSA/blob/main/strings/20.isValid-string.js)
+## 7. [Valid Parentheses](https://github.com/citta-lab/DSA/blob/main/strings/020.isValid-string.js)
 
     - use hashmap for storing brances where key is closed brace and value is open brace.
     - i.e `let hash = { ')':'(', ']':'[', '}','{' }`
@@ -57,6 +57,8 @@
     - Note: if we get just ']' as input then this fails so we need to have else check
      which return false when we are processing closing brace and stack/empty
      last item doesnt match
+    - Add else conditon to return false when "dict[char] === stack[stack.length-1]" fails and
+    we couldn't pop.
 
 ## 8. [Merge Two Sorted Lists](https://github.com/citta-lab/DSA/blob/main/linkedList/21.merge-two-sorted-recursion-linkedList.js)
 
@@ -86,7 +88,7 @@
     tempMergedLists to lists. i.e 'lists = tempMergedLists` at the end of for loop.
     -- we call mergeTwoSorted function with pairs i.e `for(let i=0; i<lists.length; i=i+2)`
 
-## 10. [Search in Rotated Sorted Array](https://github.com/citta-lab/DSA/blob/main/arrays/33.search-in-rotated-sorted-array.js)
+## 10. [Search in Rotated Sorted Array](https://github.com/citta-lab/DSA/blob/main/arrays/033.search-in-rotated-sorted-array.js)
 
     - Naive way is loopig and finding in O(N) time. But we need to do in O(logN)
     - we can use Binary Search concept on sorted array and use if conditions to direct which way

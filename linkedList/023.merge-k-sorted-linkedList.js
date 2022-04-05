@@ -38,7 +38,7 @@ const { buildLinkedList } = require('./LinkedListII');
 
 
 /**
- * APPRAOCH 1: ( not the optimized ) 
+ * BRUTEFORCE: ( not the optimized ) 
  *
  * In this appraoch we use the concept of merging two sorted linkedList and keep applying to all of the
  * elements in the list until we find the final result. This can be our first step towards solving the

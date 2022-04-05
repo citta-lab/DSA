@@ -24,11 +24,12 @@
  * Hint:
  * - backtracking 
  * - dfs which runs one with combination and one without combination 
- * 
+ * - 
  * 
  * 
  * */
 
+// second solution using simple dfs is easier than this
 /** time: O(2^t) where t is target as this would be the hegith of tree */
 var combinationSum = function(candidates, target) {
 
@@ -71,7 +72,7 @@ var combinationSum = function(candidates, target) {
 
 
 /**
- *
+ * ESAY
  * ANOTHER WAY OF WRITING THE SAME ( similar to 78.subset problem )
  *
  */

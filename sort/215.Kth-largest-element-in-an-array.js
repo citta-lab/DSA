@@ -30,7 +30,8 @@
 /** time:O(N) and Space:O(1) */
 var findKthLargest = function(nums, k) {
     
-    let target = nums.length - k;
+    /** idea here is that we can find k'th max by looking at size-k 'th value in sorted array */
+    let target = nums.length - k; 
     let left = 0;
     let right = nums.length-1; 
     

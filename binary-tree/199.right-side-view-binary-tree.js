@@ -1,10 +1,22 @@
-/** Given the root of a binary tree, imagine yourself standing on the right side of it, retur
+/** 
+ * 
+ * 199. Binary Tree Right Side View
+ * 
+ * Given the root of a binary tree, imagine yourself standing on the right side of it, retur
  * n the values of the nodes you can see ordered from top to bottom.
  * 
  * Input: root = [1,2,3,null,5,null,4]
  * Output: [1,3,4]
  * 
+ * leetcode-question:199
  * leetcode: https://leetcode.com/problems/binary-tree-right-side-view/
+ * 
+ * 
+ * Hint:
+ * - Time:O(N) and Space:O(N)
+ * - Remeber BFS and how it process the nodes in LEVEL ORDER
+ * - all we need to do is retain last node value in each level
+ * - push that node value to result array after every level order check
  *  */
 
 const { buildTree } = require('./helper/BinaryTree');
@@ -21,6 +33,7 @@ var rightSideView = function(root) {
         
         let size = queue.length;
         let node = null;
+        /** level order */
         for(let i=0; i < size; i++){
             node = queue.shift();
             

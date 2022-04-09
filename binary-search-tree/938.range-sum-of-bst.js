@@ -42,3 +42,39 @@
         }
     }
 };
+
+
+/***********************************************
+ *
+ * 
+ *  Recursion way
+ * 
+***********************************************/
+
+
+
+var rangeSumBST = function(root, low, high) {
+    
+    let sum = 0;
+    dfs(root, low, high);
+    
+    function dfs(root, low, high){
+    
+        if(!root) return 0;
+
+        if(root.val >= low && root.val <= high){
+            sum += root.val;
+        }
+
+        if(root && root.val > low ){
+            dfs(root.left, low, high);
+        }
+
+        if(root && root.val < high ){
+            dfs(root.right, low, high);
+        }
+
+    }
+    
+    return sum;
+};

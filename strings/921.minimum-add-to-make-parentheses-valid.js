@@ -34,9 +34,12 @@
     - if STACK is empty but we see ')' then we increment the COUNT 
     - return STACK.length + count as result so we check both
     
+    - OPTIMAL => Time:O(N) and Space:O(1)
+    - Replace stack with openBrace variable and we can eliminate stack
+    
     */
 
-/** Time:O(N) and Space:O(N) */
+/** BRUTEFORCE: Time:O(N) and Space:O(N) */
 var minAddToMakeValid = function(s) {
     let stack = [];
     let count = 0;
@@ -54,5 +57,25 @@ var minAddToMakeValid = function(s) {
     }
     
     return stack.length + count;
+};
+
+/** OPTIMAL: Time:O(N) and Spacew:O(1) */
+var minAddToMakeValid = function(s) {
+    let openBrace = 0;
+    let remainingBrace = 0;
+    
+    for(let char of s){
+        if(char === '(') {
+            openBrace ++
+        }else if(char === ')'){
+            if(openBrace > 0){
+                openBrace --
+            }else{
+                remainingBrace ++
+            }
+        }
+    }
+    
+    return openBrace + remainingBrace
 };
     

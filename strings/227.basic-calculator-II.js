@@ -38,7 +38,7 @@
     let num = '';
     let sign = null;
     
-    for(let i=0; i<=s.length; i++){
+    for(let i=0; i<=s.length; i++){ /** <--- make sure to have <= as we need to process out of bound to pick up any assigned sign */
         
         let char = s[i];
         

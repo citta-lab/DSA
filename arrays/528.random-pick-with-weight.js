@@ -19,6 +19,8 @@
  * 
  * Hint:
  * - Time:O(N) and Space:O(N)
+ * - Similar to Rolling a Dice, given values are weight. Our job is to do the ranom pick on weight and return the idex
+ * in which the weight belongs to. 
  * - we need to calculate preFixSums array which hold cumulative sums
  * until that point 
  * - also totalSum which we can use in finding ramdom number

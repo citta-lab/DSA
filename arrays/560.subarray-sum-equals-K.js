@@ -50,6 +50,10 @@ var subarraySum = function(nums, k) {
  * same Map. 
  * - Important: Prefix is used to do Map lookup and increase the count. Sum is
  * calculated and added to the Map.
+ *
+ * - [Base Case]: If we build prefix sum which will match the 'K' then when we do
+ * prefixSum - k we will get 0 which is valid. However our map might not have 
+ * accounted for ZERO. So we will default map with `{0:1}`
  */
 
  var subarraySum = function(nums, k) {

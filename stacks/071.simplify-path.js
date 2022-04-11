@@ -11,6 +11,13 @@
  * 
  * Return the simplified canonical path.
  * 
+ * Input: path = "/home//foo/"
+ * Output: "/home/foo"
+ * 
+ * Input: path = "/../"
+ * Output: "/"
+ * 
+ * 
  * leetcode-question:71
  * leetcode:https://leetcode.com/problems/simplify-path/
  * video:https://www.youtube.com/watch?v=qYlHrAKJfyA ( refer leetcode solution )

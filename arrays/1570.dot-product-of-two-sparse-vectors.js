@@ -29,7 +29,34 @@
  * matches with "array2.hash[key]" and then calculate the SUM
  */
 
-/** Time: O(min(M,N)) and Space: O(min(M,N)) for hash */
+/****************************************************************
+ *
+ * BruteForce: without Optimization ( checks even 0 )
+ * 
+ ***************************************************************/
+
+var SparseVector = function(nums) {
+    this.nums = nums;
+};
+
+SparseVector.prototype.dotProduct = function(vec) {
+    
+    let size = this.nums.length
+    this.sum = 0;
+    for(let i=0; i<size; i++){
+        this.sum = this.sum + ( this.nums[i] * vec.nums[i] )
+    }
+    
+    return this.sum
+};
+
+
+/****************************************************************
+ *
+ * Optimized: Time: O(min(M,N)) and Space: O(min(M,N)) for hash
+ * 
+ ***************************************************************/
+
 var SparseVector = function(nums) {
     this.nums = nums;
     this.hash = {};

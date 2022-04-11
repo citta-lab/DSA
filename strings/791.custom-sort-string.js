@@ -17,6 +17,7 @@
  * leetcode:https://leetcode.com/problems/custom-sort-string/
  * 
  * Hint:
+ * - Bruteforce: Time:O(N*M) ( cehck second solution )
  * - Time:O(N) and Space:O(N)
  * - Consider how can we handle chars not present in ORDER string
  * - Consider handling REPEATED chars in S. Which needs to be in same order in the result.
@@ -69,4 +70,29 @@ var customSortString = function(order, s) {
     
     console.log(result); // cbad
     return result
+};
+
+
+/** Time: O(N*M) where N is size of Order and M is size of S */
+var customSortString = function(order, s) {
+    
+    let map ={};
+    
+    /** holds char doesnt match in order */
+    let buffer = '';
+
+    for(let char of s){
+        if(order.includes(char)){
+            let idx = order.indexOf(char);
+            if(!map[idx]) map[idx] = ''
+            map[idx] = map[idx]+char /** so we hold all chars belongs to that index */
+        }else{
+            buffer += char           /** char didnt matched in order */
+        }
+    }    
+    
+    console.log(map);
+    console.log(buffer)
+    
+    return Object.values(map).join('')+buffer
 };

@@ -25,6 +25,12 @@
  * - Initialize queue with [root, 0] where 0 is column index of rootnode
  * - left node will be -1 index with respect to root and right will be +1 with respect to root
  * 
+ * - Note: we could do with DFS but then we need to sort by row and col. Similar to this 
+ * https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/. 
+ * 
+ * Followup: What if we need to also sort by values rather than just the index ? example: if
+ * there are multiple nodes in the same column and row then we need to sort by thier value.
+ * then we need to solve https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
  * */
 
 /** BruteForce with SORTING : Time:O(nlogN) and Space: O(N) */

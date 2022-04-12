@@ -115,3 +115,12 @@ Input: nums = [23,2,6,4,7], k = 6
 Output: true
 ```
 https://github.com/citta-lab/DSA/blob/main/arrays/523.continuous-subarray-sum.js
+
+
+# STACKS
+## 636. Exclusive Time of Functions
+```
+Input: n = 1, logs = ["0:start:0","0:start:2","0:end:5","0:start:6","0:end:6","0:end:7"]
+Output: [8]
+```
+https://github.com/citta-lab/DSA/blob/main/stacks/636.exclusive-time-of-functions.js

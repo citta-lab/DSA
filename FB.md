@@ -14,28 +14,32 @@ https://leetcode.com/problems/add-binary/
 Input: s = "abca"
 Output: true
 ```
-https://leetcode.com/problems/valid-palindrome-ii/
+https://leetcode.com/problems/valid-palindrome-ii/  
+https://github.com/citta-lab/DSA/blob/main/strings/680.valid-palindrome-II.js
 
 ### 1216.By Removing K char
 ```
 Input: s = "abcdeca", k = 2
 Output: true
 ```
-https://leetcode.com/problems/valid-palindrome-iii/
+https://leetcode.com/problems/valid-palindrome-iii/   
+https://github.com/citta-lab/DSA/blob/main/strings/1216.valid-palindrome-III.js
 
 ### 125.With Special Chars 
 ```
 Input: s = "A man, a plan, a canal: Panama"
 Output: true
 ```
-https://leetcode.com/problems/valid-palindrome/
+https://leetcode.com/problems/valid-palindrome/   
+https://github.com/citta-lab/DSA/blob/main/strings/125.valid-palindrome.js
 
 ### 266.Palindrome Permutation
 ```
 Input: s = 'aab'
 Output: true
 ```
-https://leetcode.com/problems/palindrome-permutation/
+https://leetcode.com/problems/palindrome-permutation/ 
+https://github.com/citta-lab/DSA/blob/20d32d25dcbbe37780780947df61ebf86e7d7b66/strings/266.palindrome-permutation.js
 
 ### 647.Plaindrome Substring 
 ```

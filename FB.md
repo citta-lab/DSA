@@ -107,3 +107,11 @@ a = [3, 4, 1, 6, 2]
 output = [1, 3, 1, 5, 1]
 ```
 https://github.com/citta-lab/DSA/blob/main/arrays/9000.contiguous-subarrays.js
+
+
+## 523.Continuous Subarray Sum
+```
+Input: nums = [23,2,6,4,7], k = 6
+Output: true
+```
+https://github.com/citta-lab/DSA/blob/main/arrays/523.continuous-subarray-sum.js

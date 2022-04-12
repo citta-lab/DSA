@@ -38,7 +38,7 @@ https://github.com/citta-lab/DSA/blob/main/strings/125.valid-palindrome.js
 Input: s = 'aab'
 Output: true
 ```
-https://leetcode.com/problems/palindrome-permutation/ 
+https://leetcode.com/problems/palindrome-permutation/   
 https://github.com/citta-lab/DSA/blob/20d32d25dcbbe37780780947df61ebf86e7d7b66/strings/266.palindrome-permutation.js
 
 ### 647.Plaindrome Substring 

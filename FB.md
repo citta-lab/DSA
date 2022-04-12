@@ -43,6 +43,7 @@ Input: s = "aaa"
 Output: 6 i,e a, a, a, aa, aa, aaa
 ```
 https://leetcode.com/problems/palindromic-substrings/
+
 https://github.com/citta-lab/DSA/blob/main/strings/647.palindromic-substrings.js 
 
 
@@ -64,7 +65,8 @@ https://github.com/citta-lab/DSA/blob/main/arrays/023.merge-k-sorted-arrays.js
 Input: s = "(a)())()"
 Output: ["(a())()","(a)()()"]
 ```
-https://leetcode.com/problems/remove-invalid-parentheses/
+https://leetcode.com/problems/remove-invalid-parentheses/ 
+
 https://github.com/citta-lab/DSA/blob/main/backtracking/301.remove-invalid-parentheses.js 
 
 

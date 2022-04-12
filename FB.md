@@ -48,7 +48,7 @@ https://github.com/citta-lab/DSA/blob/main/strings/647.palindromic-substrings.js
 
 
 # Merge Arrays 
-### Merge K sorted Arrays
+### 23.Merge K sorted Arrays
 ```
 Input: arrays = [[2,3,4], [0,8,9], [5,6,7]]
 Output: [0,2,3,4,5,6,7,8,9]
@@ -59,7 +59,7 @@ https://github.com/citta-lab/DSA/blob/main/arrays/023.merge-k-sorted-arrays.js
 
 
 # Parentheses
-### Remove Invlaid Parentheses
+### 301.Remove Invlaid Parentheses
 ```
 Input: s = "(a)())()"
 Output: ["(a())()","(a)()()"]
@@ -68,7 +68,7 @@ https://leetcode.com/problems/remove-invalid-parentheses/
 https://github.com/citta-lab/DSA/blob/main/backtracking/301.remove-invalid-parentheses.js 
 
 
-### Minimum Remove to Make Valid Parentheses
+### 1249.Minimum Remove to Make Valid Parentheses
 ```
 Input: s = "a)b(c)d"
 Output: "ab(c)d"
@@ -77,7 +77,7 @@ https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 https://github.com/citta-lab/DSA/blob/main/strings/1249.minimum-remove-to-make-valid-parentheses.js
 
 
-### Minimum Add to Make Parentheses Valid
+### 921.Minimum Add to Make Parentheses Valid
 ```
 Input: s = "((("
 Output: 3
@@ -87,7 +87,7 @@ https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/
 https://github.com/citta-lab/DSA/blob/main/strings/921.minimum-add-to-make-parentheses-valid.js
 
 
-### Valid Parentheses
+### 20.Valid Parentheses
 ```
 Input: s = "()[]{}"
 Output: true

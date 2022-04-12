@@ -14,6 +14,9 @@
  * Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
  * Output: 4
  * 
+ * Input: nums = [3,1,2,4], k = 2  <-- needs  [nums[curPointer], nums[i]] = [nums[i], nums[curPointer]];
+ * Output: 3
+ * 
  * leetcode-question: 215
  * leetcode:https://leetcode.com/problems/kth-largest-element-in-an-array/
  * video: https://www.youtube.com/watch?v=XEmy13g1Qxc

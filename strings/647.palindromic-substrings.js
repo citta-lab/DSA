@@ -35,7 +35,7 @@ so pseudo code looks like this
 ```js
 result = [];
 for index of s 
-   /** odd case like 'bbb' */
+   // odd case like 'bbb'
    left = index
    right = index
    while left>= 0 && right < s.length && s[left] === s[right]
@@ -46,7 +46,7 @@ for index of s
        left -= 1
        right += 1
        
-   /** even case like 'bb' */
+   // even case like 'bb' 
    left = index
    right = index+1 // <--- is the only diff
    while left>= 0 && right < s.length && s[left] === s[right]

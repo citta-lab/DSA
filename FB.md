@@ -74,7 +74,6 @@ Input: s = "a)b(c)d"
 Output: "ab(c)d"
 ```
 https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/  
-
 https://github.com/citta-lab/DSA/blob/main/strings/1249.minimum-remove-to-make-valid-parentheses.js
 
 

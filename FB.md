@@ -98,3 +98,12 @@ Output: true
 ```
 https://leetcode.com/problems/valid-parentheses/     
 https://github.com/citta-lab/DSA/blob/6abe5eb287e54320dd29251fa54923090cac7ee9/strings/020.isValid-string.js
+
+
+# Array
+## Contiguous Subarrays
+```
+a = [3, 4, 1, 6, 2]
+output = [1, 3, 1, 5, 1]
+```
+https://github.com/citta-lab/DSA/blob/main/arrays/9000.contiguous-subarrays.js

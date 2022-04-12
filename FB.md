@@ -73,7 +73,8 @@ https://github.com/citta-lab/DSA/blob/main/backtracking/301.remove-invalid-paren
 Input: s = "a)b(c)d"
 Output: "ab(c)d"
 ```
-https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/ 
+https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/  
+
 https://github.com/citta-lab/DSA/blob/main/strings/1249.minimum-remove-to-make-valid-parentheses.js
 
 
@@ -83,7 +84,7 @@ Input: s = "((("
 Output: 3
 ```
 if s = "()))", you can insert an opening parenthesis to be "(()))" or a closing parenthesis to be "())))"
-https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/ 
+https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/   
 https://github.com/citta-lab/DSA/blob/main/strings/921.minimum-add-to-make-parentheses-valid.js
 
 
@@ -92,5 +93,5 @@ https://github.com/citta-lab/DSA/blob/main/strings/921.minimum-add-to-make-paren
 Input: s = "()[]{}"
 Output: true
 ```
-https://leetcode.com/problems/valid-parentheses/ 
+https://leetcode.com/problems/valid-parentheses/     
 https://github.com/citta-lab/DSA/blob/6abe5eb287e54320dd29251fa54923090cac7ee9/strings/020.isValid-string.js

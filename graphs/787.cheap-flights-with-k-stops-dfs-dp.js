@@ -20,9 +20,58 @@
  * - add memo to memoize as we will keep visiting same cell multiple times in DFS
  * - Can also be done using "Dijkstra's algorithm" as this is meant for shortest path but having K stops
  * adds more complexity
- * - Bellam-Ford is better
+ *
+ *
+ * - Bellam-Ford is better ( Time: O(E*k) )
+ * -- we will need prices array and tempPrices array which will be used in every stop 
+ * -- we update the original prices array after every stop from tempArray. By doing so we can avoid 
+ * updating the original prices array directly with min value by bypassing the K stops.
  * */
 
+
+/** Time:O(E*k) where k is number of stops, Space:O(E) */
+var findCheapestPrice = function(n, flights, src, dst, k) {
+    
+    let prices = new Array(n).fill(Infinity);
+    prices[src] = 0;
+    
+    console.log(prices); // [ 0, Infinity, Infinity, Infinity ]
+    
+    /** step 1: run only until we meet k + 1 stops */ 
+    for(let stop=0; stop < k + 1; stop++){
+        
+        /** step 2: copy prices helps in determining cost involved in reaching dst by STOP by STOP */ 
+        let tempPrices = [...prices];
+        
+        for(let flight of flights){
+            const [src, dst, price] = flight;
+            
+            
+            if(prices[src] === Infinity){
+                continue;
+            }
+            
+            let newPrice = price + prices[src];
+            
+            /** step 3: check with tempPrice as we are interested checking the price with in the STOP loop */
+            if(newPrice < tempPrices[dst]){
+                tempPrices[dst] = newPrice;
+            }
+        }
+        
+        /** step 4: update original prices at end of each stop */
+        prices = tempPrices;
+    }
+    
+    return prices[dst] === Infinity ? -1: prices[dst]
+    
+};
+
+
+/****************** OR *******************/
+
+
+ /** DFS with memoization */
  var findCheapestPrice = function(n, flights, src, dst, k) {
     
     let adjMatrix = new Array(n).fill(0).map(row => new Array(n).fill(0));

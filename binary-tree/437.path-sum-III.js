@@ -24,6 +24,11 @@
  * - Hence it's DFS node values in array are in order from Leaft to Root.
  * - we do forloop at the end of DFS to calculate if tempSum === targetSum. 
  * if yes increase count and pop last value from array.
+ *
+ *
+ * - (Optimized) PrefixSum : O(n)
+ * - All the elements in between sum up to curr_sum - (curr_sum - target) = target.
+ * - Similar to preFixSum we do in continuous subarrays that sum to target.
  * */
 
 /** Bruteforce  time:O(n^2) && space: O(n) */
@@ -64,4 +69,53 @@ var pathSum = function(root, targetSum) {
         
         list.pop();
     }
+};
+
+
+/****************************************************************************
+ *
+ * Optimized : preFix Sum in Binary Tree
+ * Time:O(N) and Space:O(N)
+ *
+ ****************************************************************************/
+
+var pathSum = function(root, targetSum) {
+    
+    let count = 0;
+
+    /** holds the curSum occurance in map */
+    let sumMap = {};
+    
+    function preorder(root, curSum){
+        
+        if(!root) return 
+        
+        /** preorder hence process root and go left, right */
+        curSum += root.val;
+        
+        if(curSum === targetSum){
+            count++
+        }
+        
+        /** 
+        find if we have preFix sum has occured already. 
+        i.e this will determine number of times a path with targetSum has occured until current node
+        */
+        let predixSum = curSum-targetSum;
+        count += sumMap[predixSum] || 0
+        
+        /** hold the sum count for child node processing */
+        if(!sumMap[curSum]) sumMap[curSum] = 0;
+        sumMap[curSum] += 1;
+        
+        preorder(root.left, curSum);
+        
+        preorder(root.right, curSum);
+        
+        sumMap[curSum] -= 1
+    }
+    
+    preorder(root, 0);
+    
+    return count
 };

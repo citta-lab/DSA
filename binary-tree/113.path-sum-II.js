@@ -65,3 +65,42 @@ function dfs(root, targetSum, sum, pathNodes, pathList){
     */
     pathNodes.pop();
 }
+
+
+
+/********************************************************************************
+ *
+ *    Same as ABOVE, but using BACKTRACKING template ( similar to combination sum )
+ *
+ *
+ *******************************************************************************/
+
+var pathSum = function(root, targetSum) {
+    
+    let nodePath = [];
+    let nodeList = [];
+    
+    function dfs(root){
+        
+        if(!root) return 
+        
+        nodePath.push(root.val);
+        
+        if(root && !root.left && !root.right){
+            let sum = nodePath.reduce((a,b) => a+b, 0);
+            if(sum === targetSum){
+                let copy = [...nodePath];
+                nodeList.push(copy);
+            }
+        }
+        
+        dfs(root.left);
+        dfs(root.right);
+        
+        nodePath.pop();
+    }
+    
+    dfs(root)
+    
+    return nodeList;
+};

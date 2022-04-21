@@ -11,6 +11,13 @@
  * 
  * leetcode-question:257
  * lettcode: https://leetcode.com/problems/binary-tree-paths/
+ *
+ *
+ * Hint
+ * - Time:O(N) where N is nodes and Space:O(N) but if it is balanced tree then O(logN)
+ * - Backtracking with DFS
+ * - we need to have pathNode and pathList arrays. When we reach tail we join pathNodes with ->
+ * - Similar pattern as Combination Sum
  * 
  * */
  

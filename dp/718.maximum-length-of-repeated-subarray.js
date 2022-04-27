@@ -32,6 +32,18 @@
     .map((row) => new Array(nums2.length+1)
     .fill(0))
     
+    /** 
+    dp = 
+    [
+     [ 0, 0, 0, 0, 0, 0 ],
+     [ 0, 0, 0, 0, 0, 0 ],
+     [ 0, 0, 0, 0, 0, 0 ],
+     [ 0, 0, 0, 0, 0, 0 ],
+     [ 0, 0, 0, 0, 0, 0 ],
+     [ 0, 0, 0, 0, 0, 0 ]
+    ]
+    */
+    
     
     /** 
     bottom up appraoch, we use right most column and bottom most row as

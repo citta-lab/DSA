@@ -23,7 +23,11 @@
  * - For loop will start from startIndex = Math.max(0, this.queue.length-this.size);
  * - average will use divider = Math.min(this.size, this.queue.length);
  * 
- * 
+ * - Optimal => Time:O(1) and Space:O(N)
+ * - Using Dequeue:
+ * - we will keep popping elements from left whenever we cross the alloted size 
+ * - in Js we can use shift which will cost O(N) but dequeue can pop left element at O(1) 
+ * - https://dev.to/swarup260/data-structures-algorithms-in-javascript-deque-g7b
  * */
 
 /** BRUTEFORCE: Time:O(N) and Space:O(M) where M is the queue */
@@ -76,7 +80,7 @@ MovingAverage.prototype.next = function(val) {
 };
 
 
-/** IMPROVED ( DEQUE ) : time:O(1) and space:o(m) */
+/** IMPROVED ( Dequeue ) : time:O(1) and space:o(m) */
 var MovingAverage = function(size) {
     this.size = size;
     this.arr = [];

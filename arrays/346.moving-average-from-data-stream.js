@@ -74,3 +74,31 @@ MovingAverage.prototype.next = function(val) {
     return (this.sum / divider);
     
 };
+
+
+/** IMPROVED ( DEQUE ) : time:O(1) and space:o(m) */
+var MovingAverage = function(size) {
+    this.size = size;
+    this.arr = [];
+    
+    this.count = 0;
+    this.sum =0;
+};
+
+MovingAverage.prototype.next = function(val) {
+    
+    this.count ++
+    this.arr.push(val);
+    
+    /** this will pluck the elements from start whenever we exceed size */
+    let tail = this.count > this.size 
+    ? this.arr.shift() 
+    : 0; 
+    
+    /** we keep adding value to sum and remove any plucked first element when
+    we cross the window size */
+    this.sum = this.sum - tail + val;
+    
+    return this.sum * 1.0 / Math.min(this.count, this.size)
+    
+};

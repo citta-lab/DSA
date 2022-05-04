@@ -26,7 +26,8 @@ Answer: https://github.com/citta-lab/DSA/blob/main/graphs/1466.reorder-routes-to
 Ref Answer: https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/discuss/1930587/DFS-JS-Solution
 
 ## 5. Linked List Intersection 
-https://leetcode.com/problems/intersection-of-two-linked-lists/
+Question: https://leetcode.com/problems/intersection-of-two-linked-lists/   
+Answer: https://github.com/citta-lab/DSA/blob/main/linkedList/160.intersection-two-linkedList.js 
 
 ## 6. Count Prime Number for a Given N
 https://leetcode.com/problems/count-primes/

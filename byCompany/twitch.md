@@ -22,7 +22,8 @@ Twitch Question Asnwer: https://github.com/citta-lab/DSA/blob/main/arrays/041.fi
 Question: https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/          
 Actual Question in Twitch Interview: https://leetcode.com/company/twitch/discuss/1149406/Twitch-OA-Codility   
 
-Answer: https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/discuss/1930587/DFS-JS-Solution
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/1466.reorder-routes-to-make-all-paths-lead-to-the-city-zero.js  
+Ref Answer: https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/discuss/1930587/DFS-JS-Solution
 
 ## 5. Linked List Intersection 
 https://leetcode.com/problems/intersection-of-two-linked-lists/

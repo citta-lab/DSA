@@ -5,7 +5,7 @@ Question: https://leetcode.com/problems/trapping-rain-water/
 Answer : https://github.com/citta-lab/DSA/blob/main/dp/042.trapping-rain-water.js 
 
 ## 2. Insert, Delete and Get Random at O(1)
-https://leetcode.com/problems/insert-delete-getrandom-o1/    
+Question: https://leetcode.com/problems/insert-delete-getrandom-o1/    
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/380.insert-delete-getRandom-O1.js 
 
 ## 3. Min Positive Number ( First Missing Postive )

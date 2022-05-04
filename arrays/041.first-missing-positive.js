@@ -18,7 +18,21 @@
  * video: https://www.youtube.com/watch?v=8g78yfzMlao
  *
  * Hint:
- * Optimized: Time : O(N) and Space:(1)
+ * BruteForce: Time:O(NlogN) and Space:O(N)
+ * - Will sort given array 
+ * - remove -ve values 
+ * - use set to do lookup 
+ *
+ * Optimal: Time:O(N) and Space:ON)
+ * - will not sort instead use set and filter 
+ * - filter -ve and 0 values as they are not positve values
+ * - add filtered nums in set 
+ * - find max value from filtered array
+ * - loop from 1 until max and look up in set for missing value
+ * - return max+1 if we didnt find missing in set
+ *
+ *
+ * More Optimized: Time : O(N) and Space:(1)
  * - we will treat value as index in this array 
  * - we will REPLACE num with "nums.length + 1" if num is <= 0
  * - we will mark them -ve if they are in range 
@@ -65,7 +79,42 @@ var firstMissingPositive = function(nums) {
 
 /*************************************************************************
  *
- * Optimal with Time:O(N) and Space:O(1)
+ * Optimal with Time:O(N) and Space:O(N)
+ * No Sorting <--- 
+ *
+ *************************************************************************/
+
+var firstMissingPositive = function(nums) {
+    
+    /** remove any -ve values and 0 as they are not postive */
+    let filter = nums.filter((a) => a > 0);
+    
+    /** edge case: handle when nums = [0] */
+    if(!filter.length) return 1;
+    
+    console.log(filter)
+    
+    /** find max value, acts as boundary */
+    let max = Math.max(...filter);
+    
+    /** set for O(1) look up */
+    let set = new Set(filter);
+    
+    console.log(set);
+    
+    /** iterative from 1 until max to see if we find missing */
+    for(let i=1; i<= max; i++){
+        if(!set.has(i)) return i;
+    }
+    
+    /** if we didnt find then return max+1 */
+    return max+1
+};
+
+
+/*************************************************************************
+ *
+ * More Optimal with Time:O(N) and Space:O(1)
  *
  *
  *************************************************************************/

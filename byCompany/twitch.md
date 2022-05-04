@@ -34,10 +34,12 @@ Question: https://leetcode.com/problems/count-primes/
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/204.count-primes.js
 
 ## 7. Find Destination Node from Source 
-https://leetcode.com/problems/all-paths-from-source-to-target/ 
+Question: https://leetcode.com/problems/all-paths-from-source-to-target/   
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/797.all-paths-from-source-to-target-dfs-backtrack.js  
 
 ## 8. Parallel Course 
-https://leetcode.com/problems/parallel-courses/ 
+Question: https://leetcode.com/problems/parallel-courses/    
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/1136.course-parallel-inDegree.js
 
 ## 9. Minimum Knight Moves 
-https://leetcode.com/problems/minimum-knight-moves/ 
+Question: https://leetcode.com/problems/minimum-knight-moves/ 

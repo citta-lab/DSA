@@ -1,9 +1,13 @@
 /** 
+ *
+ * 160. Intersection of Two Linked Lists
+ *
 Given the heads of two singly linked-lists headA and headB, 
 return the node at which the two lists intersect. If the two 
 linked lists have no intersection at all, return null. 
 
-leetcode: 
+leetcode-question:160
+leetcode:https://leetcode.com/problems/intersection-of-two-linked-lists/
 
 Can you do without any space and reduce the time complexity ?
 i.e Space O(1)
@@ -78,6 +82,7 @@ var getIntersectionNodeI = function(headA, headB) {
 
 
 /**
+ Bruteforce: 
  Using Set:
  O(M+N) time and O(M) space
 */

@@ -18,6 +18,11 @@
  * - Instead of calculating all leftMax and rightMax every time, we will hold the max value in temp array
  * - By doing so we will use extra space
  *
+ *
+ * More Optimal (Two Pointer):: Time:O(N) and Space:O(1)
+ * - Instead of having to store leftMax and rightMax in temp, we will calculate while iterating using
+ * two pointer
+ *
  * Code Flow: 
  * There are three important steps we need to take.
  * - need to find out all the left max height from every index ( go from 0 to length)
@@ -31,7 +36,12 @@
  * leetcode:https://leetcode.com/problems/trapping-rain-water/solution/
  */
 
-/** Dynamic Programming: Time:O(N) and Space:O(N) */
+
+/*************************************************************
+ *
+ * Optimal ( preFix Sum / DP ) :: Time:O(N) and Space:O(N)
+ *
+ *************************************************************/
 var trap = function(height) {
     // find left max
     // right max 
@@ -70,6 +80,41 @@ const findRightMax = (array, temp=[]) => {
     
     return temp
 }
+
+
+/*********************************************************
+ *
+ * More Optimal ( Two Pointer ) :: Time:O(N) and Space:O(1)
+ *
+ ********************************************************/
+var trap = function(height) {
+    
+    let left = 0;
+    let right = height.length-1;
+    
+    let leftMax = 0;
+    let rightMax = 0;
+    
+    let total = 0;
+    
+    while(left <= right){
+        
+        /** max hegith with respect to cell we are looking at */
+        leftMax = Math.max(height[left], leftMax);
+        rightMax = Math.max(height[right], rightMax);
+        
+        if(height[left] < height[right]){
+            total += leftMax - height[left];
+            left++
+        }else{
+            total += rightMax - height[right];
+            right--
+        }
+        
+    }
+    
+    return total
+};
 
 console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1])) // 6
 console.log(trap([4,2,0,3,2,5])) // 9

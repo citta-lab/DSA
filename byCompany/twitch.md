@@ -19,8 +19,8 @@ Twitch Question Asnwer: https://github.com/citta-lab/DSA/blob/main/arrays/041.fi
 
 
 ## 4. Network with N roads and N-1 Cities ( Reorder Routes to Make All Paths Lead to City Zero)
-Question: https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/ 
-Actual Question: https://leetcode.com/company/twitch/discuss/1149406/Twitch-OA-Codility   
+Question: https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/          
+Actual Question in Twitch Interview: https://leetcode.com/company/twitch/discuss/1149406/Twitch-OA-Codility   
 
 Answer: https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/discuss/1930587/DFS-JS-Solution
 

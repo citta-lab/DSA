@@ -38,7 +38,7 @@ function findMin(arr){
    return max+1;
 }
 
-/** Time:O(N) and Space:O(N) */
+/** Time:O(N) and Space:O(N) ( without using Set but only Array ) */
 function findMinWihtoutSet(arr){
 
     if(!arr || !arr.length) return 0;

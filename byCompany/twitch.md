@@ -30,7 +30,8 @@ Question: https://leetcode.com/problems/intersection-of-two-linked-lists/
 Answer: https://github.com/citta-lab/DSA/blob/main/linkedList/160.intersection-two-linkedList.js 
 
 ## 6. Count Prime Number for a Given N
-https://leetcode.com/problems/count-primes/
+Question: https://leetcode.com/problems/count-primes/   
+Answer: https://github.com/citta-lab/DSA/blob/main/arrays/204.count-primes.js
 
 ## 7. Find Destination Node from Source 
 https://leetcode.com/problems/all-paths-from-source-to-target/ 

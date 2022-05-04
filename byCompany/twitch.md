@@ -9,7 +9,13 @@ https://leetcode.com/problems/insert-delete-getrandom-o1/
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/380.insert-delete-getRandom-O1.js 
 
 ## 3. Min Positive Number ( First Missing Postive )
-Similar : https://leetcode.com/problems/first-missing-positive/
+If the given numbers include -ve and 0 then we will need to use this algorithm defined in the problem solution to solve 
+in O(N) time and O(N) space but can further improve to use O(1) space.
+Similar : https://leetcode.com/problems/first-missing-positive/   
+Answer: https://github.com/citta-lab/DSA/blob/main/arrays/041.first-missing-positive.js
+
+Twitch Question Asnwer: https://github.com/citta-lab/DSA/blob/main/arrays/041.first-missing-id-twitch.js
+
 
 ## 4. Network with N roads and N-1 Cities ( Reorder Routes to Make All Paths Lead to City Zero)
 https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/

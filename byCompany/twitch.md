@@ -42,4 +42,5 @@ Question: https://leetcode.com/problems/parallel-courses/
 Answer: https://github.com/citta-lab/DSA/blob/main/graphs/1136.course-parallel-inDegree.js
 
 ## 9. Minimum Knight Moves 
-Question: https://leetcode.com/problems/minimum-knight-moves/ 
+Question: https://leetcode.com/problems/minimum-knight-moves/    
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/1197.minimum-knight-moves.js

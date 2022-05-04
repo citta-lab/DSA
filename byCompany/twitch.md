@@ -10,7 +10,8 @@ Answer: https://github.com/citta-lab/DSA/blob/main/arrays/380.insert-delete-getR
 
 ## 3. Min Positive Number ( First Missing Postive )
 If the given numbers include -ve and 0 then we will need to use this algorithm defined in the problem solution to solve 
-in O(N) time and O(N) space but can further improve to use O(1) space.
+in O(N) time and O(N) space but can further improve to use O(1) space.  
+
 Similar : https://leetcode.com/problems/first-missing-positive/   
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/041.first-missing-positive.js
 

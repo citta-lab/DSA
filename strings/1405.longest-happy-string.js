@@ -24,11 +24,12 @@
  * Output: "aabaa"
  * 
  * leetcode-question:1405
- * leetcode:
+ * leetcode:https://leetcode.com/problems/longest-happy-string/
  *
+ * Similar Question: https://github.com/citta-lab/DSA/blob/main/strings/984.string-without-AAA-or-BBB.js
  *
  * Hint:
- * - Greedy Appraoch : Time:O(N) Space:O(N) where N is number of chars. So it should be Time: O(1) 
+ * - Greedy Appraoch : Time:O(N) Space:O(N) where N is number of chars count (a+b+c) . 
  * - Focus on starting the combination from char which has more value i.e c = 7 
  * - We will use countA, countB, countC as counter to create valid combination of 'abc'
  * - use ARRAY to add chars which then be joined to produce the RESULT 

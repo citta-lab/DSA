@@ -17,7 +17,7 @@
  * leetcode: https://leetcode.com/problems/string-without-aaa-or-bbb/
  *
  * Hint:
- * Greedy Appraoch:
+ * Greedy Appraoch: Time:O(N) and Space:O(N) where N is a+b 
  * - we need to process char which has most value i.e b if b > a
  * - we will need counterA, counterB which we will check for creating combination
  * - we will use array to store combination

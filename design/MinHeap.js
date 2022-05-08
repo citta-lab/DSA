@@ -1,9 +1,6 @@
-
 /**
  * 
- * Heap Implementation with comperator to do Min and Max heap.
- *
- * Heap implementation (max heap) : https://github.com/citta-lab/DSA/blob/main/design/Heap.js
+ * Min Heap Implementation
  * 
  * Hint
  * - Max & Min  lookup : O(1) time.
@@ -12,17 +9,17 @@
  * - Combination of Array and Tree like data structure
  * - We are dealing with Binary Heap as we will be using Binary Tree
  * - Condition of Binary Heap is that child nodes should be less than parent 
- * -- child node doesn't need to be in order (i.e we dont have to make sure less value left and more on right etc )
+ * -- child node doesn't need to be in order (i.e less value left and more right etc )
  * - Binary heap is complete tree and read from LEFT to RIGHT.
- * - MinHeap and MaxHeap are two diff flavour of heap
+ * - MinHeap and MaxHeap are two diff falour of heap
  * - 'Pop' will return max value from MaxHeap and min from MinHeap. O(1) operation
- * - 'Insert' will add element to Heap Array and then it make use of "Heapify" method
- * to bubble up the value until we meet condition `parent node > children`.
+ * - 'Insert' will add element to Heap Array and then it make uses of "Heapify" method
+ * to bubble up the value until we met condition parent node > children.
  * - 'Heapify' process of rearranging the nodes during 'Insert' and 'Delete' in a tree.
  * i.e O(logn) operation
  * 
  * 
- * Example: 
+ * Max Heap Example Here: 
  * heap = [99, 44, 90, 40, 25, 5, 70]
  * In binary tree:
  *                99
@@ -32,23 +29,22 @@
  *          40   25  5  70
  * 
  * If we add new Element example 100 at 70'th position, then it will be added at the end of the heap array
- * like `[99, 44, 90, 40, 25, 5, 70, 100]` and then heapify will happen to carry the value
+ * like [99, 44, 90, 40, 25, 5, 70, 100] and then heapify will happen to carry the value
  * all the value until PARENT > CHILD. i.e 100 will be swaped with 90's position and then
  * with 99th's postion. 
  * 
  * At the end heapify array will become like  below once 100 is added and heapified.
- * head arr = [100,44,99,40,25,5,90]
+ * head arr = [5,25,40,44,90,99,100]
  * 
  * 
  * Video: https://www.youtube.com/watch?v=hzxa4psfxxg
  * 
  */
 
- class Heap {
-    constructor(comparator){
+/** Example of Min Heap implementaion */
+class Heap {
+    constructor(){
         this.heap = []
-        /** this will be (a,b) => a > b for minHeap or (a,b) => b > a for maxHeap */
-        this.comparator = comparator;
     }
 
     getParentIdx(i){
@@ -85,19 +81,19 @@
          * of all lesser child values. Hence swap and then update the current index to parent of it's current
          * index. 
          */
-        while(this.comparator(this.heap[currentIdx], this.heap[this.getParentIdx(currentIdx)])){
+        while(this.heap[currentIdx] < this.heap[this.getParentIdx(currentIdx)]){
             this.swap(currentIdx, this.getParentIdx(currentIdx));
             currentIdx = this.getParentIdx(currentIdx);
         }
     }
 
     poll(){
-        let maxElement = this.heap[0]; /** first element is always max */
-        this.heap[0] = this.heap[this.heap.length-1]; /** assign last right most value to top */
+        let minElement = this.heap[0]; /** first element is always max */
+        this.heap[0] = this.heap[this.heap.length-1]; /** assign last left most value to top */
         this.heap.length -- /** reduce the length as we just took one element off the array */
         this.heapifyDown(); /** readjust */
         
-        return maxElement;
+        return minElement;
     }
 
     heapifyDown(){
@@ -111,17 +107,20 @@
          */
 
         while(this.heap[this.getLeftChildIdx(currentIdx)]){
-            let biggestChildIdx = this.getLeftChildIdx(currentIdx);
 
+            // assume the one we have on left is smallest, now lets compare 
+            let smallestChildIdx = this.getLeftChildIdx(currentIdx);
+
+            // check if we have right node, if so then check if right one is smaller than left
             if(this.heap[this.getRightChildIdx(currentIdx)] 
-            && this.comparator(this.heap[this.getRightChildIdx(currentIdx)], this.heap[this.getLeftChildIdx(currentIdx)])){
-                biggestChildIdx = this.getRightChildIdx(currentIdx);
+            && this.heap[this.getRightChildIdx(currentIdx)] < this.heap[this.getLeftChildIdx(currentIdx)]){
+                smallestChildIdx = this.getRightChildIdx(currentIdx);
             }
 
-            console.log(this.comparator(this.heap[currentIdx], this.heap[biggestChildIdx]));
-            if(this.comparator(this.heap[currentIdx], this.heap[biggestChildIdx])){
-                this.swap(currentIdx, biggestChildIdx);
-                currentIdx = biggestChildIdx;
+            // now we have smaller idx between left/right, lets check with currentIndex
+            if(this.heap[currentIdx] > this.heap[smallestChildIdx]){
+                this.swap(currentIdx, smallestChildIdx);
+                currentIdx = smallestChildIdx;
             }else{
                 return
             }
@@ -132,31 +131,22 @@
 }
 
 
-let maxHeap = new Heap((a, b) => a > b); //maxHeap 
-let minHeap = new Heap((a, b) => b > a); //minHeap 
+let heap = new Heap();
+heap.push(25)
+heap.push(5)
+heap.push(40)
+heap.push(70)
+heap.push(90)
+heap.push(44)
 
-minHeap.push(25)
-minHeap.push(5)
-minHeap.push(40)
-minHeap.push(70)
-minHeap.push(90)
-minHeap.push(44)
+console.log(heap.heap.join(',')); // 90,70,44,40,25,5
 
-console.log(minHeap.heap.join(',')); // 5,25,40,44,70,90
-minHeap.poll();
-console.log(minHeap.heap.join(',')); // 5,25,40,44,70,90
+heap.poll(); // takes 5
+console.log(heap.heap.join(',')); // 25, 44, 40, 90, 70
 
-// maxHeap.push(25)
-// maxHeap.push(5)
-// maxHeap.push(40)
-// maxHeap.push(70)
-// maxHeap.push(90)
-// maxHeap.push(44)
+heap.push(41);
+console.log(heap.heap.join(',')); // 25,44,40,41,90,70
 
-// console.log(maxHeap.heap.join(',')); // 90,70,44,40,25,5
 
-// /** verify heapifyDown */
-// const maxValue = maxHeap.poll();
-// console.log(maxValue); // 90
 
-// console.log(maxHeap.heap.join(',')); // 90,70,44,40,25,5
+

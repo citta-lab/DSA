@@ -17,6 +17,7 @@
  * 
  * leetcode-question:1653
  * leetcode:https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/
+ * refer: https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/discuss/997750/6-different-approaches%3A-from-basic-to-the-most-optimal-(C%2B%2B)
  * 
  * Hint:
  * - THREE PASS

@@ -40,6 +40,7 @@ console.log(findPenalty('Y Y Y N', 2)); // 1
 console.log(findPenalty('Y Y Y N', 3)); // 0
 console.log(findPenalty('Y Y Y N', 4)); // 1
 console.log(findPenalty('', 1));        // 0
+console.log(findPenalty('Y N Y Y N', 5)); // should be 1 ?? 
 
 console.log("------------------------------");
 
@@ -68,3 +69,4 @@ const findBestClosingTime = function (data) {
 console.log(findBestClosingTime('Y Y Y N')); // 3
 console.log(findBestClosingTime('')); // 0
 console.log(findBestClosingTime('Y Y Y N Y N')); // 3
+console.log(findBestClosingTime('Y Y N N')); // ????

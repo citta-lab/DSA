@@ -9,3 +9,7 @@ https://github.com/citta-lab/DSA/blob/main/byCompany/stripe/server-next-number.j
 https://github.com/citta-lab/DSA/blob/main/design/KeyValueStore.js 
 
 ## 3. Server Tracker ( Assign / Release server hostname )
+https://github.com/citta-lab/DSA/blob/main/byCompany/stripe/server-next-number.js
+
+## 4. Shop penanlty / best closing time ( can we server )
+https://github.com/citta-lab/DSA/blob/main/byCompany/stripe/shop-best-time-to-close.js

@@ -3,6 +3,9 @@ https://leetcode.com/discuss/interview-experience/1551743/Accept-or-Stripe-Phone
 # Stripe 
 
 ## 1. Server Next Number (min positive number)
-
+https://github.com/citta-lab/DSA/blob/main/byCompany/stripe/server-next-number.js 
 
 ## 2. Implement Key-Value Store 
+https://github.com/citta-lab/DSA/blob/main/design/KeyValueStore.js 
+
+## 3. Server Tracker ( Assign / Release server hostname )

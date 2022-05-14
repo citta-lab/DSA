@@ -26,7 +26,11 @@
  * @return {void} Do not return anything, modify matrix in-place instead.
  */
 
- /** Most optimal : Time:O(m*n) and Space:O(1) */
+ /********************************************************************** 
+  * 
+  * Most optimal : Time:O(m*n) and Space:O(1)
+  * 
+  * ********************************************************************/
  var setZeroes = function(matrix) {
     
     /** prepapration
@@ -93,7 +97,16 @@
     }  
 };
 
- /** Second Optimal :: Time: O(n*m) Space: O(n+m) as we are only using a row and column 1-d array */
+
+
+
+/********************************************************************** 
+  * 
+  * Second Optimal :: Time: O(n*m) Space: O(n+m) as we are only 
+  * using a row and column 1-d array
+  * 
+  * ********************************************************************/
+
  var setZeroes = function(matrix) {
 
     var col = [];
@@ -127,7 +140,13 @@
 };
 
 
-/** Same Complexity but DFS way */
+/********************************************************************** 
+  * 
+  * Third Optimal (Same Complexity but DFS way) ::
+  * Time: O(n*m) Space: O(n+m) 
+  * 
+  * ********************************************************************/
+
 var setZeroes = function(matrix) {
     let visited = new Set();
     for(let i=0; i<matrix.length; i++){

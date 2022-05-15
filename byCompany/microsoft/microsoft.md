@@ -16,5 +16,10 @@ Answer: https://github.com/citta-lab/DSA/blob/main/arrays/073.set-matrix-zeroes.
 Question: https://leetcode.com/problems/add-two-numbers/       
 Answer: https://github.com/citta-lab/DSA/blob/main/linkedList/002.add-two-numbers.js 
 
-## 5. 
+## 5. 138. Copy List with Random Pointer    
+Question:  https://leetcode.com/problems/copy-list-with-random-pointer/    
+Answer: https://github.com/citta-lab/DSA/blob/main/linkedList/138.copy-random-linkedList.js 
 
+## 6. 21. Merge Two Sorted Lists     
+Question: https://leetcode.com/problems/merge-two-sorted-lists/    
+Answer: https://github.com/citta-lab/DSA/blob/main/linkedList/021.merge-two-sorted-linkedList.js 

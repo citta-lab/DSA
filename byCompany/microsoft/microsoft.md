@@ -32,4 +32,6 @@ Answer: https://github.com/citta-lab/DSA/blob/main/binary-tree/102.binary-tree-l
 Question: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/   
 Answer: https://github.com/citta-lab/DSA/blob/main/graphs/116.populating-next-right-pointers-in-each-node-bfs.js   
 
-## 9. 
+## 9. 101. Symmetric Tree.   
+Question: https://leetcode.com/problems/symmetric-tree/   
+Answer: https://github.com/citta-lab/DSA/blob/main/binary-tree/101.symmetric-tree.js   

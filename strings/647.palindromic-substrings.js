@@ -20,8 +20,9 @@ video: https://www.youtube.com/watch?v=4RACzI5-du8
 Similar Question: https://github.com/citta-lab/DSA/blob/89faf71b0f98f993e08d0af2e64a92c51bd3289e/strings/5.longest-palindromic-substring.js
 
 Hint: 
-Use two pointers left and right have them move outwards. we need to handle both
+- (optimal) Use two pointers left and right have them move outwards. we need to handle both
 odd case ( i.e 'bbb' ) and for even case (i.e 'bb' ). 
+- (less optimal) Backtracking 
 
 IMPORTANT: 
 - `left, right = i` ( to start with )
@@ -96,4 +97,51 @@ var countSubstrings = function(s) {
     console.log(result);
     return result.length;
 };
+
+
+/**************************************************************************
+ *
+ * Backtracking
+ * Note: If the input is large like test case 128 then calculating the result
+ * array size will cause TLE. so we can change it to result = [0] and instead
+ * of pushing element to result we increment like result[0]++. 
+ *
+ **************************************************************************/
+ var countSubstrings = function(s) {
     
+    let result = [];
+    let str = '';
+    for(let i=0; i<s.length; i++){
+        traverse(s, i, str, result);
+    }
+    
+    return result.length;
+};
+
+function traverse(s, index, str, result){
+    
+    if(index >= s.length) return 
+    
+    let char = s.charAt(index);
+    str += char;
+    
+    if(isPalindrome(str)) result.push(str);
+    
+    traverse(s, index+1, str, result);
+}
+
+function isPalindrome(str){
+    let left = 0;
+    let right = str.length-1; 
+    
+    while(left <= right){
+        if(str[left] !== str[right]){
+            return false
+        }
+        
+        left ++
+        right --
+    }
+    
+    return true
+}

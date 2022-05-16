@@ -23,3 +23,13 @@ Answer: https://github.com/citta-lab/DSA/blob/main/linkedList/138.copy-random-li
 ## 6. 21. Merge Two Sorted Lists     
 Question: https://leetcode.com/problems/merge-two-sorted-lists/    
 Answer: https://github.com/citta-lab/DSA/blob/main/linkedList/021.merge-two-sorted-linkedList.js 
+
+## 7. 102. Binary Tree Level Order Traversal.  
+Question: https://leetcode.com/problems/binary-tree-level-order-traversal/   
+Answer: https://github.com/citta-lab/DSA/blob/main/binary-tree/102.binary-tree-level-order-traversal-binary-tree.js  
+
+## 8. 116. Populating Next Right Pointers in Each Node  
+Question: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/   
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/116.populating-next-right-pointers-in-each-node-bfs.js   
+
+## 9. 

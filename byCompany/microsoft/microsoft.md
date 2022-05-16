@@ -40,4 +40,6 @@ Answer: https://github.com/citta-lab/DSA/blob/main/binary-tree/101.symmetric-tre
 Question: https://leetcode.com/problems/reverse-words-in-a-string/.    
 Answer: https://github.com/citta-lab/DSA/blob/893de5532382844231ed076bc377f5510bfb3e53/strings/151.reverse-words-in-a-string.js  
 
-## 11. 
+## 11. 647. Palindromic Substrings.        
+Question: https://leetcode.com/problems/palindromic-substrings/   
+Answer: https://github.com/citta-lab/DSA/blob/main/strings/647.palindromic-substrings.js

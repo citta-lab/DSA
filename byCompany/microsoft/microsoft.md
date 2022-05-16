@@ -43,3 +43,7 @@ Answer: https://github.com/citta-lab/DSA/blob/893de5532382844231ed076bc377f5510b
 ## 11. 647. Palindromic Substrings.        
 Question: https://leetcode.com/problems/palindromic-substrings/   
 Answer: https://github.com/citta-lab/DSA/blob/main/strings/647.palindromic-substrings.js
+
+## 12. 139. Word Break OR String Segmentation   
+Question: https://leetcode.com/problems/word-break/.    
+Answer: 

@@ -30,6 +30,28 @@
  * 
  * - DFS with memo
  * - Time:O(N^2) and Space:O(N)
+ *
+ * 
+ *
+ * Example: [1,2,4, 3] 
+ * 
+ * The idea here is that we would start from the last. Which will tell us the following,
+ * - At position 3 (i.e num 3) we have only ONE choice to add value to result. i.e the 3rd
+ * position item by itself. So our dp[3] = 1. 
+ * - At postion 2 (i.e num 4) we have TWO choices to make. i.e adding num from the 2nd postion
+ * i.e 4 and another option is adding 3rd position along with 2nd position. However later one is
+ * not possible as it doesnt satisfy ( increasing subsequence num ) the condition. So our choices
+ * dp[2] = 1. 
+ * - At position 1, we have three choices to make. i.e adding num from position 1 it self or 
+ * adding num from position 1 and 2 or adding position from 1,2,3 indexs. However we alredy have
+ * choices calculated at 2 and 3rd position. so at dp[1] = Math.max(1 position, 2 position, 3rd position)
+ * i.e Math.max(1, 1+dp[2], 1+dp[3]) i.e Math.max(1,2,2) i.e 2
+ * so dp[1] = 2
+ * - At position 0, we have 4 choices and it will be Math.max(1, 1+dp[1], 1+dp[2], 1+dp[3])
+ * so it would be Math.max(1, 3, 2, 2) => 3
+ *
+ * Diagram: https://github.com/citta-lab/DSA/blob/main/a-assets/longest-increasing-subsequence-dfs.png
+ *
  * */
 
  /** Time:O(N^2) and Space:O(N) */

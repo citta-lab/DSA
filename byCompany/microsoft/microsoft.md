@@ -47,3 +47,19 @@ Answer: https://github.com/citta-lab/DSA/blob/main/strings/647.palindromic-subst
 ## 12. 139. Word Break OR String Segmentation   
 Question: https://leetcode.com/problems/word-break/.    
 Answer: 
+
+## 14. 300. Longest Increasing Subsequence.  
+Question:https://leetcode.com/problems/longest-increasing-subsequence/.  
+Answer: https://github.com/citta-lab/DSA/blob/main/dp/300.longest-increasing-subsequence.js    
+
+## 15. 329. Longest Increasing Path in a Matrix  
+Question: https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/329.longest-increasing-path-dfs.js 
+
+## 16. Same as first one    
+
+## 17. 39. Combination Sum.   
+Question: https://leetcode.com/problems/combination-sum/   
+Answer: https://github.com/citta-lab/DSA/blob/main/backtracking/039.combination-sum.js   
+
+

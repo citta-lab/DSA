@@ -52,7 +52,7 @@ function helper(s, wordDict, start, memo){
         let subString = s.substring(start, end);
         
         /** if substring exists in wordDict then only we will call recursively */
-        if(wordDict.includes(subString)){
+        if(wordDict.includes(subString)){   
             let result = helper(s, wordDict, end, memo);
             if(result) {
                 memo.set(start, result)

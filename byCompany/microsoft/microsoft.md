@@ -45,8 +45,12 @@ Question: https://leetcode.com/problems/palindromic-substrings/
 Answer: https://github.com/citta-lab/DSA/blob/main/strings/647.palindromic-substrings.js
 
 ## 12. 139. Word Break OR String Segmentation   
-Question: https://leetcode.com/problems/word-break/.    
-Answer: 
+Question: https://leetcode.com/problems/word-break/.        
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/139.word-break.js  
+
+## 13. 121. Best Time to Buy and Sell Stock | Find the maximum single sell profit 
+Question:   https://leetcode.com/problems/best-time-to-buy-and-sell-stock/   
+Answer: https://github.com/citta-lab/DSA/blob/main/arrays/121.best%20-time-to-buy-and-sell-stock.js   
 
 ## 14. 300. Longest Increasing Subsequence.  
 Question:https://leetcode.com/problems/longest-increasing-subsequence/.  
@@ -62,9 +66,6 @@ Answer: https://github.com/citta-lab/DSA/blob/main/graphs/329.longest-increasing
 Question: https://leetcode.com/problems/combination-sum/   
 Answer: https://github.com/citta-lab/DSA/blob/main/backtracking/039.combination-sum.js   
 
-
-Answer: https://github.com/citta-lab/DSA/blob/main/graphs/139.word-break.js  
-
-## 13. 121. Best Time to Buy and Sell Stock | Find the maximum single sell profit 
-Question:   https://leetcode.com/problems/best-time-to-buy-and-sell-stock/   
-Answer: https://github.com/citta-lab/DSA/blob/main/arrays/121.best%20-time-to-buy-and-sell-stock.js     
+## 18. 60. Permutation Sequence   
+Question: https://leetcode.com/problems/permutation-sequence/.   
+Answer: https://github.com/citta-lab/DSA/blob/main/math/060.permutation-sequence.js

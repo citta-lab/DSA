@@ -10,7 +10,7 @@
  * leetcode: https://leetcode.com/problems/permutations/
  *
  * Hint
- * - Time: Check leetcode Space:O(N)
+ * - Time: O(n!). [ Check leetcode ]  Space:O(N)
  * - Backtracking to build different permutations 
  */
 

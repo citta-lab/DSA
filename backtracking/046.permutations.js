@@ -1,6 +1,6 @@
 /** 
  * 
- * 46. Permutations 
+ * 046. Permutations 
  * 
  * Given an array nums of distinct integers, return all the possible permutations. 
  * You can return the answer in any order. 
@@ -19,6 +19,8 @@
  * - Backtracking with DFS
  * - Need for loop to make combination of 3 numbers before calling DFS recursiverly 
  * - Need visited set to check 
+ * 
+ * another backtrack approach :  https://github.com/citta-lab/DSA/blob/main/graphs/046.permutations.js
  * */
 
  var permute = function(nums) {

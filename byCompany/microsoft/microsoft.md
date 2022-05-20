@@ -87,6 +87,6 @@ Similar Rat in Maze problem in leetcode
 - [ Solution ](https://github.com/citta-lab/DSA/blob/main/backtracking/490.the-maze.js)
 
 ## 21. 37. Sudoku Solver    
-Question: https://leetcode.com/problems/sudoku-solver/ 
+Question: https://leetcode.com/problems/sudoku-solver/        
 Answer: https://github.com/citta-lab/DSA/blob/main/backtracking/037.sudoku-solver.js
 

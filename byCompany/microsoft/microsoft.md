@@ -82,3 +82,11 @@ Answer: https://github.com/citta-lab/DSA/blob/main/recursion/010.regular-express
 Question: https://leetcode.com/discuss/general-discussion/988908/pls-help-me-with-thisrat-in-maze-1-problem  
 Answer:  
 
+Similar Rat in Maze problem in leetcode
+- [490. The Maze](https://leetcode.com/problems/the-maze/) 
+- [ Solution ](https://github.com/citta-lab/DSA/blob/main/backtracking/490.the-maze.js)
+
+## 21. 37. Sudoku Solver    
+Question: https://leetcode.com/problems/sudoku-solver/ 
+Answer: https://github.com/citta-lab/DSA/blob/main/backtracking/037.sudoku-solver.js
+

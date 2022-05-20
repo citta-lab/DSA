@@ -69,3 +69,16 @@ Answer: https://github.com/citta-lab/DSA/blob/main/backtracking/039.combination-
 ## 18. 60. Permutation Sequence   
 Question: https://leetcode.com/problems/permutation-sequence/.   
 Answer: https://github.com/citta-lab/DSA/blob/main/math/060.permutation-sequence.js
+
+Other permutation problems,
+- [Find all permutations for given nums like [1,2,3]](https://github.com/citta-lab/DSA/blob/main/backtracking/046.permutations.js) 
+- [Find all permutations for nums [1,1,2] without duplicates](https://github.com/citta-lab/DSA/blob/main/backtracking/047.permutations-II.js)
+
+## 19. 10. Regular Expression Matching  
+Question: https://leetcode.com/problems/regular-expression-matching/   
+Answer: https://github.com/citta-lab/DSA/blob/main/recursion/010.regular-expression-matching.js   
+
+## 20. XX. Rat in Maze  
+Question: https://leetcode.com/discuss/general-discussion/988908/pls-help-me-with-thisrat-in-maze-1-problem  
+Answer:  
+

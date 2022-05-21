@@ -99,4 +99,12 @@ Answer: BFS using queue
 
 # 24. 1971. Find if Path Exists in Graph  
 Question: https://leetcode.com/problems/find-if-path-exists-in-graph/   
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/1971.find-if-path-exists-in-graph-dfs.js  
+
+# 25. 296. Best Meeting Point  
+Question: https://leetcode.com/problems/best-meeting-point/ 
+Answer: https://leetcode.com/problems/best-meeting-point/discuss/1452062/JavaScript-O(mn)-solution-with-easy-understanding 
+
+# 26. 74. Search a 2D Matrix 
+Question: https://leetcode.com/problems/search-a-2d-matrix/    
 Answer: 

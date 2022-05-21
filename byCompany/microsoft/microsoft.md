@@ -90,3 +90,13 @@ Similar Rat in Maze problem in leetcode
 Question: https://leetcode.com/problems/sudoku-solver/        
 Answer: https://github.com/citta-lab/DSA/blob/main/backtracking/037.sudoku-solver.js
 
+## 22. 133. Clone Graph   
+Question: https://leetcode.com/problems/clone-graph/    
+Answer: https://github.com/citta-lab/DSA/blob/main/graphs/133.clone-graph-dfs.js   
+
+## 23. Conduct a Breadth-First Traversal of a given graph
+Answer: BFS using queue 
+
+# 24. 1971. Find if Path Exists in Graph  
+Question: https://leetcode.com/problems/find-if-path-exists-in-graph/   
+Answer: 

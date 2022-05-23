@@ -18,7 +18,12 @@
  * - Bruteforce: Two for loops
  * - Time:O(N^2) and Space:O(N)
  * - TLE
- *
+ * 
+ * - Optimal: Merge Sort
+ * - Time:O(nlogN) and Space:O(N)
+ * - Refer This: https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/445769/merge-sort-CLEAR-simple-EXPLANATION-with-EXAMPLES-O(n-lg-n)
+ * - Idea is while doing merge sort all the small elements jumps from right to left, during this
+ * process we need to count the smaller elements with respec to current number.
  */
 
 /****************************************************************************

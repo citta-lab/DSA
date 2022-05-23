@@ -16,5 +16,9 @@ Answer: https://leetcode.com/problems/design-hit-counter/
 Question: https://leetcode.com/problems/search-in-rotated-sorted-array/    
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/033.search-in-rotated-sorted-array.js 
 
-# 4. 
+# 4. 540. Single Element in a Sorted Array     
+Question:https://leetcode.com/problems/single-element-in-a-sorted-array/.      
+Answer: https://github.com/citta-lab/DSA/blob/main/sort/540.single-element-in-a-sorted-array.js
+
+
 

@@ -9,6 +9,7 @@ Answer: same as above
 
 ## 1013. Partition Array Into Three Parts With Equal Sum
 Question: https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/  
+<<<<<<< HEAD
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/1013.partition-array-into-three-parts-with-equal-sum.js
 
 # Sorted Rotated Array
@@ -26,3 +27,8 @@ Question: https://www.ideserve.co.in/learn/find-pivot-in-a-sorted-rotated-array.
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/7240.find-pivot-in-sorted-rotated-array.js 
 
 ## Find pivot in Sorted Rotated Array [ with duplicates ]
+=======
+Answer: https://github.com/citta-lab/DSA/blob/main/arrays/1013.partition-array-into-three-parts-with-equal-sum.js  
+
+## 
+>>>>>>> d442c1a... merge sort

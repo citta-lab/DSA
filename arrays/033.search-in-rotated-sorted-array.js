@@ -16,7 +16,7 @@
  * Input: nums = [1], target = 0
  * output: -1
  * 
- * Input: nums = [4,5,6,7,0,1,2], target = 0
+ * Input: nums = [4,5,6,7,0,1,2], targ  let = 0
  * Output: 4
  * 
  * Input: nums = [4,5,6,7,8,1,2,3], target = 8

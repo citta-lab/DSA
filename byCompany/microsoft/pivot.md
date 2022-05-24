@@ -14,9 +14,9 @@ Answer:
 # Sorted Rotated Array
 
 ## 33. Search in Rotated Sorted Array [ No duplicates ] 
-Question: https://leetcode.com/problems/search-in-rotated-sorted-array/. 
+Question: https://leetcode.com/problems/search-in-rotated-sorted-array/.   
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/033.search-in-rotated-sorted-array.js 
 
 ## 81. Search in Rotated Sorted Array II  [ with duplicates ] 
-Question: https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ 
+Question: https://leetcode.com/problems/search-in-rotated-sorted-array-ii/     
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/081.search-in-rotated-sorted-array-II.js  

@@ -21,4 +21,8 @@ Answer: https://github.com/citta-lab/DSA/blob/main/arrays/033.search-in-rotated-
 Question: https://leetcode.com/problems/search-in-rotated-sorted-array-ii/     
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/081.search-in-rotated-sorted-array-II.js  
 
-# Sorted Rotated Array with Pivot 
+## Find pivot in Sorted Rotated Array [ no duplicates ]
+Question: https://www.ideserve.co.in/learn/find-pivot-in-a-sorted-rotated-array.       
+Answer: https://github.com/citta-lab/DSA/blob/main/arrays/7240.find-pivot-in-sorted-rotated-array.js 
+
+## Find pivot in Sorted Rotated Array [ with duplicates ]

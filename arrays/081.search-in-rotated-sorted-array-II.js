@@ -34,9 +34,18 @@
  * - we need to have a logic to skip elements if we find duplicates
  * -- i.e while(left < right && nums[left] === nums[left+1]) { left++ }
  * -- i.e while(left < right && nums[right] === nums[right-1] { right -- }
+ *
+ * Binary Search II: ( without while loop )
+ * - Same complexity as above 
  */
 
 /** Time:O(logN) and Space:O(1) */
+/**********************************************************************
+ *
+ * Binary Search ( with while loop to remove duplicates )
+ * Time:O(logN) and Space:O(1)
+ *
+ **********************************************************************/
 var search = function(nums, target) {
     let left = 0;
     let right = nums.length-1;
@@ -56,6 +65,49 @@ var search = function(nums, target) {
         let mid = Math.floor((left+right)/2);
         if(nums[mid] === target) return true;
         
+        if(nums[left] <= nums[mid]){
+            if(nums[mid] > target && target >= nums[left]){
+                right = mid -1;
+            }else{
+                left = mid + 1;
+            }
+        } else {
+            if(nums[mid] < target && target <= nums[right]){
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+    }
+    
+    return false
+};
+
+
+
+/**********************************************************************
+ *
+ * Binary Search ( same as above without while loop )
+ *
+ **********************************************************************/
+var search = function(nums, target) {
+    let left = 0;
+    let right = nums.length-1;
+    
+    while(left <= right){
+        
+        
+        let mid = Math.floor((left+right)/2);
+        if(nums[mid] === target) return true;
+        
+        /** Only section diff from 33: avoid duplicates */
+        if(nums[left] === nums[mid] && nums[mid] === nums[right]){
+            left ++
+            right --
+            continue;
+        }
+        
+        /** coontinue with default binary search */
         if(nums[left] <= nums[mid]){
             if(nums[mid] > target && target >= nums[left]){
                 right = mid -1;

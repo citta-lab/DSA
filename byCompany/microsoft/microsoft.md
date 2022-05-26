@@ -1,6 +1,8 @@
 # Microsoft 
 
-## 1. 268. Missing Number     
+# Educative IO List 
+
+### 1. 268. Missing Number     
 Question:https://leetcode.com/problems/missing-number/    
 Answer: https://github.com/citta-lab/DSA/blob/main/arrays/268.missing-number.js
 

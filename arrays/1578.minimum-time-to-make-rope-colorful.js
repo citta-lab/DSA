@@ -16,6 +16,7 @@
  *
  * leetcode:https://leetcode.com/problems/minimum-time-to-make-rope-colorful/
  * leetcode-question:1578
+ * ref: https://leetcode.com/problems/minimum-time-to-make-rope-colorful/discuss/841690/My-Java-Solution-O(n)
  *
  * Hint:
  * - Time:O(N) and Space:O(1)

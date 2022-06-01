@@ -39,7 +39,8 @@ index = 1, left = right = 0; result = 'bab' ( while loop will exit after going t
 
 
 Hint: 
-Use two pointers left and right have them move outwards. we need to handle both
+Use two pointers left and right have them move outwards (start at 0). 
+    we need to handle both
 ODD case ( i.e 'bbb' ) and 
 EVEN case (i.e 'bb' ). 
 

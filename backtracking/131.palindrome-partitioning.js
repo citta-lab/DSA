@@ -41,8 +41,9 @@
          result.push(copy);
      }
      
+     /** this for loop will let us build a combination chars which we can then check if it is palindrome */
      for(let i=start; i<s.length; i++){
-         let checkPalindrome = isPalindrome(s, start, i);
+         let checkPalindrome = isPalindrome(s, start, i);  // <-- just i here ( upto i'th position )
          
          if(checkPalindrome){
              

@@ -12,6 +12,7 @@
  * 
  * leetcode:https://leetcode.com/problems/palindrome-pairs/
  * leetcode-question:336
+ * video: https://www.youtube.com/watch?v=tc0QbmjqccQ
  * 
  * Hint:
  * Bruteforce 
@@ -22,7 +23,11 @@
  * - concat words and check if it is palindrome and add
  * 
  * Optimal (HashMap)
- * 
+ * - Time: O(N *K^2) and Space:O(N)
+ * - reverse word and store word:index in map
+ * - check for empty word 
+ * - find palindrome by splittign the word by index and treating 
+ * left, remaining char and remaining char, right
  * 
  */
 

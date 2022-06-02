@@ -2,6 +2,8 @@
 
 5. Longest Palindromic Substring
 
+Similar to 647. Palindromic Substrings
+
 Given a string s, return the longest palindromic substring in s.
 
 Input: s = "babad"

@@ -24,7 +24,8 @@ yiled in O(1) space
 ### 5. 647. Palindromic Substrings
 Question: https://leetcode.com/problems/palindromic-substrings/   
 Answer: https://github.com/citta-lab/DSA/blob/main/strings/647.palindromic-substrings.js   
-Hint: can be done using forloop and two whileloop or backtracking (similar to longest palindrome substring)
+Hint: can we done similar to longest palindrome substring using two
+whileloop || call backtrack in forloop fpr every char combination.
 
 ### 6. 131. Palindrome Partitioning
 Question: https://leetcode.com/problems/palindrome-partitioning/    
@@ -53,6 +54,11 @@ Answer: https://github.com/citta-lab/DSA/blob/main/strings/1216.valid-palindrome
 Hint: recursion with memo where we need to call recursion when we find match, or
 call recursion on left, right when char does't match 
 
+### 11. 336. Palindrome Pairs
+Question: https://leetcode.com/problems/palindrome-pairs/  
+Answer:     
+Hint: Optimal one with HashMap. Revesered word & it's index is stored in hashmap.
+handle empty string, then find palindrome by `left, remaining` check. `remaining, right` check
 
 
 

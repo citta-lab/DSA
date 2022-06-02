@@ -55,8 +55,8 @@ Hint: recursion with memo where we need to call recursion when we find match, or
 call recursion on left, right when char does't match 
 
 ### 11. 336. Palindrome Pairs
-Question: https://leetcode.com/problems/palindrome-pairs/  
-Answer:     
+Question: https://leetcode.com/problems/palindrome-pairs/      
+Answer: https://github.com/citta-lab/DSA/blob/main/arrays/336.palindrome-pairs.js    
 Hint: Optimal one with HashMap. Revesered word & it's index is stored in hashmap.
 handle empty string, then find palindrome by `left, remaining` check. `remaining, right` check
 

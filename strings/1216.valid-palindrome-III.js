@@ -11,6 +11,9 @@
  * Output: true
  * Explanation: Remove 'b' and 'e' characters.
  * 
+ * Input: S = "bacabaaa", k= 2
+ * Output: false <---- we need `if(left === right) return 1`
+ * 
  * leetcode-quesiton:1216
  * leetcode:https://leetcode.com/problems/valid-palindrome-iii/
  * 

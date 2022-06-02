@@ -29,26 +29,29 @@
 /** memorization with recursion */
 var longestPalindromeSubseq = function(s) {
     
+    /** needed for long string */
     let memo = new Array(s.length).fill(0).map((e) => new Array(s.length).fill(0));
     
     function findPalindrome(left, right){
         
+        /** boundry : if we cross but didnt return */
         if(left > right ) return 0;
         
+        /** edge case: if the given string as just one char */
         if(left === right) return 1;
         
         if(memo[left][right]) return memo[left][right];
         
         let result;
         
-        /** scenario: when chars matches */
+        /** scenario: when chars matches where 2 indicates TWO char match */
         if(s[left] === s[right]){
             result = findPalindrome(left+1, right-1) + 2
         }else{
             /** scenario: when chars doesnt match */
             let fromLeft = findPalindrome(left+1, right);
             let fromRight = findPalindrome(left, right-1);
-            result = Math.max(fromLeft, fromRight);
+            result = Math.max(fromLeft, fromRight); // <-- return the max match count
         }
         
         memo[left][right] = result;

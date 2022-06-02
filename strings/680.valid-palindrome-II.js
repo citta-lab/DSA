@@ -20,8 +20,15 @@
  * Company: FACEBOOK
  * 
  * HINT:
- * use INWARDS pointers instead of outwards which might make us handle ODD and EVEN check 
- * in helper method before we call it done.
+ * 
+ * Optimal:
+ * - Time:O()
+ * - use INWARDS pointers instead of outwards which might make 
+ * us handle ODD and EVEN check in helper method before we call it done.
+ * 
+ * Recursion with memo:
+ * - using recursion and memoization 
+ * - this will fail if the string length is more than 1000 char
  * 
  * */
 
@@ -70,3 +77,47 @@ var validPalindrome = function(s) {
         
         return true;
 }
+
+/*****************************************************************
+ * 
+ * Recursion with Memoization | Time:O(N^2) and Space:O(N^2)
+ * Note: Fails when string length is more than 1000 char. 
+ * 
+ * Example from valid-palindrome-III
+ * 
+ ****************************************************************/
+
+var isValidPalindrome = function(s) {
+    
+    /** at most one char */
+    let k = 1; 
+
+    let memo = new Array(s.length).fill(0).map((e) => new Array(s.length).fill(0));
+    
+    function findPalindrome(left, right){
+        
+        if(left > right ) return 0;
+        
+        if(left === right) return 1;
+        
+        if(memo[left][right]) return memo[left][right];
+        
+        let result;
+        
+        /** scenario: when chars matches */
+        if(s[left] === s[right]){
+            result = findPalindrome(left+1, right-1) + 2
+        }else{
+            /** scenario: when chars doesnt match */
+            let fromLeft = findPalindrome(left+1, right);
+            let fromRight = findPalindrome(left, right-1);
+            result = Math.max(fromLeft, fromRight);
+        }
+        
+        memo[left][right] = result;
+        return result;
+    }
+    
+    /** as long as the diff is 1 or less we are good */
+    return s.length - findPalindrome(0, s.length-1) <= k
+};

@@ -32,8 +32,8 @@ Answer: https://github.com/citta-lab/DSA/blob/main/backtracking/131.palindrome-p
 Hint: backtracking with forloop ( similar to path problems )
 
 ### 7. 1328. Break a Palindrome
-Question: https://leetcode.com/problems/break-a-palindrome/     
-Answer: 
+Question: https://leetcode.com/problems/break-a-palindrome/       
+Answer: https://github.com/citta-lab/DSA/blob/main/strings/1328.break-a-palindrome.js
 Hint: change non 'a' char to 'a' in first half.
 
 ### 8. 266. Palindrome Permutation
@@ -43,8 +43,8 @@ Hint: map and count all chars. increment counter when odd, decrement
 when even. Finally. if counter <= 1 then we are good
 
 ### 9. 516. Longest Palindromic Subsequence
-Question: https://leetcode.com/problems/longest-palindromic-subsequence/   
-Answer:      
+Question: https://leetcode.com/problems/longest-palindromic-subsequence/  
+Answer: https://github.com/citta-lab/DSA/blob/main/strings/516.longest-palindromic-subsequence.js  
 Hint: Similar to make palindrome after removing k elements
 
 ### 10. 1216. Valid Palindrome III ( remove k elements )

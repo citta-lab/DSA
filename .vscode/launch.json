@@ -9,6 +9,25 @@
     ],
     "program": "${workspaceFolder}/scratch-pad/bookList-oop.js",
     "runtimeExecutable": "npm",
-    "runtimeArgs": ["run-script", "debug"]
+    "runtimeArgs": [
+        "run-script",
+        "debug"
+    ],
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch AllocatorHeap",
+            "request": "launch",
+            "mainClass": "AllocatorHeap",
+            "projectName": "DSA_b324a401"
+        },
+        {
+            "type": "java",
+            "name": "Launch Allocator",
+            "request": "launch",
+            "mainClass": "Allocator",
+            "projectName": "DSA_b324a401"
+        }
+    ]
   }
   

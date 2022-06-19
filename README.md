@@ -24,7 +24,7 @@ Here is the [binay tree problems](https://leetcode.com/tag/binary-tree/) from le
 - [1676. Lowest Common Ancestor of a Binary Tree IV](https://github.com/citta-lab/DSA/blob/main/binary-tree/1676.lowest-common-ancestor-of-a-binary-tree-IV.js)
 - [2096. Directions From Start to Destination nodes ( i.e UP LEFT RIGHT DOWN )](https://github.com/citta-lab/DSA/blob/main/binary-tree/2096.step-by-step-directions-from-a-binary-tree-node-to-another.js)
 - [1740. Find Distance in a Binary Tree ( i.e START and DESTINATION )](https://github.com/citta-lab/DSA/blob/main/binary-tree/1740.find-distance-in-a-binary-tree.js)
-- [1257. Smallest Common Region]()
+- [1257. Smallest Common Region](https://github.com/citta-lab/DSA/blob/main/binary-tree/1257.smallest-common-region.js)
 
 ### Tree Validation
 

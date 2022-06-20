@@ -1,6 +1,12 @@
 let arrOne = [2,4,5];
 let arrTwo = [1,2,3,6,7];
 
+/**
+ * Time: O(N+M) and Space: O(N+M)
+ * @param {*} arrOne : sorted array
+ * @param {*} arrTwo : sorted array
+ * @returns 
+ */
 let mergeTwo = (arrOne, arrTwo) => {
 
     let first = 0;
@@ -9,13 +15,10 @@ let mergeTwo = (arrOne, arrTwo) => {
     let result = [];
     while(first < arrOne.length && second < arrTwo.length){
 
-        /** by doing this we can handle duplicate numbers  */
-        while(arrOne[first] <= arrTwo[second]){
+        if(arrOne[first] <= arrTwo[second]){
             result.push(arrOne[first]);
             first ++
-        }
-
-        while(arrOne[first] > arrTwo[second]){
+        } else {
             result.push(arrTwo[second]);
             second ++
         }
@@ -40,5 +43,18 @@ let mergeTwo = (arrOne, arrTwo) => {
     console.log(result)
     return result;
 }
+
+/** example 1 */
+mergeTwo(arrOne, arrTwo);
+
+/** example 2 */
+arrOne = [2,2,2];
+arrTwo = [2];
+
+mergeTwo(arrOne, arrTwo);
+
+/** example 3 */
+arrOne = [0,1,99,109];
+arrTwo = [-1,0,1];
 
 mergeTwo(arrOne, arrTwo);
